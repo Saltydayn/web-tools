@@ -9,6 +9,7 @@ Every tool is one self-contained `index.html`: no server, no tracking, nothing u
 |---|---|---|
 | Emote & Badge Checker | `emote-checker/` | https://saltydayn.github.io/web-tools/emote-checker/ |
 | Shorts Safe-Zone Checker | `safe-zone-checker/` | https://saltydayn.github.io/web-tools/safe-zone-checker/ |
+| Stream Schedule Link | `schedule-link/` | https://saltydayn.github.io/web-tools/schedule-link/ |
 
 ## Layout
 - `index.html` - the tool list (landing page).
