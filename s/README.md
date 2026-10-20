@@ -1,6 +1,8 @@
 # Stream Schedule Link
 
-**Use it:** https://saltydayn.github.io/web-tools/schedule-link/
+**Use it:** https://saltydayn.github.io/web-tools/s/
+
+Lives at `s/` to keep share links short. `schedule-link/` is a one-line page that forwards there (hash included), so the first links ever made still work.
 
 A streamer enters their weekly schedule (plus special one-off streams and days off) in their own
 time zone and gets one link. Viewers who open it see every stream in their own local time, a live
@@ -9,23 +11,39 @@ a schedule image (square, story, wide, Twitch panel). Accent color + dark/light 
 No server, no account: the whole schedule lives inside the link. Part of the H.E.R.M.E.S. tool family.
 
 ## Files
-- `index.html` - the whole tool, self-contained (~90 KB). This is what gets served.
+- `index.html` - the whole tool, self-contained (~95 KB). This is what gets served.
 - `src/` - `src.html` + `build.py` produce `index.html` (inlines the logo).
 
 ## How the link works
-`schedule-link/#<code>` = viewer page. `#e<code>` = load that schedule into the editor ("Streamer? Edit this schedule").
-`<code>` is a version char + base64url: `1` = deflate-raw compressed, `0` = plain UTF-8 JSON (whichever is shorter).
-The hash is never sent to GitHub, so the schedule stays between streamer and viewer.
+`s/#<code>` = viewer page. `#e<code>` = load that schedule into the editor ("Streamer? Edit this schedule").
+`<code>` = one version character + base64url. The hash is never sent to GitHub.
 
-Payload (JSON array, trailing empty fields dropped):
+| Prefix | Format | Written today? |
+|---|---|---|
+| `2` | compact binary (`packBin`) | yes |
+| `3` | compact binary, deflate-compressed (used only when shorter, i.e. big schedules) | yes |
+| `1` | deflated JSON (first release) | no, decode only |
+| `0` | plain JSON (first release) | no, decode only |
+
+Binary layout (varint = 7 bits per byte; str = varint byte length + UTF-8):
 ```
-[1, name, channelUrl, ianaTimeZone, accentHex(no #), light(0|1),
- slots: [[dayMask, startMin, endMin, title, game], ...],   dayMask bit 0 = Monday; end <= start = ends next day
- ones:  [[epochDay, startMin, endMin, title, game], ...],  one-off streams; epochDay = days since 1970-01-01
- offs:  [[fromEpochDay, toEpochDay, label], ...]]          days off, inclusive; to omitted = single day
+varint flags      bit0 light, bit1 name doubles as channel handle, bit2 custom color, bit3 time zone not in table
+u8     platform   0 none, 1 Twitch, 2 YouTube @handle, 3 Kick, 4 TikTok @handle, 255 other link (stored in full)
+[str handle | str url]   handle only if platform 1-4 and bit1 is off
+str    name
+tz     varint index into TZ_TABLE, or str if bit3
+color  varint index into ACCENTS, or 3 raw bytes if bit2
+slots  varint n, then n x (u8-ish varint dayMask, time start, time end, str title, str game)
+ones   varint n, then n x (zigzag day-20000, time, time, str title, str game)
+offs   varint n, then n x (zigzag from-20000, varint length-in-days, str label)
+time   varint: quarter hours (0-95) as-is, any other minute as 96 + minutes
 ```
+**`TZ_TABLE`, `ACCENTS` and `PLATFORMS` are append-only.** Links store positions in them, so reordering or removing
+an entry silently breaks existing links. Add new entries at the end only.
+Both decoders return the same array as the old JSON format and go through one `unpack()`, so validation is shared.
+
 Everything decoded is clamped and validated (lengths, ranges, http(s)-only links, valid time zone).
-Changing the version number means old links need a migration path in `unpack()`.
+
 
 ## Time zones / daylight saving
 Times are stored as the streamer's wall-clock times plus their IANA zone. Each concrete date is

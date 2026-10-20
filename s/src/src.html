@@ -358,7 +358,7 @@ const PROMO_KEY = "hermes.tools.promoShown";
 const DRAFT_KEY = "hermes.tools.schedule.draft";
 const VIEWTZ_KEY = "hermes.tools.schedule.viewTz";
 // Used for the share link when the page isn't served over http(s) (opened from disk, or inside HERMES later).
-const CANON = "https://saltydayn.github.io/web-tools/schedule-link/";
+const CANON = "https://saltydayn.github.io/web-tools/s/";
 const LIMITS = { name: 40, url: 200, title: 60, game: 40, label: 30, slots: 30, ones: 30, offs: 20 };
 const ACCENTS = ["#52b788", "#9146ff", "#4ea8de", "#ff4d4d", "#f4a261", "#ffd166", "#ff6fae", "#53fc18"];
 const EN_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -513,24 +513,95 @@ function unpack(a) {
 const b64u = bytes => { let s = ""; for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); };
 const unb64u = s => { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
 async function pipe(bytes, stream) { return new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(stream)).arrayBuffer()); }
-// Prefix: "1" = deflate-raw, "0" = plain UTF-8 JSON (used when it's shorter or compression isn't available).
+/* ---------- compact binary format (link versions "2" / "3") ----------
+   APPEND-ONLY TABLES: links store positions in these lists. Never reorder or remove entries,
+   only add new ones at the end, or existing links will decode to the wrong zone/platform. */
+const TZ_TABLE = ["UTC",
+  "Europe/London", "Europe/Dublin", "Europe/Lisbon", "Europe/Berlin", "Europe/Vienna", "Europe/Zurich", "Europe/Paris", "Europe/Brussels", "Europe/Amsterdam", "Europe/Luxembourg",
+  "Europe/Madrid", "Europe/Rome", "Europe/Copenhagen", "Europe/Oslo", "Europe/Stockholm", "Europe/Helsinki", "Europe/Warsaw", "Europe/Prague", "Europe/Budapest", "Europe/Bratislava",
+  "Europe/Ljubljana", "Europe/Zagreb", "Europe/Belgrade", "Europe/Bucharest", "Europe/Sofia", "Europe/Athens", "Europe/Istanbul", "Europe/Kyiv", "Europe/Kiev", "Europe/Vilnius",
+  "Europe/Riga", "Europe/Tallinn", "Europe/Minsk", "Europe/Moscow", "Europe/Malta", "Atlantic/Reykjavik", "Atlantic/Canary", "Atlantic/Azores",
+  "America/New_York", "America/Toronto", "America/Detroit", "America/Chicago", "America/Winnipeg", "America/Denver", "America/Edmonton", "America/Phoenix", "America/Los_Angeles", "America/Vancouver",
+  "America/Anchorage", "Pacific/Honolulu", "America/Halifax", "America/St_Johns", "America/Mexico_City", "America/Monterrey", "America/Tijuana", "America/Guatemala", "America/Bogota", "America/Lima",
+  "America/Caracas", "America/Santiago", "America/Argentina/Buenos_Aires", "America/Buenos_Aires", "America/Sao_Paulo", "America/Montevideo", "America/Asuncion", "America/La_Paz", "America/Panama", "America/Puerto_Rico",
+  "America/Havana", "America/Santo_Domingo", "America/Costa_Rica", "America/Indiana/Indianapolis", "America/Boise",
+  "Africa/Cairo", "Africa/Johannesburg", "Africa/Lagos", "Africa/Nairobi", "Africa/Casablanca", "Africa/Algiers", "Africa/Tunis", "Africa/Accra",
+  "Asia/Dubai", "Asia/Riyadh", "Asia/Qatar", "Asia/Tehran", "Asia/Jerusalem", "Asia/Beirut", "Asia/Baghdad", "Asia/Karachi", "Asia/Kolkata", "Asia/Calcutta",
+  "Asia/Dhaka", "Asia/Kathmandu", "Asia/Bangkok", "Asia/Jakarta", "Asia/Ho_Chi_Minh", "Asia/Kuala_Lumpur", "Asia/Singapore", "Asia/Manila", "Asia/Hong_Kong", "Asia/Taipei",
+  "Asia/Shanghai", "Asia/Seoul", "Asia/Tokyo", "Asia/Almaty", "Asia/Tashkent", "Asia/Yekaterinburg", "Asia/Novosibirsk", "Asia/Vladivostok", "Asia/Tbilisi", "Asia/Yerevan", "Asia/Baku",
+  "Australia/Perth", "Australia/Adelaide", "Australia/Darwin", "Australia/Brisbane", "Australia/Sydney", "Australia/Melbourne", "Australia/Hobart", "Pacific/Auckland", "Pacific/Fiji", "Pacific/Guam"];
+const PLATFORMS = [null, // 0 = no link, 255 = any other link (stored in full)
+  { re: /^https?:\/\/(?:www\.|m\.)?twitch\.tv\/([A-Za-z0-9_]{1,30})\/?$/i, url: h => `https://twitch.tv/${h}` },
+  { re: /^https?:\/\/(?:www\.|m\.)?youtube\.com\/@([A-Za-z0-9_.-]{1,40})\/?$/i, url: h => `https://youtube.com/@${h}` },
+  { re: /^https?:\/\/(?:www\.)?kick\.com\/([A-Za-z0-9_-]{1,30})\/?$/i, url: h => `https://kick.com/${h}` },
+  { re: /^https?:\/\/(?:www\.)?tiktok\.com\/@([A-Za-z0-9_.]{1,30})\/?$/i, url: h => `https://tiktok.com/@${h}` }];
+const DAY0 = 20000; // epoch day 2024-10-04; dates are stored relative to it (zigzag) to keep them to 1-2 bytes
+function packBin(M) {
+  const out = [], te = new TextEncoder();
+  const vi = v => { while (v > 127) { out.push((v & 127) | 128); v = Math.floor(v / 128); } out.push(v); };
+  const zz = v => vi(v >= 0 ? v * 2 : -v * 2 - 1);
+  const st = s => { const b = te.encode(s || ""); vi(b.length); out.push(...b); };
+  const tm = m => vi(m % 15 === 0 ? m / 15 : 96 + m); // quarter hours fit in one byte
+  let plat = M.url ? 255 : 0, handle = "";
+  for (let i = 1; M.url && i < PLATFORMS.length; i++) { const m = PLATFORMS[i].re.exec(M.url); if (m) { plat = i; handle = m[1]; break; } }
+  // Common case: display name is the handle with different capitals ("Saltydayn" / twitch.tv/saltydayn) -> store it once.
+  const nameIsHandle = plat > 0 && plat < 255 && M.name.toLowerCase() === handle.toLowerCase();
+  const tzi = TZ_TABLE.indexOf(M.tz), acc = ACCENTS.indexOf(M.accent);
+  vi((M.light ? 1 : 0) | (nameIsHandle ? 2 : 0) | (acc < 0 ? 4 : 0) | (tzi < 0 ? 8 : 0));
+  out.push(plat);
+  if (plat === 255) st(M.url); else if (plat && !nameIsHandle) st(handle);
+  st(M.name);
+  if (tzi < 0) st(M.tz); else vi(tzi);
+  if (acc < 0) { const n = parseInt(M.accent.slice(1), 16); out.push(n >> 16, (n >> 8) & 255, n & 255); } else vi(acc);
+  vi(M.slots.length); for (const x of M.slots) { vi(x.mask); tm(x.s); tm(x.e); st(x.title); st(x.game); }
+  vi(M.ones.length); for (const x of M.ones) { zz(x.day - DAY0); tm(x.s); tm(x.e); st(x.title); st(x.game); }
+  vi(M.offs.length); for (const x of M.offs) { zz(x.from - DAY0); vi(x.to - x.from); st(x.label); }
+  return new Uint8Array(out);
+}
+// Returns the same array shape as pack(), so unpack() does all validation for every link version.
+function unpackBin(b) {
+  let p = 0; const td = new TextDecoder("utf-8", { fatal: true });
+  const u8 = () => { if (p >= b.length) throw new Error("short"); return b[p++]; };
+  const vi = () => { let v = 0, mul = 1, c; do { c = u8(); v += (c & 127) * mul; mul *= 128; if (mul > 2 ** 35) throw new Error("varint"); } while (c & 128); return v; };
+  const zz = () => { const v = vi(); return v % 2 ? -(v + 1) / 2 : v / 2; };
+  const st = () => { const n = vi(); if (n > 400 || p + n > b.length) throw new Error("str"); const s = td.decode(b.subarray(p, p + n)); p += n; return s; };
+  const tm = () => { const v = vi(); return v < 96 ? v * 15 : v - 96; };
+  const list = (n, f) => { if (n > 100) throw new Error("count"); const a = []; for (let i = 0; i < n; i++) a.push(f()); return a; };
+  const flags = vi(), plat = u8();
+  let url = "", handle = "";
+  if (plat === 255) url = st(); else if (plat && !(flags & 2)) handle = st();
+  const name = st();
+  if (flags & 2) handle = name.toLowerCase();
+  if (plat > 0 && plat < 255) { if (!PLATFORMS[plat]) throw new Error("platform"); url = PLATFORMS[plat].url(handle); }
+  const tz = flags & 8 ? st() : TZ_TABLE[vi()];
+  const acc = flags & 4 ? [u8(), u8(), u8()].map(v => v.toString(16).padStart(2, "0")).join("") : (ACCENTS[vi()] || ACCENTS[0]).slice(1);
+  const slots = list(vi(), () => [vi(), tm(), tm(), st(), st()]);
+  const ones = list(vi(), () => [zz() + DAY0, tm(), tm(), st(), st()]);
+  const offs = list(vi(), () => { const f = zz() + DAY0; return [f, f + vi(), st()]; });
+  if (p !== b.length) throw new Error("trailing");
+  return [1, name, url, tz, acc, flags & 1 ? 1 : 0, slots, ones, offs];
+}
+// Link prefixes: "2" = binary, "3" = binary + deflate (whichever is shorter).
+// Old links: "1" = deflated JSON, "0" = plain JSON. Still decoded, never written.
 async function encode(M) {
-  const raw = new TextEncoder().encode(JSON.stringify(pack(M)));
-  let best = "0" + b64u(raw);
-  if ("CompressionStream" in window) {
-    try { const z = "1" + b64u(await pipe(raw, new CompressionStream("deflate-raw"))); if (z.length < best.length) best = z; } catch {}
+  const raw = packBin(M);
+  let best = "2" + b64u(raw);
+  if ("CompressionStream" in window && raw.length > 60) {
+    try { const z = "3" + b64u(await pipe(raw, new CompressionStream("deflate-raw"))); if (z.length < best.length) best = z; } catch {}
   }
   return best;
 }
 async function decode(code) {
   const kind = code[0], body = unb64u(code.slice(1));
-  let bytes;
-  if (kind === "0") bytes = body;
-  else if (kind === "1") {
+  const inflate = async () => {
     if (!("DecompressionStream" in window)) throw new Error("old-browser");
-    bytes = await pipe(body, new DecompressionStream("deflate-raw"));
-  } else throw new Error("format");
-  return unpack(JSON.parse(new TextDecoder().decode(bytes)));
+    return pipe(body, new DecompressionStream("deflate-raw"));
+  };
+  if (kind === "2") return unpack(unpackBin(body));
+  if (kind === "3") return unpack(unpackBin(await inflate()));
+  if (kind === "0") return unpack(JSON.parse(new TextDecoder().decode(body)));
+  if (kind === "1") return unpack(JSON.parse(new TextDecoder().decode(await inflate())));
+  throw new Error("format");
 }
 const baseUrl = () => /^https?:$/.test(location.protocol) ? location.origin + location.pathname : CANON;
 
@@ -1239,7 +1310,7 @@ async function boot() {
 }
 window.addEventListener("hashchange", () => location.reload());
 // Exposed for automated tests only.
-window.__ssl = { wallToUtc, offsetMin, occurrences, nextOcc, encode, decode, pack, unpack, buildIcs, renderImage, todayEd, edOf };
+window.__ssl = { packBin, unpackBin, TZ_TABLE, wallToUtc, offsetMin, occurrences, nextOcc, encode, decode, pack, unpack, buildIcs, renderImage, todayEd, edOf };
 boot();
 })();
 </script>

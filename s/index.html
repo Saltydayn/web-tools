@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stream Schedule Link · H.E.R.M.E.S.</title>
+<meta name="description" content="A stream schedule shown in your own time zone, with a countdown to the next stream and add-to-calendar. Free tool for streamers: make your own link, no account needed.">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAMQElEQVR42uVbe3BU1Rn/fefce3c3jyVhYYNBiNhqgfBQaTsdpSYWbJ1qpbSz9Y9atOiM1bY4pe20VtsMbdW2VnHq9KHVVjotKtvHDJWW+igEBMFhQApGBAGB5v3ObnLv3XvP+frHbkKyJCQkIYb0zNxJZmfP3fP9vu/8vsc5H2HogyoqKmjr1q0C43iUl5frNWvWMAAerXdSLBaTuMBGZs00qHCDvSQejysAEEJg2bJl89rb2+fZtl0CIGc0UR6pkoQQjmmaJ/Pz8w9s3LjxIBHpbBnOCYDuiStXrsw/evToHclk8kvJZHKhUkoqpcal1oUQMAyDQ6HQwXA4/KeioqLfxuPxlrOBQGcT/vrrr/9Mc3Pzo21tbZc5jgOtNQCocaT5M+QhIklECAaDCIfDJyKRyHdeffXVFwAIAHpQALqFv/baa+9vbGz8cWtrK4jIByCUUsTMBADMPN4k7/7LUkoGoLXWRmFhIYqKih6qrKy8PyOb7q1AOYDw36uvr3+wpaVFSSmRMXvqDRgRjaunNxYZRQnDMHRnZ6fyPK9s7ty5wc2bN78ci8VkVVXVmQB0C7906dJP19XVPdPS0uKbpilTqZTojfCFMLrXqpQi0zTJtm2fmcsWLlx46MUXXzzQGwTqvRVWrlyZt3fv3gN1dXUzpZTsuq64kATvbzAzAoGA9n2fioqKmkpLS+c+99xzzRmZtQCAsrIyCYDffffdLycSiRIiUp7nXfDCd1tDKpUSUkqVSCSmnjp16h4AXFZWJpBhRlRWVqoNGzbIjo6OO2zbZgCUYfwJMZgZzCwcx+FEInFbRUVFsLKyUgEgUVFRIQDwunXr5ti2Xaq1JqWUnAja720FSikBALZtX7pr164rAXAsFhOiO7bv6upa4Pu+BKDGm4sbLSsAoHzfh+M4VwBAQ0MD9SQ2qVRqZsbsJ570p7cBtNZwXbekJ3rs/kdrHcpCCxMVCAChMwCYqJofCIf+ABgJy4xpoEREwCj9nhgN4bXvw7NdkDz/tRKSAp6Tgvb8UQF9xCvWvo+pHypBtHQWnNZErwSd+knaB1/wWecRwWlNYMrlMxAtnQXtq6HUPM4vAEJKtByrwQc+sQhl962Ab7sgIvhdqdNBdmaNvp0alGl8u595Xal0RJe0cc03bsGcmxej5VgNSAiARkZdxojZRGloX2HH4xuwePUtmFV+FY78azcuX7EU08rnQ6V8AAxpmajfUYXjL2yDMA0g29MQQbseSj53NYqXXNFnXuPrh3Domc0oWbwAZk4Q2x9ZD5ICQggQifcHAGaGEbAQKsiD3Z4EM+P1J/6MafM/gPDMKIo/vQihqQXQrpcmSUNg5rKPofaVfXCaE31BIAIrBXNSDkqWXw2rIBfa8wEQhCFgFi5CzSv7oBwPO9a+ABIEKyeIUGEYTnsSnuMOmw/ESJhYuR7cpI3onEtQMCMK7SvUHTyG0s+VIRgKwUva0Ckf2vWgnBRUygMZYkDHRFJApzz4dgra9aBdD16nA0MamP+FJWg49B58N4Xw9KkomncpUl02PNcdERmOyH5Ya7gdnajZdwRaM2aVXQnfTuHUawdQEClMl9AE9bhJIjo7B3DGpWbmQBAUMwojk1Gzqwp2WxKzyq+EkBI1+w7DaUsCiseeBJkBKyeInCkFMEIB+LaL1uO1UJ6PGx9bBZYCdcdOwQxYZ+71cxymZaLhv7VwXAc3PX5vhnSr4XU5MAIWcqZMgpUbGlsOIAJ82wEImHxpMXIik1C77zCqXt4JEGH5r7+N6uYGdHQmIaUADzOzJhCU5yOvIIzPP/ldvHT/k/jP37diSvFFKP7wbLjtSbSfrIdnO2O/BTpthURzEk1Vx6FdF9c9cDs+ed9KnHz9ADbe/XNYlgUGI1NDHVHsHswN4R/f+AUO/3MXlnxzBZb+6E4IMBoPHkNHcwKdXT6YhxccGsMx/+nREIqjIVQ3OjhyogP7Nr+B6gPv4YYf3oFVe57B/vgWNNc1wsgLgJXOCmpEz9PbC0Bw+rM+lMCQpoHWuibMuGYebnrsa6jZ/y42P/A0ao5VI5iThw+W5OPiohDqmxz8t77r/ANABFQ32DAMgRs+XoxVK2bjwOE2vPjKCfzhjgdRunwpPvvTu9Hc1oia+nqYptknu/SSNrxE15lu0Fdpwuz1XQLB83xEoxFcdOsC/P2Bp/Hm+k0omT4Z99x2Ja6aW4jjJxN4ZWftsIQfEQccOdGBt4+24yMLpmD17XPwg3vm4+A77Xj2j/ux/d6HcfHqWyANmRY+IxdJgcvv/BR82wPJLI/ADGEaEEEL0Gl7ZjCkELBtF9tX/wzzO2vwyLplWDSvELv3N2Hts29jx94GCEEIBuTYAQAAwYCECBL2HGzC579eiaVXT8MPv7oQv1v3GajqFjzW0IAtiCAXPnQGARIC08oXDLxZmeHbqR6LEWB0QWKhX49nvv9BBEo+iv07q7HyuzuxaXs1TCkQzjOhefg1jBFEgoBiRl7IRH4usG1PA6697SXceN0MPPy1UkwvEPCaGZSlGC9pZ/z9QMmQ6LUFAE8DF+UK1LW4uP/Hr+JvL5+A1oxIQSC9Bv0+5wKaGVBAONcEE7Dx5RPY81Yrlv7icuQFAJ2VsGUT3dnfTcgxGG90WHhk9U4cP9KMKZEQCIBSo1O/GbUEXmmG1sDkSRYcEGpdAaO/wI8HebK+ahJQnxLoUoQpBRb0KGh9VC3gDCAUw8osvL9lkiEHTuEZ4Kyj924QJAGuYohRrrmMOgDoT5mcLmpoz8dbj/4VbmsyDQT32uxKw8gNYu69y2DkBjNAUP/vG+8ADBDXgpmROFqDrvr2fuMAK5yTDpzG8EzGOEfFDiLi4EMGLBghq18AZNAaU+HPDYDBgvohBuLMDNbp5zQASH/2PpxHGEM0X0WGYfMA+iGAWekAAPNCOyAwBhFcs69F4YJZf130k9s3JI/W5oug0YemOaVE8OLJXe/8ZvPHal/atwoCDIIYTRf7/gHAECQF2t4+edPWLzx8DRiiHy4gEJRyvUL2tWSlwb6eMBbAUExWYd6x3JLom+ypAEQ/ZKhBJMknQ/oMeARMA3ADxpzSRp8DmAEy84MNU664pCrV7uRAks4qjjIZUrNiYs2CDLh+wvFBxOfEjuN2CwhC54nG6478/t/X9Wshmon78eczbvxIZrMwkHEgQ2J55tObjDH0eeeZBP981UO39SFBTikRmBp2Tm3ac9nx9Vu/nyY+Sq9aCoiAKUgSoNPVXSKCDAzuJETAxHDmnS8LIBICHYerl7y24tFSgCX6BLCklOfnAzC6tU1SItXeicbXD6GobH76YCQjWNMb78BpSkAYsm+1mBlkDGPeGHAAgQCd8gpTrlc4sNqob2VHCrzz5D/x3l92pBkgk/87TYmzmv6w5o1NIEQMGjAUpjPYnghkEJzG9r44GXLQWtuw5o0SADRInH9ubM5Ix/vZBHe+5p1zapYFgBDC6eXaRikv5rGdNyRjJjCzc0ZFyDCMUyJdbZg4FwSzBM8oGpZlneoBoLy8XANAXl7eAcMwNAAxkS5JZgEgDcNAbm7umwAQjUZZrFmzRgOgm2++uSoYDB4SQkBKqSfSVTlmhpRSExECgcDJmTNn7gWAeDx++rL0XXfd5YXD4WeDwSAB0BPtqiwAHQgEKBwO//Gpp57qyjRVcc9laQA0Y8aMp/Pz82uZWVqWNSGsgJlhmqbWWotwONxaXFz8BACKx+PcmwQ5FouJ9evXt0YikVUFBQXkeZ6yLIsvZBCYGZZlsVJKTZo0SUQikW/F4/G6WCzW0z/UE2FUVVVxLBaTmzZtemvOnDmW7/vltm0r0zShtSZmvmC6RrrXmhHez8/PN6dOnfrL7du3P5jdQZYtEcViMRGPx9XixYsfampquq+1tRVCiO6mKdF96Xi87nUigpRSI9M0VVBQgGg0+sS2bdvupfSVsj5NUwOpVADQS5Ys+WJTU9PPOjo6ih3HQWY/aIzvtjkBgAKBAMLhcFMkEvneli1bfttLVsZQwt9uU1m+fHm0ubn5K21tbbc6jnOZ7/vQWo/LtjkpJaSUCIVCx8Lh8HPTp0//1fPPP1+TUWi/5ytDbp2tqKiwdu/efZVt21e4rnsJ0lfOx03rLDM7gUDgRG5u7v7Zs2fvXbt2rZ0tw7Bf/n/bPN0fQTY0NIxrVxCNRjm7O/Rs439Y5QRRCihTYgAAAABJRU5ErkJggg==">
+<style>
+:root{
+  --bg:#1e1e1e; --panel:#2d2d2d; --deep:#151515; --card:#242424; --card-hover:#2f2f2f; --border:#3a3a3a;
+  --green:#52b788; --yellow:#ffd166; --blue:#4ea8de; --orange:#f4a261; --red:#ff4d4d; --purple:#b18cf0;
+  --text:#ffffff; --dim:#cccccc; --mute:#8a8a8a; --faint:#555555;
+  --display:"Bahnschrift SemiBold","Bahnschrift","Segoe UI Semibold","Segoe UI",system-ui,sans-serif;
+  --body:"Bahnschrift","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"Cascadia Mono",Consolas,ui-monospace,monospace;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:14px;line-height:1.45}
+a{color:var(--green)}
+button,input,select{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 24px 40px}
+@media (max-width:640px){.wrap{padding:16px 16px 32px}}
+
+/* corner links */
+.corner{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.corner a{display:flex;align-items:center;gap:8px;height:36px;padding:0 14px;background:var(--panel);border:1px solid var(--border);border-radius:4px;color:var(--dim);text-decoration:none;font-size:14px;font-family:var(--display)}
+.corner a:hover{background:var(--card-hover);color:var(--text);border-color:#4a4a4a}
+.corner svg{width:18px;height:18px;flex:none}
+.corner .kofi svg{color:#ff5e5b}
+@media (max-width:640px){.corner{margin-left:0;width:100%}.corner a{flex:1;justify-content:center;padding:0 8px}}
+
+.back{display:inline-flex;align-items:center;gap:6px;margin:0 0 10px;color:var(--mute);text-decoration:none;font-size:13px}
+.back:hover{color:var(--green)}
+.back svg{width:15px;height:15px}
+header{display:flex;align-items:center;gap:14px;margin:6px 0 4px;flex-wrap:wrap}
+header img{width:34px;height:34px}
+h1{font-family:var(--display);font-weight:600;font-size:24px;margin:0;letter-spacing:.01em}
+.underline{width:52px;height:2px;background:var(--green);margin:8px 0 8px}
+.sub{color:var(--mute);font-size:12.5px}
+.privacy{display:inline-flex;align-items:center;gap:8px;margin:12px 0 18px;padding:7px 12px;background:#1b2a23;border:1px solid #2f6b50;border-radius:4px;color:#bfe6d2;font-size:13px}
+.privacy svg{width:15px;height:15px;color:var(--green);flex:none}
+
+.label{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);margin:0 0 8px;display:flex;align-items:center;gap:10px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:4px;position:relative}
+.card.accent::before{content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:3px;border-radius:4px 0 0 4px;background:var(--acc,var(--green))}
+section{margin-bottom:18px}
+.pad{padding:14px 16px 14px 18px}
+
+.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:6px 12px;cursor:pointer;font-size:13px;color:var(--dim);white-space:nowrap}
+.btn:hover{background:var(--card-hover);color:var(--text)}
+.btn.primary{background:var(--green);border-color:var(--green);color:#10261c;font-family:var(--display);font-size:14.5px;padding:9px 18px}
+.btn.primary:hover{background:#63c596;color:#10261c}
+.btn:disabled{opacity:.5;cursor:default}
+.btn svg{width:16px;height:16px;flex:none}
+.btn.ic{padding:0;width:32px;height:32px}
+.linkbtn{background:none;border:0;color:var(--green);cursor:pointer;padding:0;text-decoration:underline;font-size:12.5px}
+
+/* editor layout */
+.main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:900px){.main{grid-template-columns:1fr}}
+.grid2{display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px 12px;align-items:center}
+@media (max-width:480px){.grid2{grid-template-columns:1fr;gap:4px 0}.grid2 > label{margin-top:6px}}
+.grid2 > label{color:var(--dim);font-size:13px}
+.in, select.in{width:100%;background:var(--deep);border:1px solid var(--border);border-radius:3px;padding:6px 9px;font-size:13.5px;min-width:0}
+.in:focus, select.in:focus{outline:2px solid var(--blue);outline-offset:-1px;border-color:transparent}
+input[type=time].in, input[type=date].in{font-family:var(--mono);font-size:13px;color-scheme:dark}
+.hintline{color:var(--mute);font-size:12px}
+.swatches{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.sw{width:26px;height:26px;border-radius:4px;border:2px solid transparent;cursor:pointer;padding:0}
+.sw[aria-pressed=true]{border-color:#fff}
+.swatches input[type=color]{width:34px;height:28px;padding:0 2px;background:var(--deep);border:1px solid var(--border);border-radius:4px;cursor:pointer}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.seg button{background:var(--panel);border:0;padding:5px 14px;cursor:pointer;font-size:13px;color:var(--dim)}
+.seg button[aria-pressed=true]{background:var(--green);color:#10261c}
+
+/* rows (slots / specials / off days) */
+.rows{display:flex;flex-direction:column}
+.rowi{padding:12px 14px 12px 18px;border-bottom:1px solid #2c2c2c;display:flex;flex-direction:column;gap:8px}
+.rowi:last-child{border-bottom:0}
+.rowi .line{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.rowi .line > .grow{flex:1 1 140px}
+.rowi .x{margin-left:auto}
+.days{display:flex;gap:3px}
+.day{width:30px;height:30px;border-radius:3px;border:1px solid var(--border);background:var(--deep);cursor:pointer;font-size:12px;color:var(--mute);padding:0}
+.day[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#10261c;font-weight:600}
+.t{width:116px}
+.d{width:150px}
+.arrow{color:var(--mute)}
+.empty{padding:12px 18px;color:var(--mute);font-size:13px}
+.addrow{padding:10px 14px 12px 18px;border-top:1px solid #2c2c2c;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.rows:empty + .addrow{border-top:0}
+.tag{font-size:11px;padding:1px 6px;border-radius:3px;background:#3a2f1a;color:var(--yellow)}
+.bad{outline:1px solid var(--red)}
+
+/* share */
+#linkbox{display:flex;gap:8px;margin-top:12px}
+#linkbox .in{font-family:var(--mono);font-size:12px;color:var(--dim)}
+#linkstat{margin-top:8px;font-size:12.5px;color:var(--mute)}
+#linkstat.stale{color:var(--yellow)}
+.note{color:var(--mute);font-size:12.5px}
+
+/* image export */
+.exprow{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.field{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--dim)}
+.field select{background:var(--deep);border:1px solid var(--border);border-radius:3px;padding:5px 8px;font-size:13px}
+.toggle{display:inline-flex;align-items:center;gap:7px;cursor:pointer;user-select:none;font-size:13px;color:var(--dim)}
+.toggle input{accent-color:var(--green);width:15px;height:15px;margin:0}
+#imgwrap{margin-top:12px;background:var(--deep);border:1px solid var(--border);border-radius:4px;padding:10px;display:flex;justify-content:center;align-items:center;min-height:120px}
+#imgprev{max-width:100%;max-height:340px;display:block;box-shadow:0 2px 12px #0008}
+
+/* preview frame (editor) */
+.pframe{border:1px dashed #444;border-radius:6px;overflow:hidden}
+
+/* ============ schedule view (viewer page + editor preview) ============ */
+.sched{--s-bg:#1e1e1e;--s-card:#262626;--s-card2:#2c2c2c;--s-line:#363636;--s-text:#fff;--s-dim:#d0d0d0;--s-mute:#8f8f8f;
+  background:var(--s-bg);color:var(--s-text);padding:22px 22px 18px;color-scheme:dark}
+.sched.light{--s-bg:#f4f4f1;--s-card:#ffffff;--s-card2:#f7f7f5;--s-line:#e0e0dc;--s-text:#161616;--s-dim:#333;--s-mute:#6e6e6e;color-scheme:light}
+@media (max-width:520px){.sched{padding:16px 14px 14px}}
+.s-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.s-head > div{flex:1 1 200px;min-width:0}
+.s-kick{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-family:var(--display)}
+.s-name{font-family:var(--display);font-weight:600;font-size:28px;margin:2px 0 0;line-height:1.15;word-break:break-word}
+.s-btn{display:inline-flex;align-items:center;gap:8px;border-radius:4px;padding:8px 16px;text-decoration:none;font-family:var(--display);font-size:14.5px;background:var(--acc);color:var(--on-acc);border:0;cursor:pointer;white-space:nowrap}
+.s-btn:hover{filter:brightness(1.08)}
+.s-btn svg{width:16px;height:16px}
+.s-btn2{display:inline-flex;align-items:center;gap:7px;border-radius:4px;padding:6px 12px;font-size:13px;background:var(--s-card2);color:var(--s-dim);border:1px solid var(--s-line);cursor:pointer;text-decoration:none}
+.s-btn2:hover{color:var(--s-text);border-color:var(--acc)}
+.s-btn2 svg{width:15px;height:15px}
+.s-next{background:var(--s-card);border:1px solid var(--s-line);border-left:4px solid var(--acc);border-radius:5px;padding:14px 16px;margin-bottom:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.s-next > div{flex:1 1 220px;min-width:0}
+.s-nk{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--s-mute)}
+.s-nt{font-family:var(--display);font-size:16px;margin-top:2px;word-break:break-word}
+.s-nt span{color:var(--s-mute);font-family:var(--body);font-size:14px}
+.s-cd{font-family:var(--mono);font-size:30px;line-height:1.1;letter-spacing:.02em;margin:4px 0 2px;color:var(--s-text);font-variant-numeric:tabular-nums}
+.s-cd small{font-size:15px;color:var(--s-mute);margin-right:2px}
+.s-nw{font-size:13px;color:var(--s-dim)}
+.s-live{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-size:13px;letter-spacing:.06em;color:#fff;background:#e5484d;border-radius:3px;padding:3px 9px}
+.s-live::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.s-tz{font-size:12.5px;color:var(--s-mute);margin:0 0 12px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
+.s-tz b{color:var(--s-dim);font-weight:normal}
+.s-tz select{background:var(--s-card);border:1px solid var(--s-line);border-radius:3px;padding:3px 6px;font-size:12.5px;color:var(--s-text);max-width:220px}
+.s-days{display:flex;flex-direction:column;gap:6px}
+.s-day{background:var(--s-card);border:1px solid var(--s-line);border-radius:5px;display:grid;grid-template-columns:118px minmax(0,1fr);align-items:stretch;overflow:hidden}
+@media (max-width:520px){.s-day{grid-template-columns:86px minmax(0,1fr)}}
+.s-dh{padding:10px 12px;border-right:1px solid var(--s-line);display:flex;flex-direction:column;justify-content:center}
+.s-dh b{font-family:var(--display);font-weight:600;font-size:14.5px}
+.s-dh span{font-size:12px;color:var(--s-mute)}
+.s-day.today .s-dh{box-shadow:inset 3px 0 0 var(--acc)}
+.s-day.today .s-dh b{color:var(--acc)}
+.s-sl{display:flex;flex-direction:column}
+.s-it{display:flex;align-items:center;gap:12px;padding:9px 12px;border-bottom:1px solid var(--s-line);min-height:44px}
+.s-it:last-child{border-bottom:0}
+.s-time{font-family:var(--mono);font-size:14px;white-space:nowrap;min-width:0;font-variant-numeric:tabular-nums}
+.s-what{flex:1;min-width:0}
+.s-what b{display:block;font-weight:600;font-size:14px;word-break:break-word}
+.s-what > span{display:block;font-size:12.5px;color:var(--s-mute);word-break:break-word}
+.s-orig{font-size:11.5px;color:var(--s-mute);font-family:var(--mono);white-space:nowrap}
+.s-badge{display:inline-block;white-space:nowrap;font-weight:normal;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;border-radius:3px;padding:1px 6px;vertical-align:1px;margin-left:6px;font-family:var(--display)}
+.s-badge.sp{background:var(--acc);color:var(--on-acc)}
+.s-badge.off{background:var(--s-line);color:var(--s-dim)}
+.s-badge.now{background:#e5484d;color:#fff}
+.s-it.off .s-time,.s-it.off .s-what b{text-decoration:line-through;color:var(--s-mute)}
+.s-none{padding:12px;color:var(--s-mute);font-size:13px;display:flex;align-items:center}
+.s-cal{background:none;border:1px solid transparent;border-radius:4px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:var(--s-mute);cursor:pointer;flex:none;padding:0}
+.s-cal:hover{color:var(--acc);border-color:var(--s-line)}
+.s-cal svg{width:17px;height:17px}
+@media (max-width:520px){.s-it{flex-wrap:wrap;gap:4px 10px}.s-orig{display:none}}
+.s-sec{margin-top:16px}
+.s-sec h3{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--s-mute);margin:0 0 6px;font-weight:normal}
+.s-list{background:var(--s-card);border:1px solid var(--s-line);border-radius:5px}
+.s-list .s-it{min-height:0}
+.s-acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.s-small{font-size:12px;color:var(--s-mute)}
+.s-foot{margin-top:20px;padding-top:12px;border-top:1px solid var(--s-line);font-size:12px;color:var(--s-mute)}
+.s-foot a{color:var(--s-mute)}
+.s-foot a:hover{color:var(--acc)}
+
+/* viewer page shell */
+body.viewer{background:var(--vbg,#1e1e1e)}
+.vwrap{max-width:760px;margin:0 auto;padding:18px 16px 30px}
+.vwrap .sched{border-radius:6px;padding-top:24px}
+@media (max-width:520px){.vwrap{padding:0}.vwrap .sched{border-radius:0}}
+.verr{max-width:520px;margin:60px auto;padding:20px 22px;text-align:center}
+
+footer{color:var(--faint);font-size:12px;margin-top:30px;border-top:1px solid #2a2a2a;padding-top:14px}
+footer a{color:var(--mute)}
+
+/* popup */
+#promo{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+#promo.on{display:flex}
+#promo .pbox{--acc:var(--green);max-width:380px;width:100%;padding:20px 20px 18px 24px;box-shadow:0 12px 40px #000a;animation:pop .18s ease-out}
+@keyframes pop{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
+#promo h2{font-family:var(--display);font-weight:600;font-size:17px;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+#promo h2 img{width:24px;height:24px}
+#promo p{margin:0 0 16px;color:var(--dim)}
+#promo .acts{display:flex;gap:8px;flex-wrap:wrap}
+#promo .x{position:absolute;top:8px;right:8px;background:none;border:0;color:var(--mute);font-size:18px;cursor:pointer;width:28px;height:28px;border-radius:3px}
+#promo .x:hover{background:var(--panel);color:var(--text)}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--green);padding:9px 14px;border-radius:4px;font-size:13px;display:none;z-index:40;max-width:calc(100% - 32px);color:#fff}
+#toast.err{border-left-color:var(--red)}
+#toast.on{display:block}
+</style>
+</head>
+<body>
+
+<div class="wrap" id="editor" hidden>
+  <a class="back" href="https://saltydayn.github.io/web-tools/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>All tools</a>
+  <header>
+    <img src="data:image/png;base64,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" alt="">
+    <div><h1>Stream Schedule Link</h1></div>
+    <nav class="corner" aria-label="Links">
+      <a class="kofi" href="https://ko-fi.com/saltydayn" target="_blank" rel="noopener" title="Support me on Ko-fi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M10 11.2c-.8-.9-2.3-.6-2.3.6 0 1.1 2.3 2.4 2.3 2.4s2.3-1.3 2.3-2.4c0-1.2-1.5-1.5-2.3-.6Z" fill="currentColor"/></svg><span>Ko-fi</span></a>
+      <a href="https://github.com/Saltydayn" target="_blank" rel="noopener" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span>GitHub</span></a>
+      <a href="https://saltydayn.pages.dev" target="_blank" rel="noopener" title="All my links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Links</span></a>
+    </nav>
+  </header>
+  <div class="underline"></div>
+  <div class="sub">A free H.E.R.M.E.S. tool · one link that shows your stream schedule in every viewer's own time zone</div>
+  <div class="privacy">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    No server, no account. Your whole schedule is stored inside the link itself.
+  </div>
+
+  <div class="main">
+    <div>
+      <section>
+        <div class="label">Your channel</div>
+        <div class="card pad">
+          <div class="grid2">
+            <label for="fName">Display name</label>
+            <input class="in" id="fName" maxlength="40" placeholder="e.g. Saltydayn" autocomplete="off">
+            <label for="fUrl">Channel link</label>
+            <input class="in" id="fUrl" maxlength="200" placeholder="https://twitch.tv/yourname" autocomplete="off" inputmode="url">
+            <label for="fTz">Your time zone</label>
+            <select class="in" id="fTz"></select>
+            <label>Color</label>
+            <div class="swatches" id="swatches"></div>
+            <label>Theme</label>
+            <div><span class="seg" id="theme"><button type="button" data-v="0">Dark</button><button type="button" data-v="1">Light</button></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">Weekly streams</div>
+        <div class="card">
+          <div class="rows" id="slots"></div>
+          <div class="addrow">
+            <button class="btn" id="addSlot" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Add stream</button>
+            <span class="hintline">Times in your time zone. Viewers see them converted, daylight saving included.</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">Special streams <span class="hintline" style="text-transform:none;letter-spacing:0">one-off dates</span></div>
+        <div class="card">
+          <div class="rows" id="ones"></div>
+          <div class="addrow"><button class="btn" id="addOne" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Add special stream</button></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">Days off <span class="hintline" style="text-transform:none;letter-spacing:0">weekly streams on these dates are marked off</span></div>
+        <div class="card">
+          <div class="rows" id="offs"></div>
+          <div class="addrow"><button class="btn" id="addOff" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Add day(s) off</button></div>
+        </div>
+      </section>
+    </div>
+
+    <div>
+      <section>
+        <div class="label">Share link</div>
+        <div class="card accent pad">
+          <button class="btn primary" id="mkLink" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+            <span>Create link</span></button>
+          <div id="linkbox" hidden>
+            <input class="in" id="linkOut" readonly aria-label="Your schedule link">
+            <button class="btn" id="copyLink" type="button">Copy</button>
+            <a class="btn" id="openLink" href="#" target="_blank" rel="noopener">Open</a>
+          </div>
+          <div id="linkstat" class="note">Put the link in your Twitch panels, Discord or bio. Changing the schedule later makes a new link, so re-post it.</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">Preview <span class="hintline" style="text-transform:none;letter-spacing:0">what viewers see · try another time zone below</span></div>
+        <div class="pframe" id="preview"></div>
+      </section>
+
+      <section>
+        <div class="label">Image for socials</div>
+        <div class="card pad">
+          <div class="exprow">
+            <label class="field">Size <select id="imgSize">
+              <option value="square">Square 1080×1080</option>
+              <option value="story">Story 1080×1920</option>
+              <option value="wide">Wide 1920×1080</option>
+              <option value="panel">Twitch panel 320 wide</option>
+            </select></label>
+            <label class="field">Clock <select id="imgClock"><option value="24">24h</option><option value="12">12h</option></select></label>
+          </div>
+          <div class="exprow" style="margin-top:10px">
+            <label class="toggle"><input type="checkbox" id="imgHide">Hide days without streams</label>
+            <label class="toggle"><input type="checkbox" id="imgExtra" checked>Show off days &amp; specials (next 14 days)</label>
+          </div>
+          <div id="imgwrap"><canvas id="imgprev" width="10" height="10"></canvas></div>
+          <div class="exprow" style="margin-top:12px">
+            <button class="btn primary" id="imgDl" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              Download PNG</button>
+            <span class="note" id="imgNote"></span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    Made by <a href="https://saltydayn.pages.dev" target="_blank" rel="noopener">Saltydayn</a> · part of <a href="https://github.com/Saltydayn/hermes/releases/latest" target="_blank" rel="noopener">H.E.R.M.E.S.</a> ·
+    <a href="https://saltydayn.github.io/web-tools/" target="_blank" rel="noopener">More free tools</a> ·
+    Not affiliated with Twitch, YouTube or any other platform. Your schedule is saved in this browser so you can come back and edit it.
+  </footer>
+</div>
+
+<div class="vwrap" id="viewer" hidden></div>
+
+<div id="promo" role="dialog" aria-modal="true" aria-labelledby="promoT">
+  <div class="pbox card accent">
+    <button class="x" id="promoX" type="button" aria-label="Close">×</button>
+    <h2 id="promoT"><img src="data:image/png;base64,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" alt="">Your link is ready!</h2>
+    <p>Liked this? Get HERMES for more tools, or check my Ko-fi.</p>
+    <div class="acts">
+      <a class="btn primary" href="https://github.com/Saltydayn/hermes/releases/latest" target="_blank" rel="noopener">Get HERMES</a>
+      <a class="btn" href="https://ko-fi.com/saltydayn" target="_blank" rel="noopener">Ko-fi</a>
+      <button class="btn" id="promoNo" type="button">No thanks</button>
+    </div>
+  </div>
+</div>
+<div id="toast" role="status"></div>
+
+<script>
+"use strict";
+(() => {
+const $ = s => document.querySelector(s);
+// Shared with every Saltydayn tool on the same site, so the popup shows once across all of them.
+const PROMO_KEY = "hermes.tools.promoShown";
+const DRAFT_KEY = "hermes.tools.schedule.draft";
+const VIEWTZ_KEY = "hermes.tools.schedule.viewTz";
+// Used for the share link when the page isn't served over http(s) (opened from disk, or inside HERMES later).
+const CANON = "https://saltydayn.github.io/web-tools/s/";
+const LIMITS = { name: 40, url: 200, title: 60, game: 40, label: 30, slots: 30, ones: 30, offs: 20 };
+const ACCENTS = ["#52b788", "#9146ff", "#4ea8de", "#ff4d4d", "#f4a261", "#ffd166", "#ff6fae", "#53fc18"];
+const EN_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const EN_SHORT = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const DAY_MS = 86400000;
+
+/* =====================================================================
+   Time zone math. Everything is computed from IANA zones via Intl, so
+   daylight-saving changes in BOTH the streamer's and the viewer's zone
+   come out right: we never add fixed offsets, we convert each concrete
+   date's wall-clock time to an instant.
+   ===================================================================== */
+const pad2 = n => String(n).padStart(2, "0");
+const dtfCache = new Map();
+function partsFmt(tz) {
+  let f = dtfCache.get(tz);
+  if (!f) {
+    f = new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" });
+    dtfCache.set(tz, f);
+  }
+  return f;
+}
+function parts(ms, tz) {
+  const o = {};
+  for (const p of partsFmt(tz).formatToParts(ms)) o[p.type] = p.value;
+  return { y: +o.year, m: +o.month, d: +o.day, h: +o.hour % 24, mi: +o.minute, s: +o.second };
+}
+// Minutes east of UTC at instant ms.
+function offsetMin(ms, tz) {
+  const p = parts(ms, tz);
+  return Math.round((Date.UTC(p.y, p.m - 1, p.d, p.h, p.mi, p.s) - Math.floor(ms / 1000) * 1000) / 60000);
+}
+// Wall-clock time (date + minutes after midnight) in tz -> UTC ms.
+// Non-existent time (clocks jump forward): moved forward by the gap, like phones do.
+// Ambiguous time (clocks go back): the first occurrence.
+function wallToUtc(y, m, d, min, tz) {
+  const guess = Date.UTC(y, m - 1, d, 0, min);
+  const o1 = offsetMin(guess, tz);
+  const a = guess - o1 * 60000;
+  const o2 = offsetMin(a, tz);
+  if (o1 === o2) {
+    // Check for the other side of a fall-back overlap (earlier instant with a larger offset).
+    const o0 = offsetMin(a - 3 * 3600000, tz);
+    if (o0 > o1) { const b = guess - o0 * 60000; if (offsetMin(b, tz) === o0) return b; }
+    return a;
+  }
+  const b = guess - o2 * 60000;
+  if (offsetMin(b, tz) === o2) return b;
+  // Neither offset is consistent: the time falls in a spring-forward gap. Use the pre-jump (smaller) offset.
+  return guess - Math.min(o1, o2) * 60000;
+}
+// Civil-date helpers. "Epoch day" = days since 1970-01-01, used for dates in the link (short, tz-free).
+const civ = ed => { const t = new Date(ed * DAY_MS); return { y: t.getUTCFullYear(), m: t.getUTCMonth() + 1, d: t.getUTCDate() }; };
+const edOf = (y, m, d) => Math.round(Date.UTC(y, m - 1, d) / DAY_MS);
+const wdOf = ed => (new Date(ed * DAY_MS).getUTCDay() + 6) % 7; // 0 = Monday
+const edToIso = ed => { const c = civ(ed); return `${c.y}-${pad2(c.m)}-${pad2(c.d)}`; };
+const isoToEd = s => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || ""); return m ? edOf(+m[1], +m[2], +m[3]) : null; };
+const todayEd = (tz, ms = Date.now()) => { const p = parts(ms, tz); return edOf(p.y, p.m, p.d); };
+const minToHHMM = m => `${pad2(Math.floor(m / 60) % 24)}:${pad2(m % 60)}`;
+const hhmmToMin = s => { const m = /^(\d{1,2}):(\d{2})/.exec(s || ""); return m ? (+m[1] % 24) * 60 + (+m[2] % 60) : null; };
+
+function validTz(tz) { try { new Intl.DateTimeFormat("en-US", { timeZone: tz }); return true; } catch { return false; } }
+function localTz() { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC"; } catch { return "UTC"; } }
+let TZ_LIST = null;
+function tzList() {
+  if (TZ_LIST) return TZ_LIST;
+  let l = [];
+  try { l = Intl.supportedValuesOf("timeZone"); } catch {}
+  if (!l.length) l = ["America/Los_Angeles", "America/Denver", "America/Chicago", "America/New_York", "America/Sao_Paulo", "Europe/London", "Europe/Berlin", "Europe/Helsinki", "Europe/Moscow", "Asia/Dubai", "Asia/Kolkata", "Asia/Shanghai", "Asia/Tokyo", "Australia/Sydney", "Pacific/Auckland"];
+  if (!l.includes("UTC")) l = ["UTC", ...l];
+  return (TZ_LIST = l);
+}
+const tzCity = tz => tz === "UTC" ? "UTC" : tz.split("/").pop().replace(/_/g, " ");
+function gmtLabel(tz, ms = Date.now()) {
+  try {
+    const p = new Intl.DateTimeFormat("en-US", { timeZone: tz, timeZoneName: "shortOffset" }).formatToParts(ms).find(x => x.type === "timeZoneName");
+    if (p) return p.value;
+  } catch {}
+  const o = offsetMin(ms, tz), s = o < 0 ? "-" : "+", a = Math.abs(o);
+  return o === 0 ? "GMT" : `GMT${s}${Math.floor(a / 60)}${a % 60 ? ":" + pad2(a % 60) : ""}`;
+}
+const fmtCache = new Map();
+function fmt(tz, opts, loc) {
+  const k = tz + JSON.stringify(opts) + (loc || "");
+  let f = fmtCache.get(k);
+  if (!f) { f = new Intl.DateTimeFormat(loc, { ...opts, timeZone: tz }); fmtCache.set(k, f); }
+  return f;
+}
+const tStr = (ms, tz) => fmt(tz, { hour: "numeric", minute: "2-digit" }).format(ms);
+
+/* =====================================================================
+   Schedule model (M) and occurrences
+   M = { name, url, tz, accent, light,
+         slots: [{ mask, s, e, title, game }]   weekly; mask bit 0 = Monday; s/e = minutes, e <= s means ends next day
+         ones:  [{ day, s, e, title, game }]    one-off; day = epoch day (streamer's date)
+         offs:  [{ from, to, label }] }          epoch days, inclusive
+   ===================================================================== */
+function offFor(M, ed) { return M.offs.find(o => ed >= o.from && ed <= o.to) || null; }
+function mkOcc(M, ed, s, e, extra) {
+  const c = civ(ed), c2 = e <= s ? civ(ed + 1) : c;
+  return { start: wallToUtc(c.y, c.m, c.d, s, M.tz), end: wallToUtc(c2.y, c2.m, c2.d, e, M.tz), ed, s, e, ...extra };
+}
+// All occurrences overlapping [fromMs, fromMs + days], sorted. Weekly slots on off days are kept but flagged.
+function occurrences(M, fromMs, days) {
+  const out = [], t0 = todayEd(M.tz, fromMs), toMs = fromMs + days * DAY_MS;
+  for (let ed = t0 - 1; ed <= t0 + days + 1; ed++) {
+    const w = wdOf(ed), off = offFor(M, ed);
+    M.slots.forEach((sl, i) => {
+      if (!((sl.mask >> w) & 1)) return;
+      const o = mkOcc(M, ed, sl.s, sl.e, { title: sl.title, game: sl.game, slot: i, off });
+      if (o.end > fromMs && o.start < toMs) out.push(o);
+    });
+  }
+  M.ones.forEach((x, i) => {
+    const o = mkOcc(M, x.day, x.s, x.e, { title: x.title, game: x.game, one: i, special: true, off: null });
+    if (o.end > fromMs && o.start < toMs) out.push(o);
+  });
+  return out.sort((a, b) => a.start - b.start || (a.special ? 1 : 0) - (b.special ? 1 : 0));
+}
+function nextOcc(M, now) {
+  // 120 days is enough to step over any sane vacation.
+  return occurrences(M, now, 120).find(o => !o.off && o.end > now) || null;
+}
+
+/* ---------- link encoding: compact JSON array -> deflate -> base64url, in the #hash (never sent to a server) ---------- */
+function pack(M) {
+  const trim = a => { while (a.length && (a[a.length - 1] === "" || a[a.length - 1] == null)) a.pop(); return a; };
+  return trim([1, M.name, M.url, M.tz, M.accent.replace("#", ""), M.light ? 1 : 0,
+    M.slots.map(x => trim([x.mask, x.s, x.e, x.title, x.game])),
+    M.ones.map(x => trim([x.day, x.s, x.e, x.title, x.game])),
+    M.offs.map(x => trim([x.from, x.to === x.from ? "" : x.to, x.label]))]);
+}
+const str = (v, n) => (typeof v === "string" ? v : "").replace(/[\u0000-\u001f\u007f]/g, "").slice(0, n).trim();
+const int = (v, lo, hi, d) => Number.isInteger(v) && v >= lo && v <= hi ? v : d;
+function safeUrl(u) {
+  u = str(u, LIMITS.url);
+  if (!u) return "";
+  if (!/^[a-z][a-z0-9+.-]*:/i.test(u)) u = "https://" + u;
+  return /^https?:\/\/[^\s/$.?#][^\s]*$/i.test(u) ? u : "";
+}
+// Everything decoded from a link is untrusted: clamp types, lengths and ranges.
+function unpack(a) {
+  if (!Array.isArray(a) || a[0] !== 1) throw new Error("version");
+  const tz = typeof a[3] === "string" && validTz(a[3]) ? a[3] : "UTC";
+  const acc = /^[0-9a-f]{6}$/i.test(a[4] || "") ? "#" + a[4].toLowerCase() : ACCENTS[0];
+  const arr = v => Array.isArray(v) ? v : [];
+  const slots = arr(a[6]).slice(0, LIMITS.slots).map(x => arr(x)).map(x => ({ mask: int(x[0], 1, 127, 0), s: int(x[1], 0, 1439, 0), e: int(x[2], 0, 1439, 0), title: str(x[3], LIMITS.title), game: str(x[4], LIMITS.game) })).filter(x => x.mask);
+  const ones = arr(a[7]).slice(0, LIMITS.ones).map(x => arr(x)).map(x => ({ day: int(x[0], 0, 80000, -1), s: int(x[1], 0, 1439, 0), e: int(x[2], 0, 1439, 0), title: str(x[3], LIMITS.title), game: str(x[4], LIMITS.game) })).filter(x => x.day >= 0);
+  const offs = arr(a[8]).slice(0, LIMITS.offs).map(x => arr(x)).map(x => { const f = int(x[0], 0, 80000, -1); let t = int(x[1], 0, 80000, f); if (t < f) t = f; if (t - f > 400) t = f + 400; return { from: f, to: t, label: str(x[2], LIMITS.label) }; }).filter(x => x.from >= 0);
+  return { name: str(a[1], LIMITS.name), url: safeUrl(a[2]), tz, accent: acc, light: a[5] === 1, slots, ones, offs };
+}
+const b64u = bytes => { let s = ""; for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); };
+const unb64u = s => { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
+async function pipe(bytes, stream) { return new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(stream)).arrayBuffer()); }
+/* ---------- compact binary format (link versions "2" / "3") ----------
+   APPEND-ONLY TABLES: links store positions in these lists. Never reorder or remove entries,
+   only add new ones at the end, or existing links will decode to the wrong zone/platform. */
+const TZ_TABLE = ["UTC",
+  "Europe/London", "Europe/Dublin", "Europe/Lisbon", "Europe/Berlin", "Europe/Vienna", "Europe/Zurich", "Europe/Paris", "Europe/Brussels", "Europe/Amsterdam", "Europe/Luxembourg",
+  "Europe/Madrid", "Europe/Rome", "Europe/Copenhagen", "Europe/Oslo", "Europe/Stockholm", "Europe/Helsinki", "Europe/Warsaw", "Europe/Prague", "Europe/Budapest", "Europe/Bratislava",
+  "Europe/Ljubljana", "Europe/Zagreb", "Europe/Belgrade", "Europe/Bucharest", "Europe/Sofia", "Europe/Athens", "Europe/Istanbul", "Europe/Kyiv", "Europe/Kiev", "Europe/Vilnius",
+  "Europe/Riga", "Europe/Tallinn", "Europe/Minsk", "Europe/Moscow", "Europe/Malta", "Atlantic/Reykjavik", "Atlantic/Canary", "Atlantic/Azores",
+  "America/New_York", "America/Toronto", "America/Detroit", "America/Chicago", "America/Winnipeg", "America/Denver", "America/Edmonton", "America/Phoenix", "America/Los_Angeles", "America/Vancouver",
+  "America/Anchorage", "Pacific/Honolulu", "America/Halifax", "America/St_Johns", "America/Mexico_City", "America/Monterrey", "America/Tijuana", "America/Guatemala", "America/Bogota", "America/Lima",
+  "America/Caracas", "America/Santiago", "America/Argentina/Buenos_Aires", "America/Buenos_Aires", "America/Sao_Paulo", "America/Montevideo", "America/Asuncion", "America/La_Paz", "America/Panama", "America/Puerto_Rico",
+  "America/Havana", "America/Santo_Domingo", "America/Costa_Rica", "America/Indiana/Indianapolis", "America/Boise",
+  "Africa/Cairo", "Africa/Johannesburg", "Africa/Lagos", "Africa/Nairobi", "Africa/Casablanca", "Africa/Algiers", "Africa/Tunis", "Africa/Accra",
+  "Asia/Dubai", "Asia/Riyadh", "Asia/Qatar", "Asia/Tehran", "Asia/Jerusalem", "Asia/Beirut", "Asia/Baghdad", "Asia/Karachi", "Asia/Kolkata", "Asia/Calcutta",
+  "Asia/Dhaka", "Asia/Kathmandu", "Asia/Bangkok", "Asia/Jakarta", "Asia/Ho_Chi_Minh", "Asia/Kuala_Lumpur", "Asia/Singapore", "Asia/Manila", "Asia/Hong_Kong", "Asia/Taipei",
+  "Asia/Shanghai", "Asia/Seoul", "Asia/Tokyo", "Asia/Almaty", "Asia/Tashkent", "Asia/Yekaterinburg", "Asia/Novosibirsk", "Asia/Vladivostok", "Asia/Tbilisi", "Asia/Yerevan", "Asia/Baku",
+  "Australia/Perth", "Australia/Adelaide", "Australia/Darwin", "Australia/Brisbane", "Australia/Sydney", "Australia/Melbourne", "Australia/Hobart", "Pacific/Auckland", "Pacific/Fiji", "Pacific/Guam"];
+const PLATFORMS = [null, // 0 = no link, 255 = any other link (stored in full)
+  { re: /^https?:\/\/(?:www\.|m\.)?twitch\.tv\/([A-Za-z0-9_]{1,30})\/?$/i, url: h => `https://twitch.tv/${h}` },
+  { re: /^https?:\/\/(?:www\.|m\.)?youtube\.com\/@([A-Za-z0-9_.-]{1,40})\/?$/i, url: h => `https://youtube.com/@${h}` },
+  { re: /^https?:\/\/(?:www\.)?kick\.com\/([A-Za-z0-9_-]{1,30})\/?$/i, url: h => `https://kick.com/${h}` },
+  { re: /^https?:\/\/(?:www\.)?tiktok\.com\/@([A-Za-z0-9_.]{1,30})\/?$/i, url: h => `https://tiktok.com/@${h}` }];
+const DAY0 = 20000; // epoch day 2024-10-04; dates are stored relative to it (zigzag) to keep them to 1-2 bytes
+function packBin(M) {
+  const out = [], te = new TextEncoder();
+  const vi = v => { while (v > 127) { out.push((v & 127) | 128); v = Math.floor(v / 128); } out.push(v); };
+  const zz = v => vi(v >= 0 ? v * 2 : -v * 2 - 1);
+  const st = s => { const b = te.encode(s || ""); vi(b.length); out.push(...b); };
+  const tm = m => vi(m % 15 === 0 ? m / 15 : 96 + m); // quarter hours fit in one byte
+  let plat = M.url ? 255 : 0, handle = "";
+  for (let i = 1; M.url && i < PLATFORMS.length; i++) { const m = PLATFORMS[i].re.exec(M.url); if (m) { plat = i; handle = m[1]; break; } }
+  // Common case: display name is the handle with different capitals ("Saltydayn" / twitch.tv/saltydayn) -> store it once.
+  const nameIsHandle = plat > 0 && plat < 255 && M.name.toLowerCase() === handle.toLowerCase();
+  const tzi = TZ_TABLE.indexOf(M.tz), acc = ACCENTS.indexOf(M.accent);
+  vi((M.light ? 1 : 0) | (nameIsHandle ? 2 : 0) | (acc < 0 ? 4 : 0) | (tzi < 0 ? 8 : 0));
+  out.push(plat);
+  if (plat === 255) st(M.url); else if (plat && !nameIsHandle) st(handle);
+  st(M.name);
+  if (tzi < 0) st(M.tz); else vi(tzi);
+  if (acc < 0) { const n = parseInt(M.accent.slice(1), 16); out.push(n >> 16, (n >> 8) & 255, n & 255); } else vi(acc);
+  vi(M.slots.length); for (const x of M.slots) { vi(x.mask); tm(x.s); tm(x.e); st(x.title); st(x.game); }
+  vi(M.ones.length); for (const x of M.ones) { zz(x.day - DAY0); tm(x.s); tm(x.e); st(x.title); st(x.game); }
+  vi(M.offs.length); for (const x of M.offs) { zz(x.from - DAY0); vi(x.to - x.from); st(x.label); }
+  return new Uint8Array(out);
+}
+// Returns the same array shape as pack(), so unpack() does all validation for every link version.
+function unpackBin(b) {
+  let p = 0; const td = new TextDecoder("utf-8", { fatal: true });
+  const u8 = () => { if (p >= b.length) throw new Error("short"); return b[p++]; };
+  const vi = () => { let v = 0, mul = 1, c; do { c = u8(); v += (c & 127) * mul; mul *= 128; if (mul > 2 ** 35) throw new Error("varint"); } while (c & 128); return v; };
+  const zz = () => { const v = vi(); return v % 2 ? -(v + 1) / 2 : v / 2; };
+  const st = () => { const n = vi(); if (n > 400 || p + n > b.length) throw new Error("str"); const s = td.decode(b.subarray(p, p + n)); p += n; return s; };
+  const tm = () => { const v = vi(); return v < 96 ? v * 15 : v - 96; };
+  const list = (n, f) => { if (n > 100) throw new Error("count"); const a = []; for (let i = 0; i < n; i++) a.push(f()); return a; };
+  const flags = vi(), plat = u8();
+  let url = "", handle = "";
+  if (plat === 255) url = st(); else if (plat && !(flags & 2)) handle = st();
+  const name = st();
+  if (flags & 2) handle = name.toLowerCase();
+  if (plat > 0 && plat < 255) { if (!PLATFORMS[plat]) throw new Error("platform"); url = PLATFORMS[plat].url(handle); }
+  const tz = flags & 8 ? st() : TZ_TABLE[vi()];
+  const acc = flags & 4 ? [u8(), u8(), u8()].map(v => v.toString(16).padStart(2, "0")).join("") : (ACCENTS[vi()] || ACCENTS[0]).slice(1);
+  const slots = list(vi(), () => [vi(), tm(), tm(), st(), st()]);
+  const ones = list(vi(), () => [zz() + DAY0, tm(), tm(), st(), st()]);
+  const offs = list(vi(), () => { const f = zz() + DAY0; return [f, f + vi(), st()]; });
+  if (p !== b.length) throw new Error("trailing");
+  return [1, name, url, tz, acc, flags & 1 ? 1 : 0, slots, ones, offs];
+}
+// Link prefixes: "2" = binary, "3" = binary + deflate (whichever is shorter).
+// Old links: "1" = deflated JSON, "0" = plain JSON. Still decoded, never written.
+async function encode(M) {
+  const raw = packBin(M);
+  let best = "2" + b64u(raw);
+  if ("CompressionStream" in window && raw.length > 60) {
+    try { const z = "3" + b64u(await pipe(raw, new CompressionStream("deflate-raw"))); if (z.length < best.length) best = z; } catch {}
+  }
+  return best;
+}
+async function decode(code) {
+  const kind = code[0], body = unb64u(code.slice(1));
+  const inflate = async () => {
+    if (!("DecompressionStream" in window)) throw new Error("old-browser");
+    return pipe(body, new DecompressionStream("deflate-raw"));
+  };
+  if (kind === "2") return unpack(unpackBin(body));
+  if (kind === "3") return unpack(unpackBin(await inflate()));
+  if (kind === "0") return unpack(JSON.parse(new TextDecoder().decode(body)));
+  if (kind === "1") return unpack(JSON.parse(new TextDecoder().decode(await inflate())));
+  throw new Error("format");
+}
+const baseUrl = () => /^https?:$/.test(location.protocol) ? location.origin + location.pathname : CANON;
+
+/* ---------- small DOM helper (user text only ever goes in as text nodes) ---------- */
+function h(tag, props, ...kids) {
+  const e = document.createElement(tag);
+  if (props) for (const [k, v] of Object.entries(props)) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v;
+    else if (k === "style") e.style.cssText = v;
+    else if (k === "svg") e.innerHTML = v; // trusted constants only
+    else if (k === "value") e.value = v;
+    else if (k.startsWith("on")) e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of kids.flat()) if (c != null && c !== false) e.append(c.nodeType ? c : String(c));
+  return e;
+}
+const ICON = {
+  cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>',
+  play: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+};
+function toast(msg, err) {
+  const t = $("#toast"); t.textContent = msg; t.classList.toggle("err", !!err); t.classList.add("on");
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 4200);
+}
+function onAccent(hex) {
+  const n = parseInt(hex.slice(1), 16), c = [n >> 16, (n >> 8) & 255, n & 255].map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+  return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] > 0.36 ? "#111111" : "#ffffff";
+}
+function platformName(url) {
+  const u = url.toLowerCase();
+  if (/twitch\.tv/.test(u)) return "Twitch";
+  if (/youtube\.com|youtu\.be/.test(u)) return "YouTube";
+  if (/kick\.com/.test(u)) return "Kick";
+  if (/tiktok\.com/.test(u)) return "TikTok";
+  return "";
+}
+function download(blob, name) {
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+const fileSafe = s => (s || "stream").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "stream";
+
+/* =====================================================================
+   .ics calendar export
+   Weekly streams become repeating events in the STREAMER's zone (TZID + a
+   generated VTIMEZONE), so calendar apps shift them correctly at every DST
+   change. Off days become EXDATEs.
+   ===================================================================== */
+function icsEsc(s) { return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n"); }
+function icsFold(line) {
+  // Lines over 75 bytes are folded (RFC 5545). Count UTF-8 bytes, never split a character.
+  const enc = new TextEncoder(); let out = "", cur = "", n = 0;
+  for (const ch of line) {
+    const b = enc.encode(ch).length;
+    if (n + b > (out ? 74 : 75)) { out += (out ? "\r\n " : "") + cur; cur = ""; n = 0; }
+    cur += ch; n += b;
+  }
+  return out ? out + "\r\n " + cur : cur;
+}
+const icsLocal = (ed, min) => { const c = civ(ed); return `${c.y}${pad2(c.m)}${pad2(c.d)}T${pad2(Math.floor(min / 60))}${pad2(min % 60)}00`; };
+const icsUtc = ms => new Date(ms).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+const icsOff = o => { const s = o < 0 ? "-" : "+", a = Math.abs(o); return `${s}${pad2(Math.floor(a / 60))}${pad2(a % 60)}`; };
+function vtimezone(tz, fromMs) {
+  // Explicit transitions from a year back to 12 years ahead, found by scanning weekly then bisecting to the minute.
+  const lines = ["BEGIN:VTIMEZONE", `TZID:${tz}`];
+  const start = fromMs - 366 * DAY_MS, end = fromMs + 12 * 366 * DAY_MS;
+  let prev = offsetMin(start, tz);
+  lines.push("BEGIN:STANDARD", "DTSTART:19700101T000000", `TZOFFSETFROM:${icsOff(prev)}`, `TZOFFSETTO:${icsOff(prev)}`, "END:STANDARD");
+  for (let t = start; t < end; t += 7 * DAY_MS) {
+    const nxt = offsetMin(t + 7 * DAY_MS, tz);
+    if (nxt === prev) continue;
+    let lo = t, hi = t + 7 * DAY_MS;
+    while (hi - lo > 60000) { const mid = Math.floor((lo + hi) / 2 / 60000) * 60000; if (offsetMin(mid, tz) === prev) lo = mid; else hi = mid; }
+    const local = new Date(hi + prev * 60000).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z/, "");
+    const kind = nxt > prev ? "DAYLIGHT" : "STANDARD";
+    lines.push(`BEGIN:${kind}`, `DTSTART:${local}`, `TZOFFSETFROM:${icsOff(prev)}`, `TZOFFSETTO:${icsOff(nxt)}`, `END:${kind}`);
+    prev = nxt;
+  }
+  lines.push("END:VTIMEZONE");
+  return lines;
+}
+const BYDAY = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
+function eventLines(M, ev, uid, now) {
+  const who = M.name || "Stream";
+  const sum = ev.title ? `${who}: ${ev.title}` : `${who} live`;
+  const desc = [ev.game && `Game: ${ev.game}`, M.url && `Watch: ${M.url}`].filter(Boolean).join("\n");
+  const L = ["BEGIN:VEVENT", `UID:${uid}`, `DTSTAMP:${icsUtc(now)}`,
+    `DTSTART;TZID=${M.tz}:${icsLocal(ev.ed, ev.s)}`,
+    `DTEND;TZID=${M.tz}:${icsLocal(ev.e <= ev.s ? ev.ed + 1 : ev.ed, ev.e)}`];
+  if (ev.byday) L.push(`RRULE:FREQ=WEEKLY;BYDAY=${ev.byday.join(",")}`);
+  if (ev.exdates && ev.exdates.length) L.push(`EXDATE;TZID=${M.tz}:${ev.exdates.join(",")}`);
+  L.push(`SUMMARY:${icsEsc(sum)}`);
+  if (desc) L.push(`DESCRIPTION:${icsEsc(desc)}`);
+  if (M.url) L.push(`URL:${M.url}`, `LOCATION:${icsEsc(M.url)}`);
+  L.push("BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${icsEsc(sum)}`, "TRIGGER:-PT15M", "END:VALARM", "END:VEVENT");
+  return L;
+}
+// sel: { all: true } | { slot: i, wd } (one weekday of a weekly slot) | { one: i }
+function buildIcs(M, sel, now = Date.now()) {
+  const t0 = todayEd(M.tz, now);
+  const uidBase = fileSafe(M.name) + "-" + (M.tz.replace(/[^A-Za-z]/g, "").slice(0, 12));
+  const evs = [];
+  const weekly = (sl, i, mask) => {
+    let ed = t0; while (!((mask >> wdOf(ed)) & 1)) ed++;
+    const ex = [];
+    for (const o of M.offs) for (let d = Math.max(o.from, ed); d <= o.to; d++) if ((mask >> wdOf(d)) & 1) ex.push(icsLocal(d, sl.s));
+    const byday = BYDAY.filter((_, w) => (mask >> w) & 1);
+    evs.push(eventLines(M, { ed, s: sl.s, e: sl.e, title: sl.title, game: sl.game, byday, exdates: ex }, `${uidBase}-w${i}-${mask}-${sl.s}@saltydayn.github.io`, now));
+  };
+  const one = (x, i) => evs.push(eventLines(M, { ed: x.day, s: x.s, e: x.e, title: x.title, game: x.game }, `${uidBase}-o${x.day}-${x.s}-${i}@saltydayn.github.io`, now));
+  if (sel.all) {
+    M.slots.forEach((sl, i) => weekly(sl, i, sl.mask));
+    M.ones.forEach((x, i) => { if (x.day >= t0 - 1) one(x, i); });
+  } else if (sel.slot != null) weekly(M.slots[sel.slot], sel.slot, 1 << sel.wd);
+  else if (sel.one != null) one(M.ones[sel.one], sel.one);
+  const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Saltydayn//Stream Schedule Link//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH"];
+  if (sel.all) L.push(`X-WR-CALNAME:${icsEsc((M.name || "Stream") + " streams")}`);
+  L.push(...vtimezone(M.tz, now));
+  for (const e of evs) L.push(...e);
+  L.push("END:VCALENDAR");
+  return L.map(icsFold).join("\r\n") + "\r\n";
+}
+function saveIcs(M, sel, label) {
+  if (!M.slots.length && !M.ones.length) { toast("Nothing on the schedule yet.", true); return; }
+  download(new Blob([buildIcs(M, sel)], { type: "text/calendar;charset=utf-8" }), `${fileSafe(M.name)}-${label}.ics`);
+}
+
+/* =====================================================================
+   Schedule view (viewer page and editor preview share this)
+   ===================================================================== */
+const view = { host: null, M: null, tz: null, opts: null, next: null, nextAt: 0, cdEl: null, dayKey: -1 };
+
+function renderSchedule(host, M, viewTz, opts) {
+  Object.assign(view, { host, M, tz: viewTz, opts });
+  const now = Date.now();
+  const occ = occurrences(M, now - DAY_MS, 9);
+  const nx = nextOcc(M, now);
+  view.next = nx; view.dayKey = todayEd(viewTz, now);
+  const loc = undefined; // viewer's own language for day names and 12h/24h
+  const sameZone = o => offsetMin(o.start, M.tz) === offsetMin(o.start, viewTz);
+  const plat = platformName(M.url);
+
+  const root = h("div", { class: "sched" + (M.light ? " light" : ""), style: `--acc:${M.accent};--on-acc:${onAccent(M.accent)}` });
+
+  // header
+  root.append(h("div", { class: "s-head" },
+    h("div", null, h("div", { class: "s-kick" }, "Stream schedule"), h("h2", { class: "s-name" }, M.name || "My streams")),
+    M.url ? h("a", { class: "s-btn", href: M.url, target: "_blank", rel: "noopener" }, h("span", { svg: ICON.play }), plat ? `Watch on ${plat}` : "Go to channel") : null));
+
+  // next stream / live
+  const nextBox = h("div", { class: "s-next" });
+  if (!nx) nextBox.append(h("div", null, h("div", { class: "s-nk" }, "Next stream"), h("div", { class: "s-nt" }, "Nothing scheduled right now.")));
+  else {
+    const live = nx.start <= now;
+    const left = h("div", null);
+    if (live) left.append(h("span", { class: "s-live" }, "SCHEDULED NOW"));
+    else left.append(h("div", { class: "s-nk" }, "Next stream in"));
+    left.append(h("div", { class: "s-nt" }, nx.title || (live ? "Should be live right now" : "Stream"), nx.game ? h("span", null, ` · ${nx.game}`) : null));
+    const cd = h("div", { class: "s-cd", "aria-live": "off" });
+    if (!live) left.append(cd);
+    left.append(h("div", { class: "s-nw" }, live
+      ? `until ${tStr(nx.end, viewTz)}`
+      : fmt(viewTz, { weekday: "long", day: "numeric", month: "short" }, loc).format(nx.start) + ", " + tStr(nx.start, viewTz)));
+    nextBox.append(left);
+    const calSel = nx.special ? { one: nx.one } : { slot: nx.slot, wd: wdOf(nx.ed) };
+    nextBox.append(live && M.url
+      ? h("a", { class: "s-btn", href: M.url, target: "_blank", rel: "noopener" }, h("span", { svg: ICON.play }), "Watch")
+      : h("button", { class: "s-btn2", type: "button", onclick: () => saveIcs(M, calSel, "stream") }, h("span", { svg: ICON.cal }), "Add to calendar"));
+    view.cdEl = live ? null : cd;
+  }
+  if (!nx) view.cdEl = null;
+  root.append(nextBox);
+
+  // time zone line
+  const sel = h("select", { "aria-label": "Show times in this time zone" });
+  for (const z of tzList()) sel.append(h("option", { value: z }, z.replace(/_/g, " ")));
+  if (!tzList().includes(viewTz)) sel.prepend(h("option", { value: viewTz }, viewTz));
+  sel.value = viewTz;
+  sel.addEventListener("change", () => opts.onTz(sel.value));
+  root.append(h("div", { class: "s-tz" },
+    h("span", null, "Times in ", h("b", null, opts.preview ? "the viewer's time zone" : "your time zone"), ":"), sel,
+    M.tz !== viewTz ? h("span", null, `Streamer's time: ${tzCity(M.tz)} (${gmtLabel(M.tz)})`) : null));
+
+  // next 7 days, bucketed by the viewer's local date
+  const t0 = view.dayKey;
+  const days = h("div", { class: "s-days" });
+  for (let i = 0; i < 7; i++) {
+    const ed = t0 + i, c = civ(ed), noon = Date.UTC(c.y, c.m - 1, c.d, 12);
+    const items = occ.filter(o => {
+      const k = todayEd(viewTz, o.start);
+      return k === ed || (i === 0 && k < ed && o.end > now && !o.off);
+    });
+    const dname = i < 2 ? relDay(i) : fmt("UTC", { weekday: "long" }, loc).format(noon);
+    const box = h("div", { class: "s-day" + (i === 0 ? " today" : "") },
+      h("div", { class: "s-dh" }, h("b", null, dname), h("span", null, fmt("UTC", { weekday: i < 2 ? "short" : undefined, day: "numeric", month: "short" }, loc).format(noon))));
+    const list = h("div", { class: "s-sl" });
+    if (!items.length) list.append(h("div", { class: "s-none" }, "No stream"));
+    for (const o of items) list.append(occRow(M, o, viewTz, now, sameZone(o)));
+    box.append(list);
+    days.append(box);
+  }
+  root.append(days);
+
+  // coming up: specials after the 7-day window, and current/future days off
+  const later = occurrences(M, now, 90).filter(o => o.special && todayEd(viewTz, o.start) >= t0 + 7);
+  const sToday = todayEd(M.tz, now);
+  const offs = M.offs.filter(o => o.to >= sToday).sort((a, b) => a.from - b.from);
+  if (later.length || offs.length) {
+    const sec = h("div", { class: "s-sec" }, h("h3", null, "Coming up"));
+    const list = h("div", { class: "s-list" });
+    for (const o of later) list.append(occRow(M, o, viewTz, now, sameZone(o), true));
+    for (const o of offs) {
+      const f = civ(o.from), t = civ(o.to), df = fmt("UTC", { weekday: "short", day: "numeric", month: "short" }, loc);
+      const range = df.format(Date.UTC(f.y, f.m - 1, f.d, 12)) + (o.to > o.from ? " – " + df.format(Date.UTC(t.y, t.m - 1, t.d, 12)) : "");
+      list.append(h("div", { class: "s-it" }, h("div", { class: "s-what" }, h("b", null, range, h("span", { class: "s-badge off" }, "Off")), o.label ? h("span", null, o.label) : null)));
+    }
+    sec.append(list);
+    root.append(sec);
+  }
+
+  root.append(h("div", { class: "s-acts" },
+    h("button", { class: "s-btn2", type: "button", onclick: () => saveIcs(M, { all: true }, "schedule") }, h("span", { svg: ICON.cal }), "Add all streams to my calendar"),
+    h("span", { class: "s-small" }, "Repeats weekly in your calendar app. If the schedule changes, remove the old events.")));
+
+  if (!opts.preview) {
+    root.append(h("div", { class: "s-foot" },
+      h("a", { href: baseUrl(), target: "_blank", rel: "noopener" }, "Make your own schedule link"), " · free, no account · ",
+      h("a", { href: baseUrl() + "#e" + opts.code }, "Streamer? Edit this schedule")));
+  }
+  host.replaceChildren(root);
+  tick();
+}
+function relDay(n) {
+  try { const s = new Intl.RelativeTimeFormat(undefined, { numeric: "auto" }).format(n, "day"); return s.charAt(0).toLocaleUpperCase() + s.slice(1); }
+  catch { return n ? "Tomorrow" : "Today"; }
+}
+function occRow(M, o, viewTz, now, same, withDate) {
+  const live = !o.off && o.start <= now && o.end > now;
+  const time = (withDate ? fmt(viewTz, { weekday: "short", day: "numeric", month: "short" }).format(o.start) + " · " : "") + `${tStr(o.start, viewTz)} – ${tStr(o.end, viewTz)}`;
+  const what = h("div", { class: "s-what" },
+    h("b", null, o.title || "Stream",
+      o.special ? h("span", { class: "s-badge sp" }, "Special") : null,
+      o.off ? h("span", { class: "s-badge off" }, "Off") : null,
+      live ? h("span", { class: "s-badge now" }, "Now") : null),
+    (o.off && o.off.label) || o.game ? h("span", null, o.off ? (o.off.label || "") : o.game) : null);
+  const row = h("div", { class: "s-it" + (o.off ? " off" : "") }, h("div", { class: "s-time" }, time), what);
+  if (!same) row.append(h("div", { class: "s-orig", title: "Streamer's local time" }, `${tStr(o.start, M.tz)} ${tzCity(M.tz)}`));
+  if (!o.off) row.append(h("button", { class: "s-cal", type: "button", title: o.special ? "Add to calendar" : "Add this weekly stream to calendar", "aria-label": "Add to calendar", svg: ICON.cal,
+    onclick: () => saveIcs(M, o.special ? { one: o.one } : { slot: o.slot, wd: wdOf(o.ed) }, "stream") }));
+  return row;
+}
+function tick() {
+  if (!view.host) return;
+  const now = Date.now();
+  // Re-render when the next stream starts/ends or the viewer's day rolls over.
+  if ((view.next && (now >= view.next.start && view.cdEl || now >= view.next.end)) || todayEd(view.tz, now) !== view.dayKey) {
+    renderSchedule(view.host, view.M, view.tz, view.opts); return;
+  }
+  if (view.cdEl && view.next) {
+    let s = Math.max(0, Math.floor((view.next.start - now) / 1000));
+    const d = Math.floor(s / 86400); s -= d * 86400;
+    const hh = Math.floor(s / 3600), mm = Math.floor(s % 3600 / 60), ss = s % 60;
+    view.cdEl.replaceChildren(...(d ? [String(d), h("small", null, "d "), " "] : []), `${pad2(hh)}:${pad2(mm)}:${pad2(ss)}`);
+  }
+}
+setInterval(tick, 1000);
+
+/* =====================================================================
+   Social image
+   Shows the weekly template in the streamer's own time zone (an image can't
+   convert per viewer), labelled with the zone.
+   ===================================================================== */
+const IMG = { square: [1080, 1080, "rows"], story: [1080, 1920, "rows"], wide: [1920, 1080, "cols"], panel: [320, 0, "rows"] };
+const FONT = (w, px) => `${w} ${Math.round(px)}px Bahnschrift, "Segoe UI", system-ui, -apple-system, sans-serif`;
+function imgTheme(M) {
+  return M.light ? { bg: "#f4f4f1", card: "#ffffff", line: "#e0e0dc", text: "#161616", mute: "#6e6e6e", acc: M.accent }
+    : { bg: "#1e1e1e", card: "#272727", line: "#383838", text: "#ffffff", mute: "#9a9a9a", acc: M.accent };
+}
+function wallFmt(min, clock) {
+  const d = Date.UTC(2026, 0, 5, 0, min);
+  return clock === "12" ? fmt("UTC", { hour: "numeric", minute: "2-digit", hour12: true }, "en-US").format(d)
+    : fmt("UTC", { hour: "2-digit", minute: "2-digit", hourCycle: "h23" }, "en-GB").format(d);
+}
+function imgData(M, o) {
+  let days = EN_DAYS.map((name, w) => ({
+    name, short: EN_SHORT[w],
+    items: M.slots.filter(s => (s.mask >> w) & 1).sort((a, b) => a.s - b.s)
+      .map(s => ({ time: `${wallFmt(s.s, o.clock)} – ${wallFmt(s.e, o.clock)}`, sub: [s.title, s.game].filter(Boolean).join(" · ") })),
+  }));
+  if (o.hide) days = days.filter(d => d.items.length);
+  const extras = [];
+  if (o.extra) {
+    const t0 = todayEd(M.tz), df = ed => { const c = civ(ed); return `${EN_SHORT[wdOf(ed)]} ${c.d} ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][c.m - 1]}`; };
+    for (const x of M.offs) if (x.to >= t0 && x.from <= t0 + 14)
+      extras.push({ tag: "OFF", text: df(x.from) + (x.to > x.from ? " – " + df(x.to) : "") + (x.label ? " · " + x.label : "") });
+    for (const x of [...M.ones].sort((a, b) => a.day - b.day || a.s - b.s)) if (x.day >= t0 && x.day <= t0 + 14)
+      extras.push({ tag: "SPECIAL", text: `${df(x.day)} · ${wallFmt(x.s, o.clock)} – ${wallFmt(x.e, o.clock)}` + ([x.title, x.game].filter(Boolean).length ? " · " + [x.title, x.game].filter(Boolean).join(" · ") : "") });
+  }
+  return { days, extras, name: M.name || "Stream schedule", tzline: tzLine(M.tz), url: M.url.replace(/^https?:\/\/(www\.)?/i, "").replace(/\/$/, "") };
+}
+function tzLine(tz) {
+  const y = new Date().getUTCFullYear(), dst = offsetMin(Date.UTC(y, 0, 15), tz) !== offsetMin(Date.UTC(y, 6, 15), tz);
+  return `All times in ${tzCity(tz)} time` + (dst ? "" : ` (${gmtLabel(tz)})`);
+}
+function fitText(ctx, s, max) {
+  if (ctx.measureText(s).width <= max) return s;
+  while (s.length > 1 && ctx.measureText(s + "…").width > max) s = s.slice(0, -1);
+  return s.trimEnd() + "…";
+}
+function wrap(ctx, s, max, maxLines) {
+  const words = s.split(/\s+/), lines = []; let cur = "";
+  for (const w of words) {
+    const t = cur ? cur + " " + w : w;
+    if (cur && ctx.measureText(t).width > max) { lines.push(cur); cur = w; } else cur = t;
+  }
+  if (cur) lines.push(cur);
+  if (lines.length > maxLines) { lines.length = maxLines; lines[maxLines - 1] = fitText(ctx, lines[maxLines - 1] + "…", max); }
+  return lines.map(l => fitText(ctx, l, max));
+}
+function rr(ctx, x, y, w, hgt, r) { ctx.beginPath(); ctx.roundRect ? ctx.roundRect(x, y, w, hgt, r) : ctx.rect(x, y, w, hgt); }
+function spaced(ctx, px) { if ("letterSpacing" in ctx) ctx.letterSpacing = px + "px"; }
+
+// Header block shared by both layouts. Returns new y.
+function drawHeader(ctx, D, th, x, y, maxW, f, dry) {
+  ctx.textBaseline = "top";
+  ctx.font = FONT(600, f * 0.62); spaced(ctx, f * 0.14);
+  if (!dry) { ctx.fillStyle = th.acc; ctx.fillText("STREAM SCHEDULE", x, y); }
+  spaced(ctx, 0);
+  y += f * 0.62 * 1.55;
+  let ns = f * 1.75;
+  ctx.font = FONT(600, ns);
+  while (ns > f * 0.95 && ctx.measureText(D.name).width > maxW) { ns *= 0.94; ctx.font = FONT(600, ns); }
+  if (!dry) { ctx.fillStyle = th.text; ctx.fillText(fitText(ctx, D.name, maxW), x, y); }
+  y += ns * 1.18;
+  ctx.font = FONT(400, f * 0.64);
+  if (!dry) { ctx.fillStyle = th.mute; ctx.fillText(fitText(ctx, D.tzline, maxW), x, y); }
+  return y + f * 0.64 * 1.4;
+}
+function drawFooter(ctx, D, th, x, y, maxW, f, dry) {
+  for (const e of D.extras) {
+    ctx.font = FONT(600, f * 0.6); spaced(ctx, f * 0.08);
+    const tw = ctx.measureText(e.tag).width + f * 0.5;
+    if (!dry) {
+      ctx.fillStyle = e.tag === "OFF" ? th.line : th.acc; rr(ctx, x, y, tw, f * 0.95, f * 0.15); ctx.fill();
+      ctx.fillStyle = e.tag === "OFF" ? th.text : onAccent(th.acc); ctx.fillText(e.tag, x + f * 0.25, y + f * 0.19);
+    }
+    spaced(ctx, 0);
+    ctx.font = FONT(400, f * 0.7);
+    if (!dry) { ctx.fillStyle = th.text; ctx.fillText(fitText(ctx, e.text, maxW - tw - f * 0.4), x + tw + f * 0.4, y + f * 0.1); }
+    y += f * 1.3;
+  }
+  if (D.url) {
+    y += f * 0.25;
+    ctx.font = FONT(600, f * 0.78);
+    if (!dry) { ctx.fillStyle = th.acc; ctx.fillText(fitText(ctx, D.url, maxW), x, y); }
+    y += f * 0.78 * 1.3;
+  }
+  return y;
+}
+function layoutRows(ctx, D, th, W, f, dry, compact) {
+  const pad = compact ? 16 : Math.round(W * 0.07), x = pad, maxW = W - 2 * pad;
+  let y = drawHeader(ctx, D, th, x, pad, maxW, f, dry) + f * 0.35;
+  ctx.font = FONT(600, f);
+  const dayW = Math.max(...D.days.map(d => ctx.measureText(compact ? d.short : d.name).width), f * 2) + f * 1.1;
+  const ip = f * 0.55, gap = f * 0.32;
+  for (const d of D.days) {
+    const hItem = it => f * 1.2 + (it.sub ? f * 0.82 * 1.3 : 0);
+    const rowH = 2 * ip + (d.items.length ? d.items.reduce((a, it) => a + hItem(it), 0) + (d.items.length - 1) * f * 0.35 : f * 1.2);
+    if (dry && !compact) {
+      const iw = maxW - f * 1.25 - dayW;
+      ctx.font = FONT(600, f);
+      if (d.items.some(it => ctx.measureText(it.time).width > iw)) return Infinity;
+      ctx.font = FONT(400, f * 0.82);
+      if (d.items.some(it => ctx.measureText(it.sub).width > iw) && f > 30) return Infinity;
+    }
+    if (!dry) {
+      ctx.fillStyle = th.card; rr(ctx, x, y, maxW, rowH, f * 0.22); ctx.fill();
+      if (d.items.length) { ctx.fillStyle = th.acc; rr(ctx, x, y, f * 0.16, rowH, [f * 0.22, 0, 0, f * 0.22]); ctx.fill(); }
+      ctx.font = FONT(600, f); ctx.fillStyle = d.items.length ? th.text : th.mute;
+      ctx.fillText(compact ? d.short : d.name, x + f * 0.65, y + ip);
+      let iy = y + ip; const ix = x + f * 0.65 + dayW, iw = maxW - (ix - x) - f * 0.6;
+      if (!d.items.length) { ctx.font = FONT(400, f * 0.9); ctx.fillStyle = th.mute; ctx.fillText("No stream", ix, iy + f * 0.08); }
+      for (const it of d.items) {
+        ctx.font = FONT(600, f); ctx.fillStyle = th.text; ctx.fillText(fitText(ctx, it.time, iw), ix, iy);
+        iy += f * 1.2;
+        if (it.sub) { ctx.font = FONT(400, f * 0.82); ctx.fillStyle = th.mute; ctx.fillText(fitText(ctx, it.sub, iw), ix, iy); iy += f * 0.82 * 1.3; }
+        iy += f * 0.35;
+      }
+    }
+    y += rowH + gap;
+  }
+  y += f * 0.3;
+  y = drawFooter(ctx, D, th, x, y, maxW, f, dry);
+  return y + pad - f * 0.3;
+}
+function layoutCols(ctx, D, th, W, H, f, dry) {
+  const pad = Math.round(H * 0.065), maxW = W - 2 * pad;
+  let y = drawHeader(ctx, D, th, pad, pad, maxW, f, dry) + f * 0.5;
+  const n = Math.max(1, D.days.length), cg = f * 0.4, cw = (maxW - (n - 1) * cg) / n, ip = f * 0.55;
+  // measure column content height
+  const timeLines = t => { ctx.font = FONT(600, f * 0.95); if (ctx.measureText(t).width <= cw - 2 * ip) return [t]; const k = t.indexOf(" – "); return k < 0 ? [t] : [t.slice(0, k), t.slice(k + 1)]; };
+  const colH = d => {
+    let hh = ip + f * 1.05 * 1.25 + f * 0.5;
+    if (!d.items.length) return hh + f;
+    for (const it of d.items) {
+      ctx.font = FONT(400, f * 0.78);
+      const t = it.sub ? wrap(ctx, it.sub, cw - 2 * ip, 3).length : 0;
+      hh += timeLines(it.time).length * f * 0.95 * 1.3 + t * f * 0.78 * 1.3 + f * 0.6;
+    }
+    return hh + ip;
+  };
+  if (dry) {
+    ctx.font = FONT(600, f * 0.95);
+    if (D.days.some(d => d.items.some(it => timeLines(it.time).some(l => ctx.measureText(l).width > cw - 2 * ip)))) return Infinity;
+  }
+  const ch = Math.max(...D.days.map(colH), f * 4);
+  if (!dry) D.days.forEach((d, i) => {
+    const cx = pad + i * (cw + cg);
+    ctx.fillStyle = th.card; rr(ctx, cx, y, cw, ch, f * 0.25); ctx.fill();
+    if (d.items.length) { ctx.fillStyle = th.acc; rr(ctx, cx, y, cw, f * 0.14, [f * 0.25, f * 0.25, 0, 0]); ctx.fill(); }
+    let iy = y + ip + f * 0.1;
+    ctx.font = FONT(600, f * 1.05); ctx.fillStyle = d.items.length ? th.text : th.mute;
+    ctx.fillText(fitText(ctx, cw > f * 6.5 ? d.name : d.short, cw - 2 * ip), cx + ip, iy);
+    iy += f * 1.05 * 1.25;
+    ctx.fillStyle = th.line; ctx.fillRect(cx + ip, iy, cw - 2 * ip, Math.max(1, f * 0.05)); iy += f * 0.5;
+    if (!d.items.length) { ctx.font = FONT(400, f * 0.8); ctx.fillStyle = th.mute; ctx.fillText("—", cx + ip, iy); }
+    for (const it of d.items) {
+      for (const l of timeLines(it.time)) { ctx.font = FONT(600, f * 0.95); ctx.fillStyle = th.text; ctx.fillText(fitText(ctx, l, cw - 2 * ip), cx + ip, iy); iy += f * 0.95 * 1.3; }
+      if (it.sub) {
+        ctx.font = FONT(400, f * 0.78); ctx.fillStyle = th.mute;
+        for (const l of wrap(ctx, it.sub, cw - 2 * ip, 3)) { ctx.fillText(l, cx + ip, iy); iy += f * 0.78 * 1.3; }
+      }
+      iy += f * 0.6;
+    }
+  });
+  y += ch + f * 0.6;
+  y = drawFooter(ctx, D, th, pad, y, maxW, f, dry);
+  return y + pad - f * 0.3;
+}
+function renderImage(M, o) {
+  const [W, H0, kind] = IMG[o.size];
+  const D = imgData(M, o), th = imgTheme(M);
+  const c = document.createElement("canvas"), ctx = c.getContext("2d");
+  c.width = W; c.height = H0 || 100;
+  const lay = (f, dry) => kind === "cols" ? layoutCols(ctx, D, th, W, H0, f, dry) : layoutRows(ctx, D, th, W, f, dry, o.size === "panel");
+  let f, used;
+  if (!H0) { f = 15; used = lay(f, true); c.height = Math.ceil(used); }
+  else {
+    // Largest font size that fits, then centre vertically.
+    f = kind === "cols" ? 52 : o.size === "story" ? 62 : 46;
+    while (f > 12 && (used = lay(f, true)) > H0) f *= 0.95;
+  }
+  const H = c.height;
+  ctx.fillStyle = th.bg; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = th.acc; ctx.fillRect(0, 0, W, Math.max(3, Math.round(W * 0.006)));
+  const dy = H0 ? Math.max(0, (H - used) / 2) : 0;
+  ctx.save(); ctx.translate(0, dy); lay(f, false); ctx.restore();
+  return c;
+}
+
+/* =====================================================================
+   Editor
+   ===================================================================== */
+const M0 = () => ({ name: "", url: "", tz: localTz(), accent: ACCENTS[0], light: false,
+  slots: [{ mask: 0b0010101, s: 19 * 60, e: 22 * 60, title: "", game: "" }], ones: [], offs: [] });
+let M = null, previewTz = null, linkMade = false, dirtyAfterLink = false;
+
+function loadDraft() {
+  try { const s = localStorage.getItem(DRAFT_KEY); if (s) return unpack(JSON.parse(s)); } catch {}
+  return M0();
+}
+function saveDraft() { try { localStorage.setItem(DRAFT_KEY, JSON.stringify(pack(M))); } catch {} }
+
+const tzSelectOptions = sel => { for (const z of tzList()) sel.append(h("option", { value: z }, z.replace(/_/g, " "))); };
+
+function dayButtons(mask, onChange) {
+  const wrap = h("div", { class: "days", role: "group", "aria-label": "Days" });
+  EN_SHORT.forEach((d, w) => {
+    const b = h("button", { class: "day", type: "button", "aria-pressed": String(!!((mask >> w) & 1)), title: EN_DAYS[w] }, d.slice(0, 2));
+    b.addEventListener("click", () => {
+      const on = b.getAttribute("aria-pressed") !== "true";
+      b.setAttribute("aria-pressed", String(on));
+      mask = on ? mask | (1 << w) : mask & ~(1 << w);
+      onChange(mask);
+    });
+    wrap.append(b);
+  });
+  return wrap;
+}
+function timeIn(min, onChange, label) {
+  const i = h("input", { class: "in t", type: "time", value: minToHHMM(min), "aria-label": label, required: true });
+  i.addEventListener("input", () => { const v = hhmmToMin(i.value); if (v != null) onChange(v); });
+  return i;
+}
+function textIn(val, max, ph, onChange, cls) {
+  const i = h("input", { class: "in " + (cls || "grow"), value: val, maxlength: max, placeholder: ph, autocomplete: "off" });
+  i.addEventListener("input", () => onChange(i.value));
+  return i;
+}
+function dateIn(ed, onChange, label) {
+  const i = h("input", { class: "in d", type: "date", value: ed != null ? edToIso(ed) : "", "aria-label": label });
+  i.addEventListener("input", () => { const v = isoToEd(i.value); if (v != null) onChange(v); });
+  return i;
+}
+const delBtn = fn => h("button", { class: "btn ic x", type: "button", title: "Remove", "aria-label": "Remove", svg: ICON.x, onclick: fn });
+const arrow = () => h("span", { class: "arrow" }, "→");
+
+function buildSlots() {
+  const host = $("#slots"); host.replaceChildren();
+  if (!M.slots.length) host.append(h("div", { class: "empty" }, "No weekly streams yet."));
+  M.slots.forEach((sl, i) => {
+    const row = h("div", { class: "rowi" });
+    const markBad = () => row.querySelector(".days").classList.toggle("bad", !sl.mask);
+    row.append(
+      h("div", { class: "line" }, dayButtons(sl.mask, m => { sl.mask = m; markBad(); changed(); }),
+        timeIn(sl.s, v => { sl.s = v; changed(); }, "Start time"), arrow(), timeIn(sl.e, v => { sl.e = v; changed(); }, "End time")),
+      h("div", { class: "line" }, textIn(sl.title, LIMITS.title, "Title (optional)", v => { sl.title = v.trim(); changed(); }),
+        textIn(sl.game, LIMITS.game, "Game / category (optional)", v => { sl.game = v.trim(); changed(); }),
+        delBtn(() => { M.slots.splice(i, 1); buildSlots(); changed(); })));
+    host.append(row);
+  });
+  $("#addSlot").disabled = M.slots.length >= LIMITS.slots;
+}
+function buildOnes() {
+  const host = $("#ones"); host.replaceChildren();
+  M.ones.forEach((x, i) => {
+    host.append(h("div", { class: "rowi" },
+      h("div", { class: "line" }, dateIn(x.day, v => { x.day = v; changed(); }, "Date"),
+        timeIn(x.s, v => { x.s = v; changed(); }, "Start time"), arrow(), timeIn(x.e, v => { x.e = v; changed(); }, "End time")),
+      h("div", { class: "line" }, textIn(x.title, LIMITS.title, "Title (optional)", v => { x.title = v.trim(); changed(); }),
+        textIn(x.game, LIMITS.game, "Game / category (optional)", v => { x.game = v.trim(); changed(); }),
+        delBtn(() => { M.ones.splice(i, 1); buildOnes(); changed(); }))));
+  });
+  $("#addOne").disabled = M.ones.length >= LIMITS.ones;
+}
+function buildOffs() {
+  const host = $("#offs"); host.replaceChildren();
+  M.offs.forEach((x, i) => {
+    let toEl;
+    const fromEl = dateIn(x.from, v => { x.from = v; if (x.to < v) { x.to = v; toEl.value = edToIso(v); } changed(); }, "First day off");
+    toEl = dateIn(x.to, v => { x.to = Math.max(v, x.from); if (v < x.from) toEl.value = edToIso(x.from); changed(); }, "Last day off");
+    host.append(h("div", { class: "rowi" },
+      h("div", { class: "line" }, fromEl, arrow(), toEl,
+        textIn(x.label, LIMITS.label, "Note, e.g. Vacation (optional)", v => { x.label = v.trim(); changed(); }),
+        delBtn(() => { M.offs.splice(i, 1); buildOffs(); changed(); }))));
+  });
+  $("#addOff").disabled = M.offs.length >= LIMITS.offs;
+}
+function buildSwatches() {
+  const host = $("#swatches"); host.replaceChildren();
+  for (const c of ACCENTS) host.append(h("button", { class: "sw", type: "button", style: `background:${c}`, title: c, "aria-label": `Color ${c}`, "aria-pressed": String(M.accent === c),
+    onclick: () => { M.accent = c; buildSwatches(); changed(); } }));
+  const pick = h("input", { type: "color", value: M.accent, title: "Custom color", "aria-label": "Custom color" });
+  pick.addEventListener("input", () => { M.accent = pick.value.toLowerCase(); host.querySelectorAll(".sw").forEach(b => b.setAttribute("aria-pressed", "false")); changed(); });
+  host.append(pick);
+}
+function syncTheme() { $("#theme").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.v === (M.light ? 1 : 0)))); }
+
+let changeT = 0;
+function changed() {
+  saveDraft();
+  if (linkMade) { dirtyAfterLink = true; updateLinkStat(); }
+  clearTimeout(changeT);
+  changeT = setTimeout(() => { renderPreview(); renderImgPreview(); }, 120);
+}
+function renderPreview() {
+  renderSchedule($("#preview"), M, previewTz, { preview: true, onTz: z => { previewTz = z; renderPreview(); } });
+}
+function imgOpts() { return { size: $("#imgSize").value, clock: $("#imgClock").value, hide: $("#imgHide").checked, extra: $("#imgExtra").checked }; }
+function renderImgPreview() {
+  const c = renderImage(M, imgOpts()), p = $("#imgprev");
+  p.width = c.width; p.height = c.height; p.getContext("2d").drawImage(c, 0, 0);
+  $("#imgNote").textContent = `${c.width}×${c.height} PNG`;
+}
+function updateLinkStat() {
+  const st = $("#linkstat");
+  if (dirtyAfterLink) {
+    st.className = "note stale";
+    st.replaceChildren("Schedule changed since this link was made. ", h("button", { class: "linkbtn", type: "button", onclick: makeLink }, "Update link"), " and re-post it.");
+    $("#mkLink span").textContent = "Update link";
+  }
+}
+async function makeLink() {
+  if (!M.slots.length && !M.ones.length) { toast("Add at least one stream first.", true); return; }
+  if (M.slots.some(s => !s.mask)) { toast("A weekly stream has no days picked. Pick days or remove it.", true); return; }
+  const url = baseUrl() + "#" + await encode(M);
+  linkMade = true; dirtyAfterLink = false;
+  $("#linkbox").hidden = false;
+  $("#linkOut").value = url;
+  $("#openLink").href = url;
+  $("#mkLink span").textContent = "Update link";
+  const st = $("#linkstat"); st.className = "note";
+  st.textContent = `${url.length} characters. Put it in your Twitch panels, Discord or bio. Changing the schedule later makes a new link, so re-post it.`;
+  schedulePromo(1200);
+}
+async function copyLink() {
+  const v = $("#linkOut").value;
+  try { await navigator.clipboard.writeText(v); }
+  catch { const i = $("#linkOut"); i.select(); try { document.execCommand("copy"); } catch {} }
+  toast("Link copied.");
+}
+
+function initEditor(fromLink) {
+  M = fromLink || loadDraft();
+  if (fromLink) saveDraft();
+  previewTz = M.tz;
+  $("#editor").hidden = false;
+  tzSelectOptions($("#fTz"));
+  if (!tzList().includes(M.tz)) $("#fTz").prepend(h("option", { value: M.tz }, M.tz));
+  $("#fTz").value = M.tz;
+  $("#fName").value = M.name; $("#fUrl").value = M.url;
+  $("#fName").addEventListener("input", e => { M.name = str(e.target.value, LIMITS.name); changed(); });
+  $("#fUrl").addEventListener("input", e => { M.url = safeUrl(e.target.value); e.target.classList.toggle("bad", !!e.target.value.trim() && !M.url); changed(); });
+  $("#fTz").addEventListener("change", e => { M.tz = e.target.value; previewTz = M.tz; changed(); });
+  $("#theme").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; M.light = b.dataset.v === "1"; syncTheme(); changed(); });
+  $("#addSlot").addEventListener("click", () => {
+    const last = M.slots[M.slots.length - 1];
+    M.slots.push(last ? { ...last, mask: 0, title: "", game: "" } : { mask: 1, s: 19 * 60, e: 22 * 60, title: "", game: "" });
+    buildSlots(); changed();
+    const rows = $("#slots").querySelectorAll(".rowi"); rows[rows.length - 1].querySelector(".days").classList.add("bad");
+  });
+  $("#addOne").addEventListener("click", () => {
+    const t = todayEd(M.tz) + 7; M.ones.push({ day: t, s: 19 * 60, e: 22 * 60, title: "", game: "" }); buildOnes(); changed();
+  });
+  $("#addOff").addEventListener("click", () => { const t = todayEd(M.tz); M.offs.push({ from: t, to: t, label: "" }); buildOffs(); changed(); });
+  $("#mkLink").addEventListener("click", makeLink);
+  $("#copyLink").addEventListener("click", copyLink);
+  $("#linkOut").addEventListener("focus", e => e.target.select());
+  // 12h default for locales that use it (en-US etc.)
+  try { if (new Intl.DateTimeFormat(undefined, { hour: "numeric" }).resolvedOptions().hour12) $("#imgClock").value = "12"; } catch {}
+  for (const id of ["#imgSize", "#imgClock", "#imgHide", "#imgExtra"]) $(id).addEventListener("change", renderImgPreview);
+  $("#imgDl").addEventListener("click", () => {
+    const o = imgOpts();
+    renderImage(M, o).toBlob(b => { if (b) download(b, `${fileSafe(M.name)}-schedule-${o.size}.png`); else toast("Export failed.", true); }, "image/png");
+  });
+  buildSwatches(); syncTheme(); buildSlots(); buildOnes(); buildOffs();
+  renderPreview(); renderImgPreview();
+  if (fromLink) toast("Loaded the schedule from the link. Edit it, then create a new link.");
+}
+
+/* =====================================================================
+   One-time popup (editor only: viewers are the streamer's audience, never shown there)
+   ===================================================================== */
+let promoShownMem = false, promoTimer = 0, isViewer = false;
+function promoSeen() { try { return localStorage.getItem(PROMO_KEY) === "1"; } catch { return promoShownMem; } }
+function markPromo() { promoShownMem = true; try { localStorage.setItem(PROMO_KEY, "1"); } catch {} }
+function schedulePromo(ms) {
+  if (isViewer || promoShownMem || promoSeen()) return;
+  clearTimeout(promoTimer);
+  promoTimer = setTimeout(() => {
+    if (isViewer || promoShownMem || promoSeen()) return;
+    markPromo();
+    $("#promo").classList.add("on");
+    $("#promoNo").focus();
+  }, ms);
+}
+function closePromo() { $("#promo").classList.remove("on"); }
+$("#promoX").addEventListener("click", closePromo);
+$("#promoNo").addEventListener("click", closePromo);
+$("#promo").addEventListener("click", e => { if (e.target.id === "promo") closePromo(); });
+$("#promo").querySelectorAll("a").forEach(a => a.addEventListener("click", closePromo));
+document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#promo").classList.contains("on")) closePromo(); });
+
+/* =====================================================================
+   Boot: "#<code>" = viewer, "#e<code>" = load into editor, nothing = editor
+   ===================================================================== */
+async function boot() {
+  const hash = decodeURIComponent(location.hash.slice(1));
+  if (hash && hash[0] === "e") {
+    let m = null;
+    try { m = await decode(hash.slice(1)); } catch {}
+    history.replaceState(null, "", location.pathname + location.search);
+    initEditor(m);
+    if (!m) toast("That edit link is broken. Showing your saved schedule.", true);
+    return;
+  }
+  if (hash) {
+    isViewer = true;
+    document.body.classList.add("viewer");
+    const host = $("#viewer"); host.hidden = false;
+    let m;
+    try { m = await decode(hash); }
+    catch (err) {
+      host.replaceChildren(h("div", { class: "card verr" },
+        h("h1", { style: "font-size:19px;margin:0 0 8px" }, "This schedule link doesn't work"),
+        h("p", { style: "color:var(--dim);margin:0 0 14px" }, err && err.message === "old-browser"
+          ? "Your browser is too old to open it. Try a current Chrome, Edge, Firefox or Safari."
+          : "It may have been cut off when it was copied. Ask the streamer for the full link."),
+        h("a", { class: "btn", href: baseUrl() }, "Make your own schedule link")));
+      return;
+    }
+    document.title = (m.name ? m.name + " · " : "") + "Stream schedule";
+    document.body.style.setProperty("--vbg", m.light ? "#e9e9e5" : "#151515");
+    document.documentElement.style.colorScheme = m.light ? "light" : "dark";
+    let vtz = localTz();
+    try { const s = localStorage.getItem(VIEWTZ_KEY); if (s && validTz(s)) vtz = s; } catch {}
+    const opts = { preview: false, code: hash, onTz: z => { try { z === localTz() ? localStorage.removeItem(VIEWTZ_KEY) : localStorage.setItem(VIEWTZ_KEY, z); } catch {} renderSchedule(host, m, z, opts); } };
+    renderSchedule(host, m, vtz, opts);
+    return;
+  }
+  initEditor(null);
+}
+window.addEventListener("hashchange", () => location.reload());
+// Exposed for automated tests only.
+window.__ssl = { packBin, unpackBin, TZ_TABLE, wallToUtc, offsetMin, occurrences, nextOcc, encode, decode, pack, unpack, buildIcs, renderImage, todayEd, edOf };
+boot();
+})();
+</script>
+</body>
+</html>
