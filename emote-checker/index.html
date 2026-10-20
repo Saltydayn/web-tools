@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emote &amp; Badge Checker · H.E.R.M.E.S.</title>
+<meta name="description" content="Free emote and sub badge checker for Twitch, 7TV and Discord. Exports every size, previews in chat, warns about common problems. Runs fully in your browser.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+:root{
+  --bg:#1e1e1e; --panel:#2d2d2d; --deep:#151515; --card:#242424; --card-hover:#2f2f2f; --border:#3a3a3a;
+  --green:#52b788; --yellow:#ffd166; --blue:#4ea8de; --orange:#f4a261; --red:#ff4d4d; --purple:#b18cf0;
+  --text:#ffffff; --dim:#cccccc; --mute:#8a8a8a; --faint:#555555;
+  --display:"Bahnschrift SemiBold","Bahnschrift","Segoe UI Semibold","Segoe UI",system-ui,sans-serif;
+  --body:"Bahnschrift","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"Cascadia Mono",Consolas,ui-monospace,monospace;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:14px;line-height:1.45}
+a{color:var(--green)}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 24px 40px}
+@media (max-width:640px){.wrap{padding:16px 16px 32px}}
+
+/* corner links (top-right of the content column) */
+.corner{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.corner a{display:flex;align-items:center;gap:8px;height:36px;padding:0 14px;background:var(--panel);border:1px solid var(--border);border-radius:4px;color:var(--dim);text-decoration:none;font-size:14px;font-family:var(--display)}
+.corner a:hover{background:var(--card-hover);color:var(--text);border-color:#4a4a4a}
+.corner svg{width:18px;height:18px;flex:none}
+.corner .kofi svg{color:#ff5e5b}
+@media (max-width:640px){.corner{margin-left:0;width:100%}.corner a{flex:1;justify-content:center;padding:0 8px}}
+/* header */
+header{display:flex;align-items:center;gap:14px;margin:6px 0 4px;flex-wrap:wrap}
+header img{width:34px;height:34px}
+h1{font-family:var(--display);font-weight:600;font-size:24px;margin:0;letter-spacing:.01em}
+.underline{width:52px;height:2px;background:var(--green);margin:8px 0 8px}
+.sub{color:var(--mute);font-size:12.5px}
+.privacy{display:inline-flex;align-items:center;gap:8px;margin:12px 0 18px;padding:7px 12px;background:#1b2a23;border:1px solid #2f6b50;border-radius:4px;color:#bfe6d2;font-size:13px}
+.privacy svg{width:15px;height:15px;color:var(--green);flex:none}
+
+.label{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:4px;position:relative}
+.card.accent::before{content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:3px;border-radius:4px 0 0 4px;background:var(--acc,var(--green))}
+section{margin-bottom:22px}
+
+/* drop zone */
+#drop{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:170px;border:1.5px dashed var(--border);border-radius:4px;background:var(--deep);cursor:pointer;text-align:center;padding:24px;transition:border-color .15s,background .15s}
+#drop:hover,#drop.over{border-color:var(--green);background:#18201c}
+#drop svg{width:34px;height:34px;color:var(--green)}
+#drop .big{font-family:var(--display);font-size:17px}
+#drop .small{color:var(--mute);font-size:12.5px}
+.linkbtn{background:none;border:0;color:var(--green);cursor:pointer;padding:0;text-decoration:underline;font-size:12.5px}
+
+/* loaded source bar */
+#srcbar{display:none;padding:14px 16px 14px 18px;gap:16px;align-items:center;flex-wrap:wrap}
+#srcbar.on{display:flex}
+#srcthumb{width:64px;height:64px;object-fit:contain;background:var(--deep);border:1px solid var(--border);border-radius:4px;image-rendering:auto}
+.srcinfo{flex:1;min-width:180px}
+.srcinfo .fn{font-family:var(--display);font-size:15px;word-break:break-all}
+.srcinfo .meta{color:var(--mute);font-size:12.5px;font-family:var(--mono)}
+.opts{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.field{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--dim)}
+.field input[type=text]{width:150px;background:var(--deep);border:1px solid var(--border);border-radius:3px;padding:5px 8px;font-family:var(--mono);font-size:13px}
+.field input[type=text]:focus{outline:1px solid var(--green);border-color:var(--green)}
+.toggle{display:inline-flex;align-items:center;gap:7px;cursor:pointer;user-select:none;font-size:13px;color:var(--dim)}
+.toggle input{position:absolute;opacity:0;pointer-events:none}
+.toggle .sw{padding:4px 10px;background:var(--panel);border-radius:3px;font-size:12px;color:var(--dim);min-width:38px;text-align:center}
+.toggle input:checked + .sw{background:var(--green);color:#10261c}
+.toggle input:focus-visible + .sw{outline:2px solid var(--blue)}
+.btn{text-decoration:none;display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:6px 12px;cursor:pointer;font-size:13px;color:var(--dim)}
+.btn:hover{background:var(--card-hover);color:var(--text)}
+.btn.primary{background:var(--green);border-color:var(--green);color:#10261c;font-family:var(--display);font-size:14.5px;padding:9px 18px}
+.btn.primary:hover{background:#63c596;color:#10261c}
+.btn:disabled{opacity:.5;cursor:default}
+.btn svg{width:16px;height:16px}
+
+#results{display:none}
+#results.on{display:block}
+.grid2{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:18px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+
+/* checks */
+#checks{list-style:none;margin:0;padding:6px 0}
+#checks li{display:flex;gap:11px;padding:10px 14px 10px 16px;border-bottom:1px solid #2c2c2c}
+#checks li:last-child{border-bottom:0}
+.lamp{flex:none;width:11px;height:11px;border-radius:50%;margin-top:4px;box-shadow:0 0 0 3px var(--glow)}
+.lamp.ok{background:var(--green);--glow:#2f6b5066}
+.lamp.warn{background:var(--yellow);--glow:#7a642466}
+.lamp.bad{background:var(--red);--glow:#7a2a2a88}
+.lamp.info{background:var(--blue);--glow:#244b6666}
+.ck-t{font-size:13.5px;color:var(--text)}
+.ck-d{font-size:12.5px;color:var(--mute);margin-top:2px}
+.ck-d b{color:var(--dim);font-weight:normal}
+.summary{display:flex;gap:14px;padding:10px 16px;border-bottom:1px solid var(--border);font-size:12.5px;color:var(--mute)}
+.summary span b{font-family:var(--mono);font-weight:normal;color:var(--text);margin-right:3px}
+
+/* chat preview */
+.chats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.chats{grid-template-columns:1fr}}
+.chat{border-radius:4px;padding:8px 0;font-family:Inter,Roobert,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:20px;overflow:hidden;border:1px solid var(--border)}
+.chat.dark{background:#18181b;color:#efeff1}
+.chat.light{background:#ffffff;color:#0e0e10;border-color:#d6d6d6}
+.chat .ttl{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;padding:0 12px 6px;opacity:.55;font-family:var(--body)}
+.chat .ln{padding:5px 12px;word-wrap:break-word}
+.chat .bdg{display:inline-block;width:18px;height:18px;vertical-align:middle;margin:-2px 3px 0 0;border-radius:2px}
+.chat .gb{display:inline-block;width:18px;height:18px;border-radius:3px;vertical-align:middle;margin:-2px 3px 0 0}
+.chat .em{display:inline-block;width:28px;height:28px;vertical-align:middle;margin:-5px 0}
+.chat .em7{display:inline-block;height:32px;width:auto;max-width:96px;vertical-align:middle;margin:-6px 0}
+.chat .tag{font-size:10px;padding:0 4px;border-radius:2px;vertical-align:1px;margin-right:4px;font-family:var(--body);opacity:.75;border:1px solid currentColor}
+.chat .u{font-weight:700}
+.chatnote{color:var(--mute);font-size:12px;margin-top:8px}
+
+/* size strip */
+.strip{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:flex-end;padding:16px 18px}
+.strip figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.strip figcaption{font-size:11px;color:var(--mute);font-family:var(--mono)}
+.strip .sep{width:1px;align-self:stretch;background:var(--border)}
+.stage{display:flex;align-items:center;justify-content:center;border-radius:3px}
+.bg-check{background:conic-gradient(#3a3a3a 25%,#2a2a2a 0 50%,#3a3a3a 0 75%,#2a2a2a 0) 0 0/12px 12px}
+.bg-dark{background:#18181b}
+.bg-light{background:#ffffff}
+.pix{image-rendering:pixelated}
+.bgsel{display:flex;gap:6px;margin-left:auto}
+.bgsel button{width:22px;height:22px;border-radius:3px;border:1px solid var(--border);cursor:pointer;padding:0}
+.bgsel button[aria-pressed=true]{outline:2px solid var(--green);outline-offset:1px}
+.rowhead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.rowhead .label{margin:0}
+
+/* exports */
+.tblwrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-weight:normal;color:var(--mute);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:9px 12px;border-bottom:1px solid var(--border)}
+td{padding:7px 12px;border-bottom:1px solid #2c2c2c;white-space:nowrap}
+td.mono{font-family:var(--mono);font-size:12.5px;color:var(--dim)}
+tr.grp td{background:#202020;color:var(--text);font-family:var(--display);font-size:13px;padding-top:9px}
+tr.grp td .gn{color:var(--mute);font-family:var(--body);font-size:12px;margin-left:8px}
+td .lamp{display:inline-block;margin:0 7px 0 0;vertical-align:-1px;width:9px;height:9px}
+td.st{font-size:12.5px;color:var(--dim)}
+.dl{background:none;border:1px solid var(--border);border-radius:3px;color:var(--dim);cursor:pointer;padding:3px 8px;font-size:12px}
+.dl:hover{border-color:var(--green);color:var(--green)}
+.exportbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 16px;border-top:1px solid var(--border)}
+.exportbar .note{color:var(--mute);font-size:12.5px}
+#busy{color:var(--yellow);font-size:12.5px;font-family:var(--mono)}
+
+footer{color:var(--faint);font-size:12px;margin-top:30px;border-top:1px solid #2a2a2a;padding-top:14px}
+footer a{color:var(--mute)}
+
+/* popup */
+#promo{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+#promo.on{display:flex}
+#promo .box{--acc:var(--green);max-width:380px;width:100%;padding:20px 20px 18px 24px;box-shadow:0 12px 40px #000a;animation:pop .18s ease-out}
+@keyframes pop{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
+#promo h2{font-family:var(--display);font-weight:600;font-size:17px;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+#promo h2 img{width:24px;height:24px}
+#promo p{margin:0 0 16px;color:var(--dim)}
+#promo .acts{display:flex;gap:8px;flex-wrap:wrap}
+#promo .x{position:absolute;top:8px;right:8px;background:none;border:0;color:var(--mute);font-size:18px;cursor:pointer;width:28px;height:28px;border-radius:3px}
+#promo .x:hover{background:var(--panel);color:var(--text)}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--red);padding:9px 14px;border-radius:4px;font-size:13px;display:none;z-index:40;max-width:calc(100% - 32px)}
+#toast.on{display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+
+
+<div class="wrap">
+  <header>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAMQElEQVR42uVbe3BU1Rn/fefce3c3jyVhYYNBiNhqgfBQaTsdpSYWbJ1qpbSz9Y9atOiM1bY4pe20VtsMbdW2VnHq9KHVVjotKtvHDJWW+igEBMFhQApGBAGB5v3ObnLv3XvP+frHbkKyJCQkIYb0zNxJZmfP3fP9vu/8vsc5H2HogyoqKmjr1q0C43iUl5frNWvWMAAerXdSLBaTuMBGZs00qHCDvSQejysAEEJg2bJl89rb2+fZtl0CIGc0UR6pkoQQjmmaJ/Pz8w9s3LjxIBHpbBnOCYDuiStXrsw/evToHclk8kvJZHKhUkoqpcal1oUQMAyDQ6HQwXA4/KeioqLfxuPxlrOBQGcT/vrrr/9Mc3Pzo21tbZc5jgOtNQCocaT5M+QhIklECAaDCIfDJyKRyHdeffXVFwAIAHpQALqFv/baa+9vbGz8cWtrK4jIByCUUsTMBADMPN4k7/7LUkoGoLXWRmFhIYqKih6qrKy8PyOb7q1AOYDw36uvr3+wpaVFSSmRMXvqDRgRjaunNxYZRQnDMHRnZ6fyPK9s7ty5wc2bN78ci8VkVVXVmQB0C7906dJP19XVPdPS0uKbpilTqZTojfCFMLrXqpQi0zTJtm2fmcsWLlx46MUXXzzQGwTqvRVWrlyZt3fv3gN1dXUzpZTsuq64kATvbzAzAoGA9n2fioqKmkpLS+c+99xzzRmZtQCAsrIyCYDffffdLycSiRIiUp7nXfDCd1tDKpUSUkqVSCSmnjp16h4AXFZWJpBhRlRWVqoNGzbIjo6OO2zbZgCUYfwJMZgZzCwcx+FEInFbRUVFsLKyUgEgUVFRIQDwunXr5ti2Xaq1JqWUnAja720FSikBALZtX7pr164rAXAsFhOiO7bv6upa4Pu+BKDGm4sbLSsAoHzfh+M4VwBAQ0MD9SQ2qVRqZsbsJ570p7cBtNZwXbekJ3rs/kdrHcpCCxMVCAChMwCYqJofCIf+ABgJy4xpoEREwCj9nhgN4bXvw7NdkDz/tRKSAp6Tgvb8UQF9xCvWvo+pHypBtHQWnNZErwSd+knaB1/wWecRwWlNYMrlMxAtnQXtq6HUPM4vAEJKtByrwQc+sQhl962Ab7sgIvhdqdNBdmaNvp0alGl8u595Xal0RJe0cc03bsGcmxej5VgNSAiARkZdxojZRGloX2HH4xuwePUtmFV+FY78azcuX7EU08rnQ6V8AAxpmajfUYXjL2yDMA0g29MQQbseSj53NYqXXNFnXuPrh3Domc0oWbwAZk4Q2x9ZD5ICQggQifcHAGaGEbAQKsiD3Z4EM+P1J/6MafM/gPDMKIo/vQihqQXQrpcmSUNg5rKPofaVfXCaE31BIAIrBXNSDkqWXw2rIBfa8wEQhCFgFi5CzSv7oBwPO9a+ABIEKyeIUGEYTnsSnuMOmw/ESJhYuR7cpI3onEtQMCMK7SvUHTyG0s+VIRgKwUva0Ckf2vWgnBRUygMZYkDHRFJApzz4dgra9aBdD16nA0MamP+FJWg49B58N4Xw9KkomncpUl02PNcdERmOyH5Ya7gdnajZdwRaM2aVXQnfTuHUawdQEClMl9AE9bhJIjo7B3DGpWbmQBAUMwojk1Gzqwp2WxKzyq+EkBI1+w7DaUsCiseeBJkBKyeInCkFMEIB+LaL1uO1UJ6PGx9bBZYCdcdOwQxYZ+71cxymZaLhv7VwXAc3PX5vhnSr4XU5MAIWcqZMgpUbGlsOIAJ82wEImHxpMXIik1C77zCqXt4JEGH5r7+N6uYGdHQmIaUADzOzJhCU5yOvIIzPP/ldvHT/k/jP37diSvFFKP7wbLjtSbSfrIdnO2O/BTpthURzEk1Vx6FdF9c9cDs+ed9KnHz9ADbe/XNYlgUGI1NDHVHsHswN4R/f+AUO/3MXlnxzBZb+6E4IMBoPHkNHcwKdXT6YhxccGsMx/+nREIqjIVQ3OjhyogP7Nr+B6gPv4YYf3oFVe57B/vgWNNc1wsgLgJXOCmpEz9PbC0Bw+rM+lMCQpoHWuibMuGYebnrsa6jZ/y42P/A0ao5VI5iThw+W5OPiohDqmxz8t77r/ANABFQ32DAMgRs+XoxVK2bjwOE2vPjKCfzhjgdRunwpPvvTu9Hc1oia+nqYptknu/SSNrxE15lu0Fdpwuz1XQLB83xEoxFcdOsC/P2Bp/Hm+k0omT4Z99x2Ja6aW4jjJxN4ZWftsIQfEQccOdGBt4+24yMLpmD17XPwg3vm4+A77Xj2j/ux/d6HcfHqWyANmRY+IxdJgcvv/BR82wPJLI/ADGEaEEEL0Gl7ZjCkELBtF9tX/wzzO2vwyLplWDSvELv3N2Hts29jx94GCEEIBuTYAQAAwYCECBL2HGzC579eiaVXT8MPv7oQv1v3GajqFjzW0IAtiCAXPnQGARIC08oXDLxZmeHbqR6LEWB0QWKhX49nvv9BBEo+iv07q7HyuzuxaXs1TCkQzjOhefg1jBFEgoBiRl7IRH4usG1PA6697SXceN0MPPy1UkwvEPCaGZSlGC9pZ/z9QMmQ6LUFAE8DF+UK1LW4uP/Hr+JvL5+A1oxIQSC9Bv0+5wKaGVBAONcEE7Dx5RPY81Yrlv7icuQFAJ2VsGUT3dnfTcgxGG90WHhk9U4cP9KMKZEQCIBSo1O/GbUEXmmG1sDkSRYcEGpdAaO/wI8HebK+ahJQnxLoUoQpBRb0KGh9VC3gDCAUw8osvL9lkiEHTuEZ4Kyj924QJAGuYohRrrmMOgDoT5mcLmpoz8dbj/4VbmsyDQT32uxKw8gNYu69y2DkBjNAUP/vG+8ADBDXgpmROFqDrvr2fuMAK5yTDpzG8EzGOEfFDiLi4EMGLBghq18AZNAaU+HPDYDBgvohBuLMDNbp5zQASH/2PpxHGEM0X0WGYfMA+iGAWekAAPNCOyAwBhFcs69F4YJZf130k9s3JI/W5oug0YemOaVE8OLJXe/8ZvPHal/atwoCDIIYTRf7/gHAECQF2t4+edPWLzx8DRiiHy4gEJRyvUL2tWSlwb6eMBbAUExWYd6x3JLom+ypAEQ/ZKhBJMknQ/oMeARMA3ADxpzSRp8DmAEy84MNU664pCrV7uRAks4qjjIZUrNiYs2CDLh+wvFBxOfEjuN2CwhC54nG6478/t/X9Wshmon78eczbvxIZrMwkHEgQ2J55tObjDH0eeeZBP981UO39SFBTikRmBp2Tm3ac9nx9Vu/nyY+Sq9aCoiAKUgSoNPVXSKCDAzuJETAxHDmnS8LIBICHYerl7y24tFSgCX6BLCklOfnAzC6tU1SItXeicbXD6GobH76YCQjWNMb78BpSkAYsm+1mBlkDGPeGHAAgQCd8gpTrlc4sNqob2VHCrzz5D/x3l92pBkgk/87TYmzmv6w5o1NIEQMGjAUpjPYnghkEJzG9r44GXLQWtuw5o0SADRInH9ubM5Ix/vZBHe+5p1zapYFgBDC6eXaRikv5rGdNyRjJjCzc0ZFyDCMUyJdbZg4FwSzBM8oGpZlneoBoLy8XANAXl7eAcMwNAAxkS5JZgEgDcNAbm7umwAQjUZZrFmzRgOgm2++uSoYDB4SQkBKqSfSVTlmhpRSExECgcDJmTNn7gWAeDx++rL0XXfd5YXD4WeDwSAB0BPtqiwAHQgEKBwO//Gpp57qyjRVcc9laQA0Y8aMp/Pz82uZWVqWNSGsgJlhmqbWWotwONxaXFz8BACKx+PcmwQ5FouJ9evXt0YikVUFBQXkeZ6yLIsvZBCYGZZlsVJKTZo0SUQikW/F4/G6WCzW0z/UE2FUVVVxLBaTmzZtemvOnDmW7/vltm0r0zShtSZmvmC6RrrXmhHez8/PN6dOnfrL7du3P5jdQZYtEcViMRGPx9XixYsfampquq+1tRVCiO6mKdF96Xi87nUigpRSI9M0VVBQgGg0+sS2bdvupfSVsj5NUwOpVADQS5Ys+WJTU9PPOjo6ih3HQWY/aIzvtjkBgAKBAMLhcFMkEvneli1bfttLVsZQwt9uU1m+fHm0ubn5K21tbbc6jnOZ7/vQWo/LtjkpJaSUCIVCx8Lh8HPTp0//1fPPP1+TUWi/5ytDbp2tqKiwdu/efZVt21e4rnsJ0lfOx03rLDM7gUDgRG5u7v7Zs2fvXbt2rZ0tw7Bf/n/bPN0fQTY0NIxrVxCNRjm7O/Rs439Y5QRRCihTYgAAAABJRU5ErkJggg==" alt="">
+    <div>
+      <h1>Emote &amp; Badge Checker</h1>
+    </div>
+    <nav class="corner" aria-label="Links">
+  <a class="kofi" href="https://ko-fi.com/saltydayn" target="_blank" rel="noopener" title="Support me on Ko-fi">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M10 11.2c-.8-.9-2.3-.6-2.3.6 0 1.1 2.3 2.4 2.3 2.4s2.3-1.3 2.3-2.4c0-1.2-1.5-1.5-2.3-.6Z" fill="currentColor"/></svg><span>Ko-fi</span></a>
+  <a href="https://github.com/Saltydayn" target="_blank" rel="noopener" title="GitHub">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span>GitHub</span></a>
+  <a href="https://saltydayn.pages.dev" target="_blank" rel="noopener" title="All my links">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Links</span></a>
+</nav>
+  </header>
+  <div class="underline"></div>
+  <div class="sub">A free H.E.R.M.E.S. tool · exports and checks emotes for Twitch, 7TV and Discord, plus Twitch sub badges</div>
+  <div class="privacy">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    Runs entirely in your browser. Your image is never uploaded anywhere.
+  </div>
+
+  <section>
+    <div id="drop" tabindex="0" role="button" aria-label="Choose an image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="m7 8 5-5 5 5"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
+      <div class="big">Drop your emote here</div>
+      <div class="small">PNG or GIF (animated works) · click to choose · or paste with Ctrl+V</div>
+      <div class="small">Best start: square, transparent, at least 112×112 (bigger is better)</div>
+      <button class="linkbtn" id="sample" type="button">No image handy? Try a sample</button>
+    </div>
+    <input type="file" id="file" accept="image/png,image/gif,image/webp,image/jpeg" class="sr">
+
+    <div id="srcbar" class="card accent">
+      <img id="srcthumb" alt="Your image">
+      <div class="srcinfo">
+        <div class="fn" id="srcname"></div>
+        <div class="meta" id="srcmeta"></div>
+      </div>
+      <div class="opts">
+        <label class="field">Name <input type="text" id="ename" spellcheck="false" maxlength="40"></label>
+        <label class="toggle" title="Cuts away empty transparent space around your emote so it fills the frame"><input type="checkbox" id="optCrop"><span class="sw">Off</span>Auto-crop empty edges</label>
+        <label class="toggle" title="Keeps hard pixel edges instead of smoothing. Use this for pixel art."><input type="checkbox" id="optPix"><span class="sw">Off</span>Pixel art</label>
+        <button class="btn" id="replace" type="button">Use another image</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="results">
+    <div class="grid2">
+      <section>
+        <div class="label">Checks</div>
+        <div class="card">
+          <div class="summary" id="summary"></div>
+          <ul id="checks"></ul>
+        </div>
+      </section>
+      <section>
+        <div class="label">In chat, at real size</div>
+        <div class="chats">
+          <div class="chat dark" id="chatDark"></div>
+          <div class="chat light" id="chatLight"></div>
+        </div>
+        <div class="chatnote">Twitch shows emotes at 28 px and badges at 18 px (sharper versions on high-res screens). This is the size most of your viewers will see.</div>
+      </section>
+    </div>
+
+    <section>
+      <div class="rowhead">
+        <div class="label">Every size</div>
+        <div class="bgsel" role="group" aria-label="Preview background">
+          <button type="button" class="bg-check" data-bg="check" aria-pressed="true" title="Transparent"></button>
+          <button type="button" class="bg-dark" data-bg="dark" aria-pressed="false" title="Dark chat"></button>
+          <button type="button" class="bg-light" data-bg="light" aria-pressed="false" title="Light chat"></button>
+        </div>
+      </div>
+      <div class="card strip" id="strip"></div>
+    </section>
+
+    <section>
+      <div class="label">Exports</div>
+      <div class="card">
+        <div class="tblwrap"><table>
+          <thead><tr><th>File</th><th>Pixels</th><th>File size</th><th>Limit</th><th>Status</th><th></th></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table></div>
+        <div class="exportbar">
+          <button class="btn primary" id="zipbtn" type="button" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download everything (.zip)</button>
+          <span id="busy" aria-live="polite"></span>
+          <span class="note">Includes a short how-to-upload text file. Limits checked as of October 2026.</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Made by <a href="https://saltydayn.pages.dev" target="_blank" rel="noopener">Saltydayn</a> · part of <a href="https://github.com/Saltydayn/hermes/releases/latest" target="_blank" rel="noopener">H.E.R.M.E.S.</a> ·
+    Not affiliated with Twitch, 7TV or Discord. Platform limits can change; always check their upload page if something gets rejected.
+  </footer>
+</div>
+
+<div id="promo" role="dialog" aria-modal="true" aria-labelledby="promoT">
+  <div class="box card accent">
+    <button class="x" id="promoX" type="button" aria-label="Close">×</button>
+    <h2 id="promoT"><img src="data:image/png;base64,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" alt="">Glad it helped!</h2>
+    <p>Liked this? Get HERMES for more tools, or check my Ko-fi.</p>
+    <div class="acts">
+      <a class="btn primary" href="https://github.com/Saltydayn/hermes/releases/latest" target="_blank" rel="noopener">Get HERMES</a>
+      <a class="btn" href="https://ko-fi.com/saltydayn" target="_blank" rel="noopener">Ko-fi</a>
+      <button class="btn" id="promoNo" type="button">No thanks</button>
+    </div>
+  </div>
+</div>
+<div id="toast" role="alert"></div>
+
+<script>(()=>{var Ie=Object.create;var ae=Object.defineProperty;var Me=Object.getOwnPropertyDescriptor;var Ce=Object.getOwnPropertyNames;var ze=Object.getPrototypeOf,Ue=Object.prototype.hasOwnProperty;var E=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports);var Fe=(t,e,n,r)=>{if(e&&typeof e=="object"||typeof e=="function")for(let i of Ce(e))!Ue.call(t,i)&&i!==n&&ae(t,i,{get:()=>e[i],enumerable:!(r=Me(e,i))||r.enumerable});return t};var ce=(t,e,n)=>(n=t!=null?Ie(ze(t)):{},Fe(e||!t||!t.__esModule?ae(n,"default",{value:t,enumerable:!0}):n,t));var Be=E(re=>{var fe=Object.defineProperty,Te=t=>fe(t,"__esModule",{value:!0}),qe=(t,e)=>{for(var n in e)fe(t,n,{get:e[n],enumerable:!0})};Te(re);qe(re,{GIFEncoder:()=>we,applyPalette:()=>Le,default:()=>$e,nearestColor:()=>Ke,nearestColorIndex:()=>ve,nearestColorIndexWithDistance:()=>he,prequantize:()=>Ve,quantize:()=>Oe,snapColorsToPalette:()=>Ze});var Pe={signature:"GIF",version:"89a",trailer:59,extensionIntroducer:33,applicationExtensionLabel:255,graphicControlExtensionLabel:249,imageSeparator:44,signatureSize:3,versionSize:3,globalColorTableFlagMask:128,colorResolutionMask:112,sortFlagMask:8,globalColorTableSizeMask:7,applicationIdentifierSize:8,applicationAuthCodeSize:3,disposalMethodMask:28,userInputFlagMask:2,transparentColorFlagMask:1,localColorTableFlagMask:128,interlaceFlagMask:64,idSortFlagMask:32,localColorTableSizeMask:7};function de(t=256){let e=0,n=new Uint8Array(t);return{get buffer(){return n.buffer},reset(){e=0},bytesView(){return n.subarray(0,e)},bytes(){return n.slice(0,e)},writeByte(i){r(e+1),n[e]=i,e++},writeBytes(i,o=0,c=i.length){r(e+c);for(let a=0;a<c;a++)n[e++]=i[a+o]},writeBytesView(i,o=0,c=i.byteLength){r(e+c),n.set(i.subarray(o,o+c),e),e+=c}};function r(i){var o=n.length;if(o>=i)return;var c=1024*1024;i=Math.max(i,o*(o<c?2:1.125)>>>0),o!=0&&(i=Math.max(i,256));let a=n;n=new Uint8Array(i),e>0&&n.set(a.subarray(0,e),0)}}var $=12,se=5003,Ee=[0,1,3,7,15,31,63,127,255,511,1023,2047,4095,8191,16383,32767,65535];function Ge(t,e,n,r,i=de(512),o=new Uint8Array(256),c=new Int32Array(se),a=new Int32Array(se)){let f=c.length,u=Math.max(2,r);o.fill(0),a.fill(0),c.fill(-1);let l=0,s=0,g=u+1,h=g,d=!1,v=h,_=(1<<v)-1,p=1<<g-1,M=p+1,B=p+2,w=0,A=n[0],I=0;for(let b=f;b<65536;b*=2)++I;I=8-I,i.writeByte(u),m(p);let x=n.length;for(let b=1;b<x;b++)e:{let C=n[b],z=(C<<$)+A,S=C<<I^A;if(c[S]===z){A=a[S];break e}let Y=S===0?1:f-S;for(;c[S]>=0;)if(S-=Y,S<0&&(S+=f),c[S]===z){A=a[S];break e}m(A),A=C,B<1<<$?(a[S]=B++,c[S]=z):(c.fill(-1),B=p+2,d=!0,m(p))}return m(A),m(M),i.writeByte(0),i.bytesView();function m(b){for(l&=Ee[s],s>0?l|=b<<s:l=b,s+=v;s>=8;)o[w++]=l&255,w>=254&&(i.writeByte(w),i.writeBytesView(o,0,w),w=0),l>>=8,s-=8;if((B>_||d)&&(d?(v=h,_=(1<<v)-1,d=!1):(++v,_=v===$?1<<v:(1<<v)-1)),b==M){for(;s>0;)o[w++]=l&255,w>=254&&(i.writeByte(w),i.writeBytesView(o,0,w),w=0),l>>=8,s-=8;w>0&&(i.writeByte(w),i.writeBytesView(o,0,w),w=0)}}}var De=Ge;function pe(t,e,n){return t<<8&63488|e<<2&992|n>>3}function ge(t,e,n,r){return t>>4|e&240|(n&240)<<4|(r&240)<<8}function ye(t,e,n){return t>>4<<8|e&240|n>>4}function R(t,e,n){return t<e?e:t>n?n:t}function O(t){return t*t}function le(t,e,n){var r=0,i=1e100;let o=t[e],c=o.cnt,a=o.ac,f=o.rc,u=o.gc,l=o.bc;for(var s=o.fw;s!=0;s=t[s].fw){let h=t[s],d=h.cnt,v=c*d/(c+d);if(!(v>=i)){var g=0;n&&(g+=v*O(h.ac-a),g>=i)||(g+=v*O(h.rc-f),!(g>=i)&&(g+=v*O(h.gc-u),!(g>=i)&&(g+=v*O(h.bc-l),!(g>=i)&&(i=g,r=s))))}}o.err=i,o.nn=r}function ee(){return{ac:0,rc:0,gc:0,bc:0,cnt:0,nn:0,fw:0,bk:0,tm:0,mtm:0,err:0}}function je(t,e){let n=e==="rgb444"?4096:65536,r=new Array(n),i=t.length;if(e==="rgba4444")for(let o=0;o<i;++o){let c=t[o],a=c>>24&255,f=c>>16&255,u=c>>8&255,l=c&255,s=ge(l,u,f,a),g=s in r?r[s]:r[s]=ee();g.rc+=l,g.gc+=u,g.bc+=f,g.ac+=a,g.cnt++}else if(e==="rgb444")for(let o=0;o<i;++o){let c=t[o],a=c>>16&255,f=c>>8&255,u=c&255,l=ye(u,f,a),s=l in r?r[l]:r[l]=ee();s.rc+=u,s.gc+=f,s.bc+=a,s.cnt++}else for(let o=0;o<i;++o){let c=t[o],a=c>>16&255,f=c>>8&255,u=c&255,l=pe(u,f,a),s=l in r?r[l]:r[l]=ee();s.rc+=u,s.gc+=f,s.bc+=a,s.cnt++}return r}function Oe(t,e,n={}){let{format:r="rgb565",clearAlpha:i=!0,clearAlphaColor:o=0,clearAlphaThreshold:c=0,oneBitAlpha:a=!1}=n;if(!t||!t.buffer)throw new Error("quantize() expected RGBA Uint8Array data");if(!(t instanceof Uint8Array)&&!(t instanceof Uint8ClampedArray))throw new Error("quantize() expected RGBA Uint8Array data");let f=new Uint32Array(t.buffer),u=n.useSqrt!==!1,l=r==="rgba4444",s=je(f,r),g=s.length,h=g-1,d=new Uint32Array(g+1);for(var v=0,p=0;p<g;++p){let U=s[p];if(U!=null){var _=1/U.cnt;l&&(U.ac*=_),U.rc*=_,U.gc*=_,U.bc*=_,s[v++]=U}}O(e)/v<.022&&(u=!1);for(var p=0;p<v-1;++p)s[p].fw=p+1,s[p+1].bk=p,u&&(s[p].cnt=Math.sqrt(s[p].cnt));u&&(s[p].cnt=Math.sqrt(s[p].cnt));var M,B,w;for(p=0;p<v;++p){le(s,p,!1);var A=s[p].err;for(B=++d[0];B>1&&(w=B>>1,!(s[M=d[w]].err<=A));B=w)d[B]=M;d[B]=p}var I=v-e;for(p=0;p<I;){for(var x;;){var m=d[1];if(x=s[m],x.tm>=x.mtm&&s[x.nn].mtm<=x.tm)break;x.mtm==h?m=d[1]=d[d[0]--]:(le(s,m,!1),x.tm=p);var A=s[m].err;for(B=1;(w=B+B)<=d[0]&&(w<d[0]&&s[d[w]].err>s[d[w+1]].err&&w++,!(A<=s[M=d[w]].err));B=w)d[B]=M;d[B]=m}var b=s[x.nn],C=x.cnt,z=b.cnt,_=1/(C+z);l&&(x.ac=_*(C*x.ac+z*b.ac)),x.rc=_*(C*x.rc+z*b.rc),x.gc=_*(C*x.gc+z*b.gc),x.bc=_*(C*x.bc+z*b.bc),x.cnt+=b.cnt,x.mtm=++p,s[b.bk].fw=b.fw,s[b.fw].bk=b.bk,b.mtm=h}let S=[];var Y=0;for(p=0;;++Y){let J=R(Math.round(s[p].rc),0,255),U=R(Math.round(s[p].gc),0,255),Q=R(Math.round(s[p].bc),0,255),D=255;l&&(D=R(Math.round(s[p].ac),0,255),a&&(D=D<=(typeof a=="number"?a:127)?0:255),i&&D<=c&&(J=U=Q=o,D=0));let oe=l?[J,U,Q,D]:[J,U,Q];if(Re(S,oe)||S.push(oe),(p=s[p].fw)==0)break}return S}function Re(t,e){for(let n=0;n<t.length;n++){let r=t[n],i=r[0]===e[0]&&r[1]===e[1]&&r[2]===e[2],o=r.length>=4&&e.length>=4?r[3]===e[3]:!0;if(i&&o)return!0}return!1}function L(t,e){var n=0,r;for(r=0;r<t.length;r++){let i=t[r]-e[r];n+=i*i}return n}function V(t,e){return e>1?Math.round(t/e)*e:t}function Ve(t,{roundRGB:e=5,roundAlpha:n=10,oneBitAlpha:r=null}={}){let i=new Uint32Array(t.buffer);for(let o=0;o<i.length;o++){let c=i[o],a=c>>24&255,f=c>>16&255,u=c>>8&255,l=c&255;a=V(a,n),r&&(a=a<=(typeof r=="number"?r:127)?0:255),l=V(l,e),u=V(u,e),f=V(f,e),i[o]=a<<24|f<<16|u<<8|l<<0}}function Le(t,e,n="rgb565"){if(!t||!t.buffer)throw new Error("quantize() expected RGBA Uint8Array data");if(!(t instanceof Uint8Array)&&!(t instanceof Uint8ClampedArray))throw new Error("quantize() expected RGBA Uint8Array data");if(e.length>256)throw new Error("applyPalette() only works with 256 colors or less");let r=new Uint32Array(t.buffer),i=r.length,o=n==="rgb444"?4096:65536,c=new Uint8Array(i),a=new Array(o),f=n==="rgba4444";if(n==="rgba4444")for(let u=0;u<i;u++){let l=r[u],s=l>>24&255,g=l>>16&255,h=l>>8&255,d=l&255,v=ge(d,h,g,s),_=v in a?a[v]:a[v]=He(d,h,g,s,e);c[u]=_}else{let u=n==="rgb444"?ye:pe;for(let l=0;l<i;l++){let s=r[l],g=s>>16&255,h=s>>8&255,d=s&255,v=u(d,h,g),_=v in a?a[v]:a[v]=Ne(d,h,g,e);c[l]=_}}return c}function He(t,e,n,r,i){let o=0,c=1e100;for(let a=0;a<i.length;a++){let f=i[a],u=f[3],l=G(u-r);if(l>c)continue;let s=f[0];if(l+=G(s-t),l>c)continue;let g=f[1];if(l+=G(g-e),l>c)continue;let h=f[2];l+=G(h-n),!(l>c)&&(c=l,o=a)}return o}function Ne(t,e,n,r){let i=0,o=1e100;for(let c=0;c<r.length;c++){let a=r[c],f=a[0],u=G(f-t);if(u>o)continue;let l=a[1];if(u+=G(l-e),u>o)continue;let s=a[2];u+=G(s-n),!(u>o)&&(o=u,i=c)}return i}function Ze(t,e,n=5){if(!t.length||!e.length)return;let r=t.map(c=>c.slice(0,3)),i=n*n,o=t[0].length;for(let c=0;c<e.length;c++){let a=e[c];a.length<o?a=[a[0],a[1],a[2],255]:a.length>o?a=a.slice(0,3):a=a.slice();let f=he(r,a.slice(0,3),L),u=f[0],l=f[1];l>0&&l<=i&&(t[u]=a)}}function G(t){return t*t}function ve(t,e,n=L){let r=1/0,i=-1;for(let o=0;o<t.length;o++){let c=t[o],a=n(e,c);a<r&&(r=a,i=o)}return i}function he(t,e,n=L){let r=1/0,i=-1;for(let o=0;o<t.length;o++){let c=t[o],a=n(e,c);a<r&&(r=a,i=o)}return[i,r]}function Ke(t,e,n=L){return t[ve(t,e,n)]}function we(t={}){let{initialCapacity:e=4096,auto:n=!0}=t,r=de(e),i=5003,o=new Uint8Array(256),c=new Int32Array(i),a=new Int32Array(i),f=!1;return{reset(){r.reset(),f=!1},finish(){r.writeByte(Pe.trailer)},bytes(){return r.bytes()},bytesView(){return r.bytesView()},get buffer(){return r.buffer},get stream(){return r},writeHeader:u,writeFrame(l,s,g,h={}){let{transparent:d=!1,transparentIndex:v=0,delay:_=0,palette:p=null,repeat:M=0,colorDepth:B=8,dispose:w=-1}=h,A=!1;if(n?f||(A=!0,u(),f=!0):A=!!h.first,s=Math.max(0,Math.floor(s)),g=Math.max(0,Math.floor(g)),A){if(!p)throw new Error("First frame must include a { palette } option");Xe(r,s,g,p,B),ue(r,p),M>=0&&Ye(r,M)}let I=Math.round(_/10);We(r,w,I,d,v);let x=!!p&&!A;Je(r,s,g,x?p:null),x&&ue(r,p),Qe(r,l,s,g,B,o,c,a)}};function u(){be(r,"GIF89a")}}function We(t,e,n,r,i){t.writeByte(33),t.writeByte(249),t.writeByte(4),i<0&&(i=0,r=!1);var o,c;r?(o=1,c=2):(o=0,c=0),e>=0&&(c=e&7),c<<=2,t.writeByte(0|c|0|o),F(t,n),t.writeByte(i||0),t.writeByte(0)}function Xe(t,e,n,r,i=8){let a=te(r.length)-1,f=128|i-1<<4|0|a,u=0,l=0;F(t,e),F(t,n),t.writeBytes([f,u,l])}function Ye(t,e){t.writeByte(33),t.writeByte(255),t.writeByte(11),be(t,"NETSCAPE2.0"),t.writeByte(3),t.writeByte(1),F(t,e),t.writeByte(0)}function ue(t,e){let n=1<<te(e.length);for(let r=0;r<n;r++){let i=[0,0,0];r<e.length&&(i=e[r]),t.writeByte(i[0]),t.writeByte(i[1]),t.writeByte(i[2])}}function Je(t,e,n,r){if(t.writeByte(44),F(t,0),F(t,0),F(t,e),F(t,n),r){let c=te(r.length)-1;t.writeByte(128|c)}else t.writeByte(0)}function Qe(t,e,n,r,i=8,o,c,a){De(n,r,e,i,t,o,c,a)}function F(t,e){t.writeByte(e&255),t.writeByte(e>>8&255)}function be(t,e){for(var n=0;n<e.length;n++)t.writeByte(e.charCodeAt(n))}function te(t){return Math.max(Math.ceil(Math.log2(t)),1)}var $e=we});var ne=E(T=>{"use strict";Object.defineProperty(T,"__esModule",{value:!0});T.loop=T.conditional=T.parse=void 0;var et=function t(e,n){var r=arguments.length>2&&arguments[2]!==void 0?arguments[2]:{},i=arguments.length>3&&arguments[3]!==void 0?arguments[3]:r;if(Array.isArray(n))n.forEach(function(c){return t(e,c,r,i)});else if(typeof n=="function")n(e,r,i,t);else{var o=Object.keys(n)[0];Array.isArray(n[o])?(i[o]={},t(e,n[o],r,i[o])):i[o]=n[o](e,r,i,t)}return r};T.parse=et;var tt=function(e,n){return function(r,i,o,c){n(r,i,o)&&c(r,e,i,o)}};T.conditional=tt;var rt=function(e,n){return function(r,i,o,c){for(var a=[],f=r.pos;n(r,i,o);){var u={};if(c(r,e,i,u),r.pos===f)break;f=r.pos,a.push(u)}return a}};T.loop=rt});var ie=E(k=>{"use strict";Object.defineProperty(k,"__esModule",{value:!0});k.readBits=k.readArray=k.readUnsigned=k.readString=k.peekBytes=k.readBytes=k.peekByte=k.readByte=k.buildStream=void 0;var nt=function(e){return{data:e,pos:0}};k.buildStream=nt;var xe=function(){return function(e){return e.data[e.pos++]}};k.readByte=xe;var it=function(){var e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:0;return function(n){return n.data[n.pos+e]}};k.peekByte=it;var H=function(e){return function(n){return n.data.subarray(n.pos,n.pos+=e)}};k.readBytes=H;var ot=function(e){return function(n){return n.data.subarray(n.pos,n.pos+e)}};k.peekBytes=ot;var at=function(e){return function(n){return Array.from(H(e)(n)).map(function(r){return String.fromCharCode(r)}).join("")}};k.readString=at;var ct=function(e){return function(n){var r=H(2)(n);return e?(r[1]<<8)+r[0]:(r[0]<<8)+r[1]}};k.readUnsigned=ct;var st=function(e,n){return function(r,i,o){for(var c=typeof n=="function"?n(r,i,o):n,a=H(e),f=new Array(c),u=0;u<c;u++)f[u]=a(r);return f}};k.readArray=st;var lt=function(e,n,r){for(var i=0,o=0;o<r;o++)i+=e[n+o]&&Math.pow(2,r-o-1);return i},ut=function(e){return function(n){for(var r=xe()(n),i=new Array(8),o=0;o<8;o++)i[7-o]=!!(r&1<<o);return Object.keys(e).reduce(function(c,a){var f=e[a];return f.length?c[a]=lt(i,f.index,f.length):c[a]=i[f.index],c},{})}};k.readBits=ut});var _e=E(Z=>{"use strict";Object.defineProperty(Z,"__esModule",{value:!0});Z.default=void 0;var q=ne(),y=ie(),N={blocks:function(e){for(var n=0,r=[],i=e.data.length,o=0,c=(0,y.readByte)()(e);c!==n&&c;c=(0,y.readByte)()(e)){if(e.pos+c>=i){var a=i-e.pos;r.push((0,y.readBytes)(a)(e)),o+=a;break}r.push((0,y.readBytes)(c)(e)),o+=c}for(var f=new Uint8Array(o),u=0,l=0;l<r.length;l++)f.set(r[l],u),u+=r[l].length;return f}},ft=(0,q.conditional)({gce:[{codes:(0,y.readBytes)(2)},{byteSize:(0,y.readByte)()},{extras:(0,y.readBits)({future:{index:0,length:3},disposal:{index:3,length:3},userInput:{index:6},transparentColorGiven:{index:7}})},{delay:(0,y.readUnsigned)(!0)},{transparentColorIndex:(0,y.readByte)()},{terminator:(0,y.readByte)()}]},function(t){var e=(0,y.peekBytes)(2)(t);return e[0]===33&&e[1]===249}),dt=(0,q.conditional)({image:[{code:(0,y.readByte)()},{descriptor:[{left:(0,y.readUnsigned)(!0)},{top:(0,y.readUnsigned)(!0)},{width:(0,y.readUnsigned)(!0)},{height:(0,y.readUnsigned)(!0)},{lct:(0,y.readBits)({exists:{index:0},interlaced:{index:1},sort:{index:2},future:{index:3,length:2},size:{index:5,length:3}})}]},(0,q.conditional)({lct:(0,y.readArray)(3,function(t,e,n){return Math.pow(2,n.descriptor.lct.size+1)})},function(t,e,n){return n.descriptor.lct.exists}),{data:[{minCodeSize:(0,y.readByte)()},N]}]},function(t){return(0,y.peekByte)()(t)===44}),pt=(0,q.conditional)({text:[{codes:(0,y.readBytes)(2)},{blockSize:(0,y.readByte)()},{preData:function(e,n,r){return(0,y.readBytes)(r.text.blockSize)(e)}},N]},function(t){var e=(0,y.peekBytes)(2)(t);return e[0]===33&&e[1]===1}),gt=(0,q.conditional)({application:[{codes:(0,y.readBytes)(2)},{blockSize:(0,y.readByte)()},{id:function(e,n,r){return(0,y.readString)(r.blockSize)(e)}},N]},function(t){var e=(0,y.peekBytes)(2)(t);return e[0]===33&&e[1]===255}),yt=(0,q.conditional)({comment:[{codes:(0,y.readBytes)(2)},N]},function(t){var e=(0,y.peekBytes)(2)(t);return e[0]===33&&e[1]===254}),vt=[{header:[{signature:(0,y.readString)(3)},{version:(0,y.readString)(3)}]},{lsd:[{width:(0,y.readUnsigned)(!0)},{height:(0,y.readUnsigned)(!0)},{gct:(0,y.readBits)({exists:{index:0},resolution:{index:1,length:3},sort:{index:4},size:{index:5,length:3}})},{backgroundColorIndex:(0,y.readByte)()},{pixelAspectRatio:(0,y.readByte)()}]},(0,q.conditional)({gct:(0,y.readArray)(3,function(t,e){return Math.pow(2,e.lsd.gct.size+1)})},function(t,e){return e.lsd.gct.exists}),{frames:(0,q.loop)([ft,gt,yt,dt,pt],function(t){var e=(0,y.peekByte)()(t);return e===33||e===44})}],ht=vt;Z.default=ht});var Ae=E(K=>{"use strict";Object.defineProperty(K,"__esModule",{value:!0});K.deinterlace=void 0;var wt=function(e,n){for(var r=new Array(e.length),i=e.length/n,o=function(g,h){var d=e.slice(h*n,(h+1)*n);r.splice.apply(r,[g*n,n].concat(d))},c=[0,4,2,1],a=[8,8,4,2],f=0,u=0;u<4;u++)for(var l=c[u];l<i;l+=a[u])o(l,f),f++;return r};K.deinterlace=wt});var ke=E(W=>{"use strict";Object.defineProperty(W,"__esModule",{value:!0});W.lzw=void 0;var bt=function(e,n,r){var i=4096,o=-1,c=r,a,f,u,l,s,g,h,I,d,v,A,_,m,b,z,C,p=new Array(r),M=new Array(i),B=new Array(i),w=new Array(i+1);for(_=e,f=1<<_,s=f+1,a=f+2,h=o,l=_+1,u=(1<<l)-1,d=0;d<f;d++)M[d]=0,B[d]=d;var A,I,x,m,b,C,z;for(A=I=x=m=b=C=z=0,v=0;v<c;){if(b===0){if(I<l){A+=n[z]<<I,I+=8,z++;continue}if(d=A&u,A>>=l,I-=l,d>a||d==s)break;if(d==f){l=_+1,u=(1<<l)-1,a=f+2,h=o;continue}if(h==o){w[b++]=B[d],h=d,m=d;continue}for(g=d,d==a&&(w[b++]=m,d=h);d>f;)w[b++]=B[d],d=M[d];m=B[d]&255,w[b++]=m,a<i&&(M[a]=h,B[a]=m,a++,!(a&u)&&a<i&&(l++,u+=a)),h=g}b--,p[C++]=w[b],v++}for(v=C;v<c;v++)p[v]=0;return p};W.lzw=bt});var Se=E(P=>{"use strict";Object.defineProperty(P,"__esModule",{value:!0});P.decompressFrames=P.decompressFrame=P.parseGIF=void 0;var Bt=mt(_e()),xt=ne(),_t=ie(),At=Ae(),kt=ke();function mt(t){return t&&t.__esModule?t:{default:t}}var St=function(e){var n=new Uint8Array(e);return(0,xt.parse)((0,_t.buildStream)(n),Bt.default)};P.parseGIF=St;var It=function(e){for(var n=e.pixels.length,r=new Uint8ClampedArray(n*4),i=0;i<n;i++){var o=i*4,c=e.pixels[i],a=e.colorTable[c]||[0,0,0];r[o]=a[0],r[o+1]=a[1],r[o+2]=a[2],r[o+3]=c!==e.transparentIndex?255:0}return r},me=function(e,n,r){if(!e.image){console.warn("gif frame does not have associated image.");return}var i=e.image,o=i.descriptor.width*i.descriptor.height,c=(0,kt.lzw)(i.data.minCodeSize,i.data.blocks,o);i.descriptor.lct.interlaced&&(c=(0,At.deinterlace)(c,i.descriptor.width));var a={pixels:c,dims:{top:e.image.descriptor.top,left:e.image.descriptor.left,width:e.image.descriptor.width,height:e.image.descriptor.height}};return i.descriptor.lct&&i.descriptor.lct.exists?a.colorTable=i.lct:a.colorTable=n,e.gce&&(a.delay=(e.gce.delay||10)*10,a.disposalType=e.gce.extras.disposal,e.gce.extras.transparentColorGiven&&(a.transparentIndex=e.gce.transparentColorIndex)),r&&(a.patch=It(a)),a};P.decompressFrame=me;var Mt=function(e,n){return e.frames.filter(function(r){return r.image}).map(function(r){return me(r,e.gct,n)})};P.decompressFrames=Mt});var j=ce(Be()),X=ce(Se());window.GIFLIB={GIFEncoder:j.GIFEncoder,quantize:j.quantize,applyPalette:j.applyPalette,parseGIF:X.parseGIF,decompressFrames:X.decompressFrames};})();
+</script>
+<script>
+"use strict";
+(() => {
+const $ = s => document.querySelector(s);
+const KB = 1024, MB = 1024 * 1024;
+const PROMO_KEY = "hermes.tools.promoShown";
+
+/* Platform limits (checked Oct 2026: Twitch via Elgato/Twitch help, 7TV help center, Discord). */
+const LIM = {
+  twStatic: 1 * MB,          // Twitch static emote, per file
+  twAnim: 512 * KB,          // Twitch animated emote, per size (advanced upload)
+  twFrames: 60,
+  badge: 25 * KB,            // Twitch sub badge, per file
+  stv: 7 * MB, stvDim: 1000, stvFrames: 1000, stvMax: 512,
+  discord: 256 * KB,
+};
+const CHAT_DARK = [24, 24, 27], CHAT_LIGHT = [255, 255, 255];
+
+const state = { src: null, outputs: [], urls: [], job: 0, bg: "check" };
+let promoShownMem = false;
+
+/* ---------- helpers ---------- */
+function mk(w, h) { const c = document.createElement("canvas"); c.width = Math.max(1, w); c.height = Math.max(1, h); return c; }
+function ctx2d(c) { return c.getContext("2d", { willReadFrequently: true }); }
+function pixels(c) { return ctx2d(c).getImageData(0, 0, c.width, c.height).data; }
+const tick = () => new Promise(r => setTimeout(r, 0));
+function fmtBytes(b) { return b < KB ? b + " B" : b < MB ? (b / KB).toFixed(b < 10 * KB ? 1 : 0) + " KB" : (b / MB).toFixed(2) + " MB"; }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("on"), 5000); }
+function srgbLum(r, g, b) {
+  const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+  return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+}
+function contrast(l1, l2) { const a = Math.max(l1, l2), b = Math.min(l1, l2); return (a + 0.05) / (b + 0.05); }
+function safeName(s) { return (s || "").replace(/\.[a-z0-9]+$/i, "").replace(/[^a-zA-Z0-9_-]+/g, "_").replace(/^_+|_+$/g, "").slice(0, 40) || "emote"; }
+
+/* Downscale in halving steps so big images don't alias; nearest-neighbour when crisp. */
+function scaleTo(src, tw, th, crisp) {
+  let cur = src, cw = src.width, ch = src.height;
+  if (!crisp) {
+    while (cw >= tw * 2 && ch >= th * 2) {
+      const nw = Math.max(tw, Math.round(cw / 2)), nh = Math.max(th, Math.round(ch / 2));
+      const n = mk(nw, nh), x = n.getContext("2d");
+      x.imageSmoothingEnabled = true; x.imageSmoothingQuality = "high";
+      x.drawImage(cur, 0, 0, cw, ch, 0, 0, nw, nh);
+      cur = n; cw = nw; ch = nh;
+    }
+  }
+  const out = mk(tw, th), x = out.getContext("2d");
+  x.imageSmoothingEnabled = !crisp; x.imageSmoothingQuality = "high";
+  x.drawImage(cur, 0, 0, cw, ch, 0, 0, tw, th);
+  return out;
+}
+
+/* ---------- decoding ---------- */
+async function decode(file) {
+  const buf = new Uint8Array(await file.arrayBuffer());
+  const isGif = buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46;
+  const isPng = buf[0] === 0x89 && buf[1] === 0x50;
+  let frames = [], W, H;
+  if (isGif) {
+    const gif = GIFLIB.parseGIF(buf.buffer);
+    const raw = GIFLIB.decompressFrames(gif, true);
+    W = gif.lsd.width; H = gif.lsd.height;
+    if (!raw.length) throw new Error("This GIF has no frames.");
+    // Keep stored frames ≤512 px: enough for every export, and keeps memory sane on long GIFs.
+    const scale = Math.min(1, LIM.stvMax / Math.max(W, H));
+    const comp = mk(W, H), cx = ctx2d(comp);
+    const patch = mk(1, 1), px = patch.getContext("2d");
+    let prev = null, saved = null;
+    for (let i = 0; i < raw.length && i < LIM.stvFrames + 500; i++) {
+      const f = raw[i];
+      if (prev) {
+        if (prev.disposalType === 2) cx.clearRect(prev.dims.left, prev.dims.top, prev.dims.width, prev.dims.height);
+        else if (prev.disposalType === 3 && saved) cx.putImageData(saved, 0, 0);
+      }
+      saved = f.disposalType === 3 ? cx.getImageData(0, 0, W, H) : null;
+      patch.width = f.dims.width; patch.height = f.dims.height;
+      px.putImageData(new ImageData(new Uint8ClampedArray(f.patch), f.dims.width, f.dims.height), 0, 0);
+      cx.drawImage(patch, f.dims.left, f.dims.top);
+      const fc = scale < 1 ? scaleTo(comp, Math.round(W * scale), Math.round(H * scale), false) : (() => { const c = mk(W, H); c.getContext("2d").drawImage(comp, 0, 0); return c; })();
+      frames.push({ c: fc, delay: f.delay >= 20 ? f.delay : 100 });
+      prev = f;
+      if (i % 20 === 19) await tick();
+    }
+  } else {
+    let bmp;
+    try { bmp = await createImageBitmap(file); }
+    catch { throw new Error("Couldn't read that file. Use a PNG or GIF."); }
+    W = bmp.width; H = bmp.height;
+    const c = mk(W, H); c.getContext("2d").drawImage(bmp, 0, 0);
+    frames.push({ c, delay: 100 });
+  }
+  return { frames, w: W, h: H, animated: frames.length > 1, bytes: file.size, type: isGif ? "GIF" : isPng ? "PNG" : (file.type.split("/")[1] || "image").toUpperCase(), name: file.name || "pasted-image.png", file };
+}
+
+/* Bounding box of visible pixels across (a sample of) all frames, in stored-frame coords. */
+function contentBox(src) {
+  const f0 = src.frames[0].c, W = f0.width, H = f0.height;
+  let x0 = W, y0 = H, x1 = -1, y1 = -1;
+  const step = Math.max(1, Math.floor(src.frames.length / 30));
+  for (let i = 0; i < src.frames.length; i += step) {
+    const d = pixels(src.frames[i].c);
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+      if (d[(y * W + x) * 4 + 3] > 16) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+    }
+  }
+  if (x1 < 0) return { x: 0, y: 0, w: W, h: H, empty: true };
+  return { x: x0, y: y0, w: x1 - x0 + 1, h: y1 - y0 + 1 };
+}
+
+/* Region used for exports: full frame, or the content box (+ small margin) when auto-crop is on. */
+function region(src, crop) {
+  const W = src.frames[0].c.width, H = src.frames[0].c.height;
+  if (!crop || src.box.empty) return { x: 0, y: 0, w: W, h: H };
+  const b = src.box, m = Math.round(Math.max(b.w, b.h) * 0.02);
+  const x = Math.max(0, b.x - m), y = Math.max(0, b.y - m);
+  return { x, y, w: Math.min(W, b.x + b.w + m) - x, h: Math.min(H, b.y + b.h + m) - y };
+}
+
+/* Fit the region into a size×size square (transparent padding), or keep aspect when square=false. */
+function renderFrame(frameC, r, size, crisp, square = true) {
+  const k = size / Math.max(r.w, r.h);
+  const dw = Math.max(1, Math.round(r.w * k)), dh = Math.max(1, Math.round(r.h * k));
+  const reg = mk(r.w, r.h); reg.getContext("2d").drawImage(frameC, r.x, r.y, r.w, r.h, 0, 0, r.w, r.h);
+  const scaled = scaleTo(reg, dw, dh, crisp);
+  if (!square) return scaled;
+  const out = mk(size, size);
+  out.getContext("2d").drawImage(scaled, Math.floor((size - dw) / 2), Math.floor((size - dh) / 2));
+  return out;
+}
+
+/* Evenly resample an animation down to maxFrames, keeping total duration. */
+function limitFrames(frames, max) {
+  if (frames.length <= max) return frames;
+  const total = frames.reduce((a, f) => a + f.delay, 0);
+  const starts = []; let t = 0; for (const f of frames) { starts.push(t); t += f.delay; }
+  const step = total / max, out = [];
+  let j = 0;
+  for (let i = 0; i < max; i++) {
+    const at = i * step;
+    while (j + 1 < frames.length && starts[j + 1] <= at) j++;
+    out.push({ c: frames[j].c, delay: Math.max(20, Math.round(step / 10) * 10) });
+  }
+  return out;
+}
+
+/* ---------- encoding ---------- */
+function encodeGif(canvases, delays, maxColors) {
+  const { GIFEncoder, quantize, applyPalette } = GIFLIB;
+  const w = canvases[0].width, h = canvases[0].height;
+  const datas = canvases.map(c => pixels(c));
+  // One shared palette from a pixel sample of all frames: smaller file, no colour flicker between frames.
+  const per = w * h * 4, budget = 600000 * 4;
+  const stride = Math.max(1, Math.ceil((per * datas.length) / budget));
+  const sample = new Uint8ClampedArray(Math.ceil(datas.length / stride) * per);
+  let o = 0;
+  for (let i = 0; i < datas.length; i += stride) { sample.set(datas[i], o); o += per; }
+  const opts = { format: "rgba4444", oneBitAlpha: true, clearAlpha: true, clearAlphaThreshold: 127, clearAlphaColor: 0 };
+  const palette = quantize(sample.subarray(0, o), maxColors, opts);
+  let ti = palette.findIndex(p => p[3] === 0);
+  const gif = GIFEncoder();
+  datas.forEach((d, i) => {
+    // Hard-threshold alpha first so semi-transparent edges map to "transparent" or "solid" predictably.
+    const dd = new Uint8ClampedArray(d);
+    for (let p = 3; p < dd.length; p += 4) { if (dd[p] < 128) { dd[p - 3] = dd[p - 2] = dd[p - 1] = 0; dd[p] = 0; } else dd[p] = 255; }
+    const idx = applyPalette(dd, palette, "rgba4444");
+    gif.writeFrame(idx, w, h, { palette: palette.map(p => [p[0], p[1], p[2]]), delay: delays[i], transparent: ti >= 0, transparentIndex: Math.max(0, ti), dispose: 2, repeat: 0 });
+  });
+  gif.finish();
+  return new Blob([gif.bytes()], { type: "image/gif" });
+}
+function pngBlob(c) { return new Promise((res, rej) => c.toBlob(b => b ? res(b) : rej(new Error("PNG export failed")), "image/png")); }
+
+/* GIF that must fit a byte limit: step colours down until it fits. */
+async function gifUnder(frames, render, limit) {
+  const canvases = [];
+  for (let i = 0; i < frames.length; i++) { canvases.push(render(frames[i].c)); if (i % 15 === 14) await tick(); }
+  const delays = frames.map(f => f.delay);
+  let blob, colors;
+  for (colors of [256, 128, 64, 32]) {
+    blob = encodeGif(canvases, delays, colors);
+    if (blob.size <= limit) break;
+    await tick();
+  }
+  return { blob, colors, frames: canvases.length };
+}
+
+/* ---------- export plan ---------- */
+async function buildOutputs(src, opt, job) {
+  const name = opt.name, crisp = opt.pix, r = region(src, opt.crop);
+  const anim = src.animated, ext = anim ? "gif" : "png";
+  const outs = [];
+  const progress = s => { if (job === state.job) $("#busy").textContent = s; };
+  const twFrames = anim ? limitFrames(src.frames, LIM.twFrames) : null;
+  const plan = [];
+  for (const s of [112, 56, 28]) plan.push({ group: "tw", file: `twitch/emotes/${name}_${s}.${ext}`, w: s, h: s, limit: anim ? LIM.twAnim : LIM.twStatic, size: s, kind: "twEmote" });
+  for (const s of [72, 36, 18]) plan.push({ group: "badge", file: `twitch/sub-badges/${name}_badge_${s}.png`, w: s, h: s, limit: LIM.badge, size: s, kind: "badge" });
+  const stvSide = Math.min(LIM.stvMax, Math.max(r.w, r.h));
+  plan.push({ group: "7tv", file: `7tv/${name}_7tv.${ext}`, limit: LIM.stv, size: stvSide, kind: "7tv" });
+  plan.push({ group: "discord", file: `discord/${name}_discord.${ext}`, w: 128, h: 128, limit: LIM.discord, size: 128, kind: "discord" });
+
+  for (let i = 0; i < plan.length; i++) {
+    const p = plan[i];
+    progress(`Exporting ${i + 1}/${plan.length}…`);
+    await tick();
+    if (job !== state.job) return null;
+    const square = p.kind !== "7tv";
+    const render = c => renderFrame(c, r, p.size, crisp, square);
+    let blob, note = "", colors = 256, frames = 1;
+    if (anim && p.kind !== "badge") {
+      const fr = p.kind === "twEmote" ? twFrames : p.kind === "7tv" ? limitFrames(src.frames, LIM.stvFrames) : src.frames;
+      let g = await gifUnder(fr, render, p.limit);
+      // Discord accepts smaller emoji, so shrink rather than fail.
+      if (p.kind === "discord") for (const s of [96, 64]) {
+        if (g.blob.size <= p.limit) break;
+        p.size = s; g = await gifUnder(fr, c => renderFrame(c, r, s, crisp, true), p.limit);
+        note = `shrunk to ${s} px to fit`;
+      }
+      blob = g.blob; colors = g.colors; frames = g.frames;
+      if (colors < 256 && blob.size <= p.limit) note = (note ? note + ", " : "") + `${colors} colours`;
+      if (p.kind === "twEmote" && src.frames.length > LIM.twFrames) note = (note ? note + ", " : "") + `${src.frames.length}→${LIM.twFrames} frames`;
+      const c0 = renderFrame(src.frames[0].c, r, p.size, crisp, square); p.w = c0.width; p.h = c0.height;
+    } else {
+      const c = render(src.frames[0].c);
+      p.w = c.width; p.h = c.height;
+      blob = await pngBlob(c);
+      if (anim && p.kind === "badge") note = "still image (badges can't animate)";
+    }
+    outs.push({ ...p, blob, note, colors, frames, ok: blob.size <= p.limit });
+  }
+  progress("");
+  return outs;
+}
+
+/* ---------- checks ---------- */
+function analyse(src, opt, outs) {
+  const res = [];
+  const add = (lvl, t, d) => res.push({ lvl, t, d });
+  const f0 = src.frames[0].c, W = f0.width, H = f0.height, d0 = pixels(f0);
+  const r = region(src, opt.crop);
+
+  // Source size
+  const minSide = Math.min(src.w, src.h);
+  if (minSide < 112) add("warn", "Image is small", `Your image is ${src.w}×${src.h}. It gets stretched up to 112 px for Twitch and will look soft. Start from at least 112×112, ideally 500 px or more.`);
+  else add("ok", "Big enough", `${src.w}×${src.h} is enough for every size.`);
+  if (minSide < 112 && !opt.pix) {
+    const cols = new Set(); for (let i = 0; i < d0.length && cols.size < 65; i += 4) if (d0[i + 3] > 16) cols.add((d0[i] << 16) | (d0[i + 1] << 8) | d0[i + 2]);
+    if (cols.size <= 64) add("info", "Looks like pixel art", 'Turn on "Pixel art" to keep the pixels sharp instead of blurry.');
+  }
+  if (src.w !== src.h && !opt.crop) add("info", "Not square", "Twitch and Discord need square images, so empty space was added on the sides. That's fine, just know your emote gets a little smaller.");
+
+  // Transparency
+  let transparentAny = 0, border = 0, borderClear = 0; const bcols = [];
+  for (let i = 3; i < d0.length; i += 4) if (d0[i] < 250) transparentAny++;
+  for (let x = 0; x < W; x++) for (const y of [0, H - 1]) { const i = (y * W + x) * 4; border++; if (d0[i + 3] < 16) borderClear++; else bcols.push(i); }
+  for (let y = 1; y < H - 1; y++) for (const x of [0, W - 1]) { const i = (y * W + x) * 4; border++; if (d0[i + 3] < 16) borderClear++; else bcols.push(i); }
+  const clearFrac = borderClear / border;
+  if (transparentAny === 0 || clearFrac < 0.2) {
+    // Fake checkerboard: opaque border made of two light greys.
+    let grey = 0; const levels = new Set();
+    for (const i of bcols) {
+      const R = d0[i], G = d0[i + 1], B = d0[i + 2];
+      if (Math.max(R, G, B) - Math.min(R, G, B) < 14 && R > 140) { grey++; levels.add(Math.round(R / 12)); }
+    }
+    const fake = bcols.length && grey / bcols.length > 0.85 && levels.size >= 2 && levels.size <= 6;
+    if (fake) add("bad", "Fake transparent background", "The grey-and-white checkerboard is part of the picture itself, so it'll show in chat. Download the image again as a real transparent PNG, or remove the background.");
+    else if (transparentAny === 0) add("bad", "No transparent background", "Your image has a solid background, so it shows as a box in chat. Remove the background and save as PNG.");
+    else add("warn", "Edges aren't transparent", "Most of the outer edge is solid colour, so there may be a background box around your emote. Check the chat preview.");
+  } else add("ok", "Transparent background", "The background is see-through, good.");
+
+  // Empty space
+  if (!src.box.empty) {
+    const fill = Math.max(src.box.w / W, src.box.h / H);
+    if (!opt.crop && fill < 0.8) add("warn", "Lots of empty space", `Your emote only uses ${Math.round(fill * 100)}% of the image, so it shows up smaller in chat. Turn on "Auto-crop empty edges".`);
+    else if (opt.crop) add("ok", "Cropped to fit", "Empty edges were cut away, so your emote fills the frame.");
+  }
+
+  // Detail at 28 px: how much of the 112 px image is lost when shrunk to 28 px and blown back up.
+  const big = renderFrame(f0, r, 112, opt.pix), back = scaleTo(scaleTo(big, 28, 28, opt.pix), 112, 112, false);
+  const a = pixels(big), b = pixels(back);
+  // Only fully-solid interior pixels count: the outline blurring at the silhouette is normal and
+  // would otherwise make every simple shape look "busy".
+  let sum = 0, n = 0;
+  for (let i = 0; i < a.length; i += 4) {
+    if (a[i + 3] < 250 || b[i + 3] < 250) continue;
+    const l1 = 0.299 * a[i] + 0.587 * a[i + 1] + 0.114 * a[i + 2];
+    const l2 = 0.299 * b[i] + 0.587 * b[i + 1] + 0.114 * b[i + 2];
+    sum += Math.abs(l1 - l2); n++;
+  }
+  const loss = n > 200 ? sum / n : 0;
+  state.detailScore = loss;
+  if (loss > 19) add("bad", "Too much detail for 28 px", "A lot of your emote turns to mush at the size viewers actually see. Use fewer, bigger shapes, thicker outlines and no small text.");
+  else if (loss > 15) add("warn", "Busy at small size", "Some details get lost at 28 px. Look at the zoomed 28 px preview below. Thicker lines and simpler shapes help.");
+  else add("ok", "Reads well at 28 px", "Shapes stay clear at the small chat size.");
+
+  // Contrast of the silhouette edge against dark and light chat (at 56 px).
+  const m = renderFrame(f0, r, 56, opt.pix), md = pixels(m), S = 56;
+  const lums = [];
+  const al = (x, y) => (x < 0 || y < 0 || x >= S || y >= S) ? 0 : md[(y * S + x) * 4 + 3];
+  for (let y = 0; y < S; y++) for (let x = 0; x < S; x++) {
+    const i = (y * S + x) * 4;
+    if (md[i + 3] < 128) continue;
+    if (al(x - 1, y) < 128 || al(x + 1, y) < 128 || al(x, y - 1) < 128 || al(x, y + 1) < 128) lums.push(srgbLum(md[i], md[i + 1], md[i + 2]));
+  }
+  const all = [];
+  for (let i = 0; i < md.length; i += 4) if (md[i + 3] >= 128) all.push(srgbLum(md[i], md[i + 1], md[i + 2]));
+  const edgeOk = lums.length >= 12 && transparentAny > 0;
+  const lowFrac = (arr, bg) => { const L = srgbLum(...bg); return arr.filter(l => contrast(l, L) < 1.6).length / arr.length; };
+  if (edgeOk) {
+    for (const [nm, bg] of [["dark", CHAT_DARK], ["light", CHAT_LIGHT]]) {
+      const fe = lowFrac(lums, bg), fa = lowFrac(all, bg), fix = nm === "dark" ? "light" : "dark";
+      if (fa > 0.55) add("warn", `Blends into ${nm} chat`, `${Math.round(fa * 100)}% of your emote is close to the ${nm} chat colour, so it can disappear. A ${fix} outline or "sticker" border fixes that.`);
+      else if (fe > 0.55) add("info", `Outline fades on ${nm} chat`, `The outer edge is close to the ${nm} chat colour, so the emote looks a bit smaller there. Fine if that's the look you want; a thin ${fix} border makes it pop.`);
+      else add("ok", `Visible on ${nm} chat`, `Stands out against ${nm} chat.`);
+    }
+  } else add("info", "Contrast not checked", "There's no clear transparent edge to measure, see the transparency check above.");
+
+  // Animation
+  if (src.animated) {
+    if (src.frames.length > LIM.twFrames) add("warn", `${src.frames.length} frames (Twitch max is ${LIM.twFrames})`, `Twitch only allows ${LIM.twFrames} frames, so the Twitch files were reduced to ${LIM.twFrames}. The animation may look a bit choppier there. 7TV and Discord keep all frames.`);
+    else add("ok", `${src.frames.length} frames`, "Within Twitch's 60 frame limit.");
+    // Flashing: big brightness flips, counted in any 1 second window.
+    const lv = src.frames.map(f => { const t = pixels(scaleTo(f.c, 16, 16, false)); let s = 0, w = 0; for (let i = 0; i < t.length; i += 4) { const A = t[i + 3] / 255; s += (0.299 * t[i] + 0.587 * t[i + 1] + 0.114 * t[i + 2]) * A; w += A; } return w ? s / w : 0; });
+    const flips = []; let tm = 0, lastDir = 0;
+    for (let i = 1; i < lv.length; i++) {
+      tm += src.frames[i - 1].delay;
+      const dlt = lv[i] - lv[i - 1];
+      if (Math.abs(dlt) > 50) { const dir = Math.sign(dlt); if (dir !== lastDir) flips.push(tm); lastDir = dir; }
+    }
+    let maxIn1s = 0; for (let i = 0; i < flips.length; i++) { let j = i; while (j < flips.length && flips[j] - flips[i] < 1000) j++; maxIn1s = Math.max(maxIn1s, j - i); }
+    if (maxIn1s / 2 > 3) add("bad", "Flashes too fast", "Your emote flashes more than 3 times per second. Twitch doesn't allow that (it can trigger seizures). Slow down the bright/dark changes.");
+    const semi = (() => { let s = 0, o = 0; for (let i = 3; i < d0.length; i += 4) { if (d0[i] > 0) { o++; if (d0[i] < 230) s++; } } return o ? s / o : 0; })();
+    if (semi > 0.08) add("info", "Soft edges become hard in GIFs", "GIFs can't do half-transparent pixels, so soft or glowy edges get cut sharp. A solid outline looks cleaner.");
+  }
+
+  // File sizes
+  const over = outs.filter(o => !o.ok);
+  if (over.length) add("bad", "Some files are too big", over.map(o => `<b>${esc(o.file.split("/").pop())}</b> is ${fmtBytes(o.blob.size)} (limit ${fmtBytes(o.limit)})`).join("<br>") + "<br>Fewer frames, fewer colours or a smaller canvas will bring it down.");
+  else add("ok", "All files within limits", "Every export fits the platform's file size limit.");
+  const shrunk = outs.filter(o => o.colors < 256 && o.ok);
+  if (shrunk.length) add("info", "Colours reduced to fit", `To stay under the size limit, ${shrunk.map(o => esc(o.file.split("/").pop())).join(", ")} ${shrunk.length > 1 ? "use" : "uses"} fewer colours. Check they still look right.`);
+  return res;
+}
+
+/* ---------- rendering UI ---------- */
+function urlFor(out) { const u = URL.createObjectURL(out.blob); state.urls.push(u); return u; }
+function clearUrls() { state.urls.forEach(u => URL.revokeObjectURL(u)); state.urls = []; }
+
+function renderChecks(list) {
+  const order = { bad: 0, warn: 1, info: 2, ok: 3 };
+  list.sort((a, b) => order[a.lvl] - order[b.lvl]);
+  const cnt = k => list.filter(c => c.lvl === k).length;
+  $("#summary").innerHTML = `<span><b>${cnt("bad")}</b>problems</span><span><b>${cnt("warn")}</b>warnings</span><span><b>${cnt("ok")}</b>passed</span>`;
+  $("#checks").innerHTML = list.map(c => `<li><span class="lamp ${c.lvl}" aria-label="${c.lvl}"></span><div><div class="ck-t">${esc(c.t)}</div><div class="ck-d">${c.d.includes("<b>") ? c.d : esc(c.d)}</div></div></li>`).join("");
+}
+
+function renderChat(u) {
+  const em = `<img class="em" alt="${esc(u.name)}" title="${esc(u.name)}" src="${u.e28}" srcset="${u.e28} 1x, ${u.e56} 2x, ${u.e112} 4x">`;
+  const bd = `<img class="bdg" alt="sub badge" src="${u.b18}" srcset="${u.b18} 1x, ${u.b36} 2x, ${u.b72} 4x">`;
+  const e7 = `<img class="em7" alt="${esc(u.name)}" src="${u.stv}">`;
+  const gbadge = c => `<span class="gb" style="background:${c}"></span>`;
+  const lines = (dark) => [
+    `<div class="ln">${bd}<span class="u" style="color:${dark ? "#ff7f50" : "#d2572b"}">Saltydayn</span>: hello chat ${em}</div>`,
+    `<div class="ln">${bd}<span class="u" style="color:${dark ? "#1e90ff" : "#1a6fc4"}">pixel_raccoon</span>: ${em} ${em} ${em}</div>`,
+    `<div class="ln">${bd}<span class="u" style="color:${dark ? "#9acd32" : "#5a8a12"}">ModMarta</span>: that was so clean ${em} gg</div>`,
+    `<div class="ln"><span class="u" style="color:${dark ? "#b18cf0" : "#7a4bd0"}">lurker_42</span>: first time here, love the vibes</div>`,
+    `<div class="ln"><span class="u" style="color:${dark ? "#daa520" : "#9a6f0a"}">noodle</span>: <span class="tag">7TV</span>${e7} LOL</div>`,
+  ].join("");
+  $("#chatDark").innerHTML = `<div class="ttl">Dark mode</div>` + lines(true);
+  $("#chatLight").innerHTML = `<div class="ttl">Light mode</div>` + lines(false);
+}
+
+function renderStrip(u) {
+  const bgc = "bg-" + state.bg;
+  const fig = (src, w, h, cap, pix) => `<figure><div class="stage ${bgc}" style="padding:6px"><img src="${src}" width="${w}" height="${h}" alt="" class="${pix ? "pix" : ""}"></div><figcaption>${cap}</figcaption></figure>`;
+  $("#strip").innerHTML =
+    fig(u.e112, 112, 112, "112", false) + fig(u.e56, 56, 56, "56", false) + fig(u.e28, 28, 28, "28", false) +
+    fig(u.e28, 112, 112, "28 zoomed 4×", true) +
+    `<span class="sep" aria-hidden="true"></span>` +
+    fig(u.b72, 72, 72, "badge 72", false) + fig(u.b36, 36, 36, "36", false) + fig(u.b18, 18, 18, "18", false) +
+    fig(u.b18, 72, 72, "18 zoomed 4×", true);
+}
+
+const GROUPS = { tw: ["Twitch emotes", "28 / 56 / 112 px"], badge: ["Twitch sub badges", "18 / 36 / 72 px, PNG only"], "7tv": ["7TV", "one file, 7TV makes the other sizes"], discord: ["Discord emoji", "128 px"] };
+function renderTable(outs, u) {
+  let html = "", g = null;
+  for (const o of outs) {
+    if (o.group !== g) { g = o.group; html += `<tr class="grp"><td colspan="6">${GROUPS[g][0]}<span class="gn">${GROUPS[g][1]}</span></td></tr>`; }
+    const st = o.ok ? `<span class="lamp ok"></span>${o.note ? esc(o.note) : "OK"}` : `<span class="lamp bad"></span>too big`;
+    html += `<tr><td class="mono">${esc(o.file.split("/").pop())}</td><td class="mono">${o.w}×${o.h}${o.frames > 1 ? ` · ${o.frames}f` : ""}</td><td class="mono">${fmtBytes(o.blob.size)}</td><td class="mono">${fmtBytes(o.limit)}</td><td class="st">${st}</td><td><button class="dl" type="button" data-i="${outs.indexOf(o)}" aria-label="Download ${esc(o.file)}">Download</button></td></tr>`;
+  }
+  $("#tbody").innerHTML = html;
+}
+
+/* ---------- main flow ---------- */
+function opts() { return { name: safeName($("#ename").value), crop: $("#optCrop").checked, pix: $("#optPix").checked }; }
+
+async function process() {
+  const src = state.src; if (!src) return;
+  const job = ++state.job;
+  $("#zipbtn").disabled = true;
+  const o = opts();
+  let outs;
+  try { outs = await buildOutputs(src, o, job); }
+  catch (e) { console.error(e); toast("Export failed: " + e.message); $("#busy").textContent = ""; return; }
+  if (!outs || job !== state.job) return;
+  clearUrls();
+  state.outputs = outs;
+  const by = k => outs.find(x => x.file.endsWith(k));
+  const ext = src.animated ? "gif" : "png";
+  const u = {
+    name: o.name,
+    e112: urlFor(by(`_112.${ext}`)), e56: urlFor(by(`_56.${ext}`)), e28: urlFor(by(`_28.${ext}`)),
+    b72: urlFor(by("_badge_72.png")), b36: urlFor(by("_badge_36.png")), b18: urlFor(by("_badge_18.png")),
+    stv: urlFor(outs.find(x => x.group === "7tv")),
+  };
+  state.u = u;
+  renderChecks(analyse(src, o, outs));
+  renderChat(u); renderStrip(u); renderTable(outs, u);
+  $("#zipbtn").disabled = false;
+}
+
+async function load(file) {
+  if (!file) return;
+  if (!/^image\//.test(file.type) && !/\.(png|gif|webp|jpe?g)$/i.test(file.name || "")) { toast("That's not an image. Use a PNG or GIF."); return; }
+  if (file.size > 40 * MB) { toast("That file is over 40 MB. Use a smaller version."); return; }
+  $("#busy").textContent = "Reading…";
+  let src;
+  try { src = await decode(file); }
+  catch (e) { console.error(e); toast(e.message || "Couldn't read that image."); $("#busy").textContent = ""; return; }
+  src.box = contentBox(src);
+  state.src = src;
+  $("#srcthumb").src = URL.createObjectURL(file);
+  $("#srcname").textContent = src.name;
+  const dur = src.frames.reduce((a, f) => a + f.delay, 0);
+  $("#srcmeta").textContent = `${src.type} · ${src.w}×${src.h} · ${fmtBytes(src.bytes)}` + (src.animated ? ` · ${src.frames.length} frames · ${(dur / 1000).toFixed(1)} s` : "");
+  $("#ename").value = safeName(src.name);
+  $("#drop").style.display = "none";
+  $("#srcbar").classList.add("on");
+  $("#results").classList.add("on");
+  await process();
+}
+
+/* ---------- zip (store only: PNG/GIF are already compressed) ---------- */
+const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(u8) { let c = 0xFFFFFFFF; for (let i = 0; i < u8.length; i++) c = CRC[(c ^ u8[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function makeZip(files) {
+  const enc = new TextEncoder(), parts = [], central = [];
+  const d = new Date();
+  const time = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+  const date = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+  let offset = 0;
+  for (const f of files) {
+    const name = enc.encode(f.name), data = f.data, crc = crc32(data);
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+    lh.setUint16(10, time, true); lh.setUint16(12, date, true); lh.setUint32(14, crc, true);
+    lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true); lh.setUint16(26, name.length, true); lh.setUint16(28, 0, true);
+    parts.push(new Uint8Array(lh.buffer), name, data);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, time, true); ch.setUint16(14, date, true); ch.setUint32(16, crc, true);
+    ch.setUint32(20, data.length, true); ch.setUint32(24, data.length, true); ch.setUint16(28, name.length, true);
+    ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), name);
+    offset += 30 + name.length + data.length;
+  }
+  const cdSize = central.reduce((a, p) => a + p.length, 0);
+  const end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+  end.setUint32(12, cdSize, true); end.setUint32(16, offset, true);
+  return new Blob([...parts, ...central, new Uint8Array(end.buffer)], { type: "application/zip" });
+}
+
+function readme(name, outs, animated) {
+  const L = [
+    `Emote & Badge Checker export for "${name}"`,
+    `Made with the free H.E.R.M.E.S. Emote & Badge Checker (by Saltydayn). Everything was made in your browser.`,
+    ``,
+    `TWITCH EMOTES (twitch/emotes)`,
+    `- Creator Dashboard > Viewer Rewards > Emotes.`,
+    `- Simple upload: use ${name}_112. Twitch makes the small sizes itself.`,
+    `- Advanced upload: upload ${name}_28, ${name}_56 and ${name}_112 into the matching slots.`,
+    animated ? `- Animated emotes need Affiliate or Partner. Max 60 frames, max 512 KB per size, no flashing faster than 3 times a second.` : `- Max 1 MB per file, PNG with a transparent background.`,
+    ``,
+    `TWITCH SUB BADGES (twitch/sub-badges)`,
+    `- Creator Dashboard > Viewer Rewards, then the subscriber badges page. Upload the 18, 36 and 72 px files into their slots.`,
+    `- PNG only, max 25 KB each.`,
+    ``,
+    `7TV (7tv)`,
+    `- 7tv.app > sign in > Upload emote. One file is enough, 7TV makes the other sizes. Max 7 MB, max 1000x1000.`,
+    ``,
+    `DISCORD (discord)`,
+    `- Server Settings > Emoji > Upload Emoji. Max 256 KB.`,
+    ``,
+    `FILES`,
+    ...outs.map(o => `- ${o.file}  ${o.w}x${o.h}  ${fmtBytes(o.blob.size)}${o.ok ? "" : "  (TOO BIG, limit " + fmtBytes(o.limit) + ")"}${o.note ? "  [" + o.note + "]" : ""}`),
+    ``,
+    `More free tools: https://github.com/Saltydayn/hermes   Support: https://ko-fi.com/saltydayn`,
+  ];
+  return L.join("\r\n");
+}
+
+function save(blob, filename) {
+  const u = URL.createObjectURL(blob), a = document.createElement("a");
+  a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(u), 4000);
+  setTimeout(maybePromo, 700);
+}
+
+async function downloadZip() {
+  const outs = state.outputs; if (!outs.length) return;
+  const name = opts().name;
+  const files = [];
+  for (const o of outs) files.push({ name: `${name}/${o.file}`, data: new Uint8Array(await o.blob.arrayBuffer()) });
+  files.push({ name: `${name}/HOW_TO_UPLOAD.txt`, data: new TextEncoder().encode(readme(name, outs, state.src.animated)) });
+  save(makeZip(files), `${name}_emotes.zip`);
+}
+
+/* ---------- one-time popup ---------- */
+function promoSeen() { try { return localStorage.getItem(PROMO_KEY) === "1"; } catch { return promoShownMem; } }
+function markPromo() { promoShownMem = true; try { localStorage.setItem(PROMO_KEY, "1"); } catch {} }
+function maybePromo() {
+  if (promoShownMem || promoSeen()) return;
+  markPromo();
+  $("#promo").classList.add("on");
+  $("#promoX").focus();
+}
+function closePromo() { $("#promo").classList.remove("on"); }
+
+/* ---------- sample image (original drawing) ---------- */
+function sampleFile() {
+  const c = mk(512, 512), x = c.getContext("2d");
+  x.lineJoin = "round";
+  x.fillStyle = "#52b788"; x.strokeStyle = "#10261c"; x.lineWidth = 26;
+  x.beginPath(); x.moveTo(70, 430);
+  x.bezierCurveTo(40, 230, 150, 70, 256, 70); x.bezierCurveTo(362, 70, 472, 230, 442, 430); x.closePath();
+  x.fill(); x.stroke();
+  x.fillStyle = "#ffffff"; x.globalAlpha = .35; x.beginPath(); x.ellipse(180, 170, 40, 22, -.6, 0, 7); x.fill(); x.globalAlpha = 1;
+  x.fillStyle = "#10261c";
+  x.beginPath(); x.ellipse(195, 270, 30, 40, 0, 0, 7); x.fill();
+  x.beginPath(); x.ellipse(320, 270, 30, 40, 0, 0, 7); x.fill();
+  x.fillStyle = "#fff"; x.beginPath(); x.arc(205, 255, 11, 0, 7); x.fill(); x.beginPath(); x.arc(330, 255, 11, 0, 7); x.fill();
+  x.strokeStyle = "#10261c"; x.lineWidth = 18; x.lineCap = "round";
+  x.beginPath(); x.arc(258, 330, 52, .2, Math.PI - .2); x.stroke();
+  x.fillStyle = "#ffd166"; x.beginPath(); x.ellipse(150, 340, 26, 16, 0, 0, 7); x.fill(); x.beginPath(); x.ellipse(366, 340, 26, 16, 0, 0, 7); x.fill();
+  return new Promise(r => c.toBlob(b => r(new File([b], "sample_slime.png", { type: "image/png" })), "image/png"));
+}
+
+/* ---------- wiring ---------- */
+const drop = $("#drop"), fileIn = $("#file");
+drop.addEventListener("click", e => { if (e.target.id !== "sample") fileIn.click(); });
+drop.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fileIn.click(); } });
+fileIn.addEventListener("change", () => { load(fileIn.files[0]); fileIn.value = ""; });
+$("#sample").addEventListener("click", async e => { e.stopPropagation(); load(await sampleFile()); });
+$("#replace").addEventListener("click", () => fileIn.click());
+["dragenter", "dragover"].forEach(t => document.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach(t => document.addEventListener(t, e => { e.preventDefault(); if (t === "drop" || e.target === document.documentElement) drop.classList.remove("over"); }));
+document.addEventListener("drop", e => { const f = e.dataTransfer && e.dataTransfer.files[0]; if (f) load(f); });
+document.addEventListener("paste", e => { const it = [...(e.clipboardData || {}).items || []].find(i => i.type.startsWith("image/")); if (it) load(it.getAsFile()); });
+for (const id of ["optCrop", "optPix"]) $("#" + id).addEventListener("change", e => { e.target.nextElementSibling.textContent = e.target.checked ? "On" : "Off"; process(); });
+let nameT; $("#ename").addEventListener("input", () => { clearTimeout(nameT); nameT = setTimeout(process, 400); });
+$("#zipbtn").addEventListener("click", downloadZip);
+$("#tbody").addEventListener("click", e => { const b = e.target.closest(".dl"); if (!b) return; const o = state.outputs[+b.dataset.i]; if (o) save(o.blob, o.file.split("/").pop()); });
+document.querySelectorAll(".bgsel button").forEach(b => b.addEventListener("click", () => {
+  state.bg = b.dataset.bg;
+  document.querySelectorAll(".bgsel button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  if (state.u) renderStrip(state.u);
+}));
+$("#promoX").addEventListener("click", closePromo);
+$("#promoNo").addEventListener("click", closePromo);
+$("#promo").addEventListener("click", e => { if (e.target.id === "promo") closePromo(); });
+document.querySelectorAll("#promo a").forEach(a => a.addEventListener("click", closePromo));
+document.addEventListener("keydown", e => { if (e.key === "Escape") closePromo(); });
+
+// Test hook (harmless in production): lets automated checks read results.
+window.__emoteChecker = { state, analyse, opts };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+SALTYDAYN TOOLS SOURCE-AVAILABLE LICENSE AGREEMENT
+Copyright (c) 2026 Joshua, doing business as "Saltydayn" ("Licensor"). All Rights Reserved.
+
+The Saltydayn Tools (H.E.R.M.E.S. web tools, currently the Emote & Badge Checker and the Shorts
+Safe-Zone Checker, plus any tool added to this repository later), including their source code,
+documentation, zone and limit data, artwork, branding, and all associated files in this repository (collectively, the "Software"), is
+the exclusive intellectual property of the Licensor and is protected under applicable copyright,
+trademark, and other intellectual property laws and international treaties. UNAUTHORIZED
+REPRODUCTION OR DISTRIBUTION OF THIS SOFTWARE, OR ANY PORTION OF IT, IS PROHIBITED.
+
+------------------------------------------------------------
+SUMMARY (informal - the clauses below are what actually governs)
+------------------------------------------------------------
+
+Use the tools as much as you like, for free, including for monetized channels and commission
+work. The files you make with them are yours. You're welcome to read the code. You are NOT
+permitted to copy, re-host, resell, rebrand, or build a competing tool from this work without
+asking first. Most reasonable requests - a fork to propose a fix, using a snippet with credit, a
+collaboration - get a yes. Ask before you assume: saltydaynofficial@gmail.com or the Discord.
+
+------------------------------------------------------------
+1. DEFINITIONS
+------------------------------------------------------------
+
+1.1 "Licensor" means Joshua, operating as "Saltydayn," the sole author and copyright holder of the
+    Software.
+1.2 "Licensee" or "You" means any individual or entity that accesses, downloads, views, or
+    otherwise makes use of the Software.
+1.3 "Official Copy" means the Software as served from the Licensor's official page
+    (https://saltydayn.github.io/web-tools/ and its sub-pages), this official repository, or a distribution
+    channel expressly designated by the Licensor (including a H.E.R.M.E.S. release).
+1.4 "Your Content" means images and videos You load into the Software and the files it produces from them.
+
+------------------------------------------------------------
+2. GRANT OF LIMITED LICENSE
+------------------------------------------------------------
+
+Subject to compliance with this Agreement, the Licensor grants You a limited, personal,
+non-exclusive, non-transferable, non-sublicensable, and revocable license to:
+
+  (a) view and study the source code for informational and educational purposes; and
+  (b) use an Official Copy, online or saved locally, to process Your Content, for any purpose,
+      including commercial streaming, video editing and commissioned work.
+
+No other rights are granted, express or implied. All rights not expressly granted herein are
+reserved by the Licensor.
+
+------------------------------------------------------------
+3. YOUR CONTENT
+------------------------------------------------------------
+
+The Licensor claims no rights in Your Content. The Software processes it entirely on Your device
+and does not upload, store, or transmit it. You are solely responsible for having the rights to
+the images and videos You use.
+
+------------------------------------------------------------
+4. PROHIBITED CONDUCT
+------------------------------------------------------------
+
+Except with the Licensor's prior express written consent, You SHALL NOT:
+
+  (a) copy, reproduce, modify, adapt, translate, merge, or create derivative works based on the
+      Software, in whole or in part, other than saving an unmodified Official Copy for Your own
+      use under Section 2(b);
+  (b) distribute, publish, sublicense, rent, lease, lend, host, mirror, or otherwise make the
+      Software (or any derivative of it) available to any third party, by any means;
+  (c) sell, resell, or otherwise monetize the Software or any derivative, adaptation, clone, or
+      substantial reproduction of its distinctive features, workflow, or design, whether or not any
+      original code is reused (selling work You made with it is allowed);
+  (d) remove, obscure, or alter any copyright, trademark, or attribution notice contained in the
+      Software; or
+  (e) use the name "HERMES," "H.E.R.M.E.S.," the Licensor's branding, logos, or any mark
+      confusingly similar thereto, in connection with any product, service, or publication not
+      expressly authorized by the Licensor in writing.
+
+------------------------------------------------------------
+5. INTELLECTUAL PROPERTY
+------------------------------------------------------------
+
+The Software, and all copyright, trademark, trade dress, and other intellectual property rights
+therein, are and shall remain the exclusive property of the Licensor. "HERMES" and the HERMES logo
+are claimed trademarks of the Licensor. No formal registration is represented by this notice unless
+separately and explicitly stated. Use of the Software does not grant You any right, title, or
+interest in the Licensor's trademarks, trade names, or brand identity.
+
+Twitch, 7TV, Discord, TikTok, Instagram and YouTube are trademarks of their respective owners. The Software is not affiliated
+with or endorsed by them.
+
+------------------------------------------------------------
+6. THIRD-PARTY COMPONENTS
+------------------------------------------------------------
+
+The Software bundles the following open-source components, each governed exclusively by its own
+license, which takes precedence over this Agreement with respect to that component:
+
+  - gifenc (c) Matt DesLauriers - MIT License (Emote & Badge Checker)
+  - gifuct-js (c) Matt Way - MIT License (Emote & Badge Checker)
+
+------------------------------------------------------------
+7. DISCLAIMER OF WARRANTY
+------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. PLATFORM SIZES, FILE LIMITS AND SAFE ZONES SHOWN BY THE SOFTWARE ARE ESTIMATES AND MAY BE OUT OF DATE. IN NO
+EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT
+OF, OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+------------------------------------------------------------
+8. TERMINATION
+------------------------------------------------------------
+
+This license is effective until terminated. It will terminate automatically and without notice if
+You fail to comply with any term herein. Upon termination, You must cease all use of the Software
+and destroy all copies in Your possession. Files You already produced remain Yours. Sections 3, 5,
+6, 7, and this Section 8 survive any termination.
+
+------------------------------------------------------------
+9. RESERVATION OF RIGHTS
+------------------------------------------------------------
+
+Nothing in this Agreement shall be construed as a waiver of any right or remedy available to the
+Licensor under copyright law, trademark law, unfair competition law, contract law, or any other
+applicable law, in any jurisdiction.
+
+------------------------------------------------------------
+CONTACT
+------------------------------------------------------------
+
+Permission requests, licensing questions, and collaboration proposals are welcome and are typically
+handled favorably. Contact: saltydaynofficial@gmail.com, or the HERMES Discord.
+
+------------------------------------------------------------
+A NOTE OF ACTUAL HONESTY
+------------------------------------------------------------
+
+This document is written in formal language to make the terms unambiguous, but it was written by
+the developer, not a lawyer, and has not been reviewed by one. If you are relying on it for
+something high-stakes, consult a qualified intellectual property attorney.
